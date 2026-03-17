@@ -731,6 +731,47 @@ footer {
     font-style: italic;
 }
 
+.audio-controls {
+    position: fixed;
+    left: 24px;
+    bottom: 24px;
+    z-index: 999;
+}
+
+.audio-btn {
+    width: 52px;
+    height: 52px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    cursor: pointer;
+    background: rgba(44, 24, 16, 0.8);
+    backdrop-filter: blur(8px);
+    color: var(--gold-light);
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.audio-btn:hover {
+    background: var(--gold);
+    color: #1a0f08;
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 0 20px rgba(184, 134, 11, 0.4);
+}
+
+.audio-btn.playing {
+    animation: pulse-gold 2s infinite;
+}
+
+@keyframes pulse-gold {
+    0% { box-shadow: 0 0 0 0 rgba(184, 134, 11, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(184, 134, 11, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(184, 134, 11, 0); }
+}
+
 .floating-top {
     position: fixed;
     right: 24px;

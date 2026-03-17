@@ -259,8 +259,8 @@ function updateProgress() {
 
     if (progressFill) progressFill.style.width = percent + '%';
     if (progressText) {
-        progressText.textContent = percent === 100 
-            ? `100% — ${progressCompleteTemplate}` 
+        progressText.textContent = percent === 100
+            ? `100% — ${progressCompleteTemplate}`
             : `${percent}% ${progressTextTemplate}`;
     }
 }
@@ -535,7 +535,7 @@ async function loadSystems() {
         const response = await fetch('sistemas.json');
         if (!response.ok) throw new Error('Falha ao carregar sistemas');
         sistemasData = await response.json();
-        
+
         renderSystemsAsCategories(sistemasData);
         checkInitialView();
     } catch (error) {
@@ -546,7 +546,7 @@ async function loadSystems() {
 
 function applyConteudoSistema(conteudoKey) {
     const c = conteudoData[conteudoKey] || conteudoData.default || {};
-    
+
     // Sabedoria
     if (c.sabedoria) {
         const s = c.sabedoria;
@@ -566,7 +566,7 @@ function applyConteudoSistema(conteudoKey) {
             });
         }
     }
-    
+
     // Arte de Contar Histórias
     if (c.arte_historias) {
         const a = c.arte_historias;
@@ -584,7 +584,7 @@ function applyConteudoSistema(conteudoKey) {
             `).join('');
         }
     }
-    
+
     // Oráculo
     if (c.oraculo) {
         const o = c.oraculo;
@@ -594,7 +594,7 @@ function applyConteudoSistema(conteudoKey) {
         if (btn) btn.textContent = o.btn_text || '✦ Conjurar História ✦';
         if (storyResult) storyResult.textContent = o.placeholder || storyResult.textContent;
     }
-    
+
     // NPC
     if (c.npc) {
         const n = c.npc;
@@ -604,7 +604,7 @@ function applyConteudoSistema(conteudoKey) {
         if (btn) btn.textContent = n.btn_text || '✦ Conjurar NPC ✦';
         if (npcResult) npcResult.textContent = n.placeholder || npcResult.textContent;
     }
-    
+
     // Gancho
     if (c.gancho) {
         const g = c.gancho;
@@ -614,7 +614,7 @@ function applyConteudoSistema(conteudoKey) {
         if (btn) btn.textContent = g.btn_text || '✦ Conjurar Gancho ✦';
         if (hookResult) hookResult.textContent = g.placeholder || hookResult.textContent;
     }
-    
+
     // Checklist
     if (c.checklist) {
         const ch = c.checklist;
@@ -629,7 +629,7 @@ function applyConteudoSistema(conteudoKey) {
             updateProgress();
         }
     }
-    
+
     // Planejador
     if (c.planejador) {
         const p = c.planejador;
@@ -640,7 +640,7 @@ function applyConteudoSistema(conteudoKey) {
         progressTextTemplate = p.progress_text || progressTextTemplate;
         progressCompleteTemplate = p.progress_complete || progressCompleteTemplate;
     }
-    
+
     // Geradores (para story, hook)
     currentGeradores = c.geradores || null;
 
@@ -664,7 +664,7 @@ function renderSystemsAsCategories(systems) {
         card.dataset.category = system.categoria;
         card.setAttribute('role', 'button');
         card.setAttribute('tabindex', '0');
-        
+
         card.innerHTML = `
             <div class="system-tag">${system.tag}</div>
             <h3>${system.nome}</h3>
@@ -674,7 +674,7 @@ function renderSystemsAsCategories(systems) {
             </ul>
             <span class="system-select-hint">Clique para abrir o guia completo →</span>
         `;
-        
+
         card.addEventListener('click', () => selectSystem(system.id));
         card.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
@@ -682,7 +682,7 @@ function renderSystemsAsCategories(systems) {
                 selectSystem(system.id);
             }
         });
-        
+
         grid.appendChild(card);
     });
 }
@@ -710,11 +710,11 @@ function showGuia(system) {
 
     // Atualizar título e meta
     document.title = `O Tomo do Mestre — Guia ${system.nome}`;
-    
+
     const badge = document.getElementById('badge-sistema');
     const titulo = document.getElementById('titulo-guia');
     const desc = document.getElementById('descricao-guia');
-    
+
     if (badge) badge.textContent = `Guia ${system.tag}`;
     if (titulo) titulo.textContent = `O Tomo do Mestre — ${system.nome}`;
     if (desc) desc.textContent = system.resumo;
@@ -779,7 +779,7 @@ function showSeletor() {
 function checkInitialView() {
     const savedId = localStorage.getItem(STORAGE_KEY);
     const system = sistemasData.find(s => s.id === savedId);
-    
+
     if (system) {
         showGuia(system);
     } else {
@@ -794,9 +794,77 @@ function checkInitialView() {
 document.addEventListener('DOMContentLoaded', () => {
     loadSystems();
     createDiceRoller();
-    
+
     document.getElementById('btnTrocarSistema')?.addEventListener('click', () => {
         showSeletor();
     });
+
+    // ========== BACKGROUND AUDIO LOGIC ==========
+    const bgAudio = document.getElementById('bg-audio');
+    const audioToggle = document.getElementById('audio-toggle');
+    const audioIcon = audioToggle?.querySelector('.audio-icon i'); // <i> que recebe as classes Font Awesome
+
+    function updateAudioUI(playing) {
+        if (!audioIcon) return;
+        audioIcon.classList.remove('fa-volume-xmark', 'fa-guitar');
+        if (playing) {
+            audioIcon.classList.add('fa-guitar');
+            audioToggle?.classList.add('playing');
+        } else {
+            audioIcon.classList.add('fa-volume-xmark');
+            audioToggle?.classList.remove('playing');
+        }
+    }
+
+    if (bgAudio && audioToggle) {
+        bgAudio.volume = 0.15;
+
+        // Se for a primeira vez (null), assumimos que o usuário quer ouvir (false para muted)
+        let isMuted = localStorage.getItem('tomo_audio_muted');
+        if (isMuted === null) {
+            isMuted = 'false';
+            localStorage.setItem('tomo_audio_muted', 'false');
+        }
+        isMuted = isMuted === 'true';
+
+        updateAudioUI(!isMuted); // Estado inicial do ícone
+
+        async function attemptPlay() {
+            try {
+                await bgAudio.play();
+                updateAudioUI(true);
+                // Remove listeners de fallback se conseguimos dar o play
+                document.removeEventListener('click', attemptPlay);
+                document.removeEventListener('scroll', attemptPlay);
+            } catch (err) {
+                console.log('Autoplay blocked, waiting for interaction.');
+                updateAudioUI(false);
+            }
+        }
+
+        if (!isMuted) {
+            // Tenta tocar imediatamente
+            attemptPlay();
+
+            // Fallback: se o browser bloqueou o play automático, tenta no primeiro clique ou scroll
+            document.addEventListener('click', attemptPlay, { once: true });
+            document.addEventListener('scroll', attemptPlay, { once: true });
+        } else {
+            updateAudioUI(false);
+        }
+
+        audioToggle.addEventListener('click', (e) => {
+            e.stopPropagation(); // Evita o listener de fallback
+            if (bgAudio.paused) {
+                bgAudio.play();
+                updateAudioUI(true);
+                localStorage.setItem('tomo_audio_muted', 'false');
+            } else {
+                bgAudio.pause();
+                updateAudioUI(false);
+                localStorage.setItem('tomo_audio_muted', 'true');
+            }
+        });
+    }
 });
 

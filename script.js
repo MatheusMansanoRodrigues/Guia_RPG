@@ -1,7 +1,59 @@
+// Torchlight Effect
+document.addEventListener('mousemove', e => {
+    const x = (e.clientX / window.innerWidth) * 100;
+    const y = (e.clientY / window.innerHeight) * 100;
+    document.body.style.setProperty('--mouse-x', `${x}%`);
+    document.body.style.setProperty('--mouse-y', `${y}%`);
+});
+
+// Particles.js Initialization
+if (window.particlesJS) {
+    particlesJS('particles-js', {
+        "particles": {
+            "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+            "color": { "value": "#daa520" },
+            "shape": { "type": "circle" },
+            "opacity": { "value": 0.5, "random": true, "anim": { "enable": true, "speed": 1, "opacity_min": 0.1, "sync": false } },
+            "size": { "value": 3, "random": true, "anim": { "enable": false } },
+            "line_linked": { "enable": false },
+            "move": { "enable": true, "speed": 1, "direction": "top", "random": true, "straight": false, "out_mode": "out", "bounce": false }
+        },
+        "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": false }, "onclick": { "enable": false }, "resize": true } },
+        "retina_detect": true
+    });
+}
+
+// Typewriter Effect
+function typeWriter(element, html, speed = 20) {
+    element.innerHTML = '';
+    let i = 0;
+    let isTag = false;
+    let text = html;
+
+    function type() {
+        if (i < text.length) {
+            let char = text.charAt(i);
+            if (char === '<') isTag = true;
+            if (char === '>') isTag = false;
+
+            element.innerHTML = text.substring(0, i + 1);
+            i++;
+
+            if (isTag) {
+                type();
+            } else {
+                setTimeout(type, speed);
+            }
+        }
+    }
+    type();
+}
+
 const storyResult = document.getElementById('storyResult');
 const npcResult = document.getElementById('npcResult');
 const hookResult = document.getElementById('hookResult');
 const plannerOutput = document.getElementById('plannerOutput');
+
 
 const storyPlaces = [
     'uma cidade élfica cercada por névoa eterna',
@@ -54,7 +106,7 @@ const storyTwists = [
     'as fadas estão testando os heróis para um propósito maior'
 ];
 
-const npcRaces      = {'elfo': 'elf.png', 'anão': 'dwarf.png', 'gnomo': 'gnome.png', 'humano': 'human.png', 'meio-elfo': 'half-elf.png', 'meio-orc': 'half-orc.png', 'fada': 'fairy.png', 'halfling': 'halfling.png'};
+const npcRaces = { 'elfo': 'elf.png', 'anão': 'dwarf.png', 'gnomo': 'gnome.png', 'humano': 'human.png', 'meio-elfo': 'half-elf.png', 'meio-orc': 'half-orc.png', 'fada': 'fairy.png', 'halfling': 'halfling.png' };
 
 const npcNames = [
     'Eldric', 'Mira', 'Thoran', 'Selene', 'Varik', 'Liora',
@@ -142,21 +194,19 @@ document.getElementById('generateStoryBtn').addEventListener('click', function (
         <strong>Antagonista:</strong> Por trás disso está ${pick(storyVillains)}.<br>
         <strong>Reviravolta:</strong> No entanto, ${pick(storyTwists)}.
       `;
-    storyResult.innerHTML = story;
+    typeWriter(storyResult, story);
 });
 
 document.getElementById('generateNpcBtn').addEventListener('click', function () {
-
     const race = pick(Object.keys(npcRaces));
     const img = npcRaces[race];
-
     const name = pick(npcNames);
     const trait = pick(npcTraits);
     const secret = pick(npcSecrets);
     const goal = pick(npcGoals);
 
     const npc = `
-        <img src="imgs/${img}" alt="${race}" style="width: 200px; height: 200px;">
+        <div style="text-align:center; margin-bottom: 15px;"><img src="imgs/${img}" alt="${race}" style="width: 150px; height: 150px; border: 2px solid var(--gold); border-radius: 50%;"></div>
         <strong>Nome:</strong> ${name}<br>
         <strong>Raça:</strong> ${race}<br>
         <strong>Traço:</strong> ${trait}.<br>
@@ -164,15 +214,18 @@ document.getElementById('generateNpcBtn').addEventListener('click', function () 
         <strong>Objetivo:</strong> ${goal}.
     `;
 
-    npcResult.innerHTML = npc;
+    typeWriter(npcResult, npc);
 });
+
+
 
 document.getElementById('generateHookBtn').addEventListener('click', function () {
     const hook = `
         ${pick(hookStarts)} ${pick(hookEvents)}, ${pick(hookComplications)}.
       `;
-    hookResult.innerHTML = hook;
+    typeWriter(hookResult, hook);
 });
+
 
 const tips = document.querySelectorAll('.tip');
 tips.forEach(tip => {
@@ -268,4 +321,35 @@ raceCards.forEach(card => {
         });
         card.classList.toggle('active');
     });
-});
+});
+
+// Dice Roller Logic
+function createDiceRoller() {
+    const diceContainer = document.createElement('div');
+    diceContainer.id = 'dice-roller';
+    diceContainer.innerHTML = '🎲';
+    document.body.appendChild(diceContainer);
+
+    const diceResult = document.createElement('div');
+    diceResult.id = 'dice-result';
+    document.body.appendChild(diceResult);
+
+    diceContainer.addEventListener('click', () => {
+        const roll = Math.floor(Math.random() * 20) + 1;
+        diceContainer.classList.add('rolling');
+        diceResult.textContent = '...';
+        diceResult.style.opacity = '1';
+
+        setTimeout(() => {
+            diceContainer.classList.remove('rolling');
+            diceResult.textContent = roll === 20 ? 'CRÍTICO! 20' : roll === 1 ? 'FALHA CRÍTICA! 1' : `Rolagem: ${roll}`;
+
+            setTimeout(() => {
+                diceResult.style.opacity = '0';
+            }, 2000);
+        }, 600);
+    });
+}
+
+createDiceRoller();
+

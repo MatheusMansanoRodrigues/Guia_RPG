@@ -240,3 +240,32 @@ document.getElementById('sendMessageBtn').addEventListener('click', function () 
 
     contactResult.innerHTML = `<strong>Mensagem enviada com sucesso!</strong><br>Obrigado, ${name}. Sua dúvida foi registrada no exemplo do site.`;
 });
+
+// Mobile Menu Toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+const menuLinks = document.querySelectorAll('.menu a');
+
+menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    menuToggle.textContent = menu.classList.contains('active') ? '✕' : '☰';
+});
+
+menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        menu.classList.remove('active');
+        menuToggle.textContent = '☰';
+    });
+});
+
+// Race Cards Mobile Toggle
+const raceCards = document.querySelectorAll('.race-card');
+raceCards.forEach(card => {
+    card.addEventListener('click', () => {
+        // Toggle current card, close others
+        raceCards.forEach(c => {
+            if (c !== card) c.classList.remove('active');
+        });
+        card.classList.toggle('active');
+    });
+});

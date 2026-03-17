@@ -342,31 +342,160 @@ raceCards.forEach(card => {
     });
 });
 
-// Dice Roller Logic
+// Dice Roller — Oráculo dos Dados
+const FORTUNA_CRIT = [
+    'Os deuses sorriem para você!', 'O destino te escolheu!', 'A sorte dos heróis está com você!',
+    'As runas antigas se alinham!', 'O vento carrega sua vitória!', 'Até as fadas aplaudem!'
+];
+const FORTUNA_FUMBLE = [
+    'O destino conspira...', 'Até os heróis tropeçam.', 'A sorte virou as costas.',
+    'As runas sussurram cautela.', 'O próximo capítulo será melhor.', 'A mesa espera sua redenção.'
+];
+const FORTUNA_NORMAL = [
+    'O dado rola, a história continua.', 'A sorte está no ar.', 'O pergaminho aguarda.',
+    'Que os dados decidam.', 'O destino ainda não revelou tudo.', 'A aventura continua.'
+];
+
+function rollDie(faces) {
+    return Math.floor(Math.random() * faces) + 1;
+}
+
+function createParticles(x, y, color = '#daa520', count = 30) {
+    for (let i = 0; i < count; i++) {
+        const dx = (Math.random() - 0.5) * 200;
+        const dy = (Math.random() - 0.5) * 200 - 50;
+        const p = document.createElement('div');
+        p.className = 'dice-particle';
+        p.style.cssText = `
+            position: fixed; left: ${x}px; top: ${y}px; width: 6px; height: 6px;
+            background: ${color}; border-radius: 50%; pointer-events: none; z-index: 10002;
+        `;
+        document.body.appendChild(p);
+        p.animate([
+            { transform: 'translate(0,0) scale(1)', opacity: 1 },
+            { transform: `translate(${dx}px, ${dy}px) scale(0)`, opacity: 0 }
+        ], { duration: 800, easing: 'ease-out' }).onfinish = () => p.remove();
+    }
+}
+
 function createDiceRoller() {
-    const diceContainer = document.createElement('div');
-    diceContainer.id = 'dice-roller';
-    diceContainer.innerHTML = '🎲';
-    document.body.appendChild(diceContainer);
+    const wrapper = document.createElement('div');
+    wrapper.id = 'dice-roller-wrapper';
+    wrapper.innerHTML = `
+        <button type="button" id="dice-roller-btn" class="dice-btn" aria-label="Abrir oráculo dos dados">
+            <span class="dice-icon">✦</span>
+            <span class="dice-label">Dados</span>
+        </button>
+        <div id="dice-panel" class="dice-panel">
+            <div class="dice-panel-header">
+                <span class="dice-panel-title">Oráculo dos Dados</span>
+                <button type="button" class="dice-close" aria-label="Fechar">×</button>
+            </div>
+            <div class="dice-presets">
+                <button type="button" data-roll="1d20">d20</button>
+                <button type="button" data-roll="2d6">2d6</button>
+                <button type="button" data-roll="3d6">3d6</button>
+                <button type="button" data-roll="1d100">d100</button>
+            </div>
+            <div class="dice-custom">
+                <input type="number" id="dice-count" min="1" max="10" value="1" />
+                <span>d</span>
+                <select id="dice-type">
+                    <option value="4">4</option>
+                    <option value="6">6</option>
+                    <option value="8">8</option>
+                    <option value="10">10</option>
+                    <option value="12">12</option>
+                    <option value="20" selected>20</option>
+                </select>
+                <span>+</span>
+                <input type="number" id="dice-mod" min="-20" max="20" value="0" />
+            </div>
+            <button type="button" id="dice-roll-btn" class="dice-roll-main">Rolar</button>
+            <div id="dice-result-area" class="dice-result-area">
+                <div id="dice-value" class="dice-value"></div>
+                <div id="dice-fortuna" class="dice-fortuna"></div>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(wrapper);
 
-    const diceResult = document.createElement('div');
-    diceResult.id = 'dice-result';
-    document.body.appendChild(diceResult);
+    const btn = document.getElementById('dice-roller-btn');
+    const panel = document.getElementById('dice-panel');
+    const closeBtn = panel.querySelector('.dice-close');
+    const resultArea = document.getElementById('dice-result-area');
+    const diceValue = document.getElementById('dice-value');
+    const diceFortuna = document.getElementById('dice-fortuna');
 
-    diceContainer.addEventListener('click', () => {
-        const roll = Math.floor(Math.random() * 20) + 1;
-        diceContainer.classList.add('rolling');
-        diceResult.textContent = '...';
-        diceResult.style.opacity = '1';
+    function togglePanel() {
+        panel.classList.toggle('open');
+        btn.classList.toggle('active', panel.classList.contains('open'));
+    }
+
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        togglePanel();
+    });
+    closeBtn.addEventListener('click', togglePanel);
+    document.addEventListener('click', (e) => {
+        if (panel.classList.contains('open') && !wrapper.contains(e.target)) togglePanel();
+    });
+
+    function doRoll(notation) {
+        const match = notation.match(/(\d+)d(\d+)/);
+        const count = match ? parseInt(match[1], 10) : 1;
+        const faces = match ? parseInt(match[2], 10) : 20;
+        const mod = parseInt(document.getElementById('dice-mod').value, 10) || 0;
+
+        resultArea.classList.add('rolling');
+        diceValue.textContent = '...';
+        diceFortuna.textContent = '';
+
+        const rolls = [];
+        for (let i = 0; i < count; i++) rolls.push(rollDie(faces));
+        const total = rolls.reduce((a, b) => a + b, 0) + mod;
 
         setTimeout(() => {
-            diceContainer.classList.remove('rolling');
-            diceResult.textContent = roll === 20 ? 'CRÍTICO! 20' : roll === 1 ? 'FALHA CRÍTICA! 1' : `Rolagem: ${roll}`;
+            resultArea.classList.remove('rolling');
+            const display = count > 1
+                ? `${rolls.join(' + ')}${mod ? ` + ${mod}` : ''} = ${total}`
+                : `${total}${mod ? ` (${rolls[0]} + ${mod})` : ''}`;
+            diceValue.textContent = display;
+            diceValue.className = 'dice-value';
 
-            setTimeout(() => {
-                diceResult.style.opacity = '0';
-            }, 2000);
-        }, 600);
+            let fortuna = '';
+            if (count === 1 && faces === 20) {
+                if (rolls[0] === 20) {
+                    diceValue.classList.add('crit');
+                    fortuna = FORTUNA_CRIT[Math.floor(Math.random() * FORTUNA_CRIT.length)];
+                    const rect = resultArea.getBoundingClientRect();
+                    createParticles(rect.left + rect.width / 2, rect.top + rect.height / 2, '#daa520');
+                } else if (rolls[0] === 1) {
+                    diceValue.classList.add('fumble');
+                    fortuna = FORTUNA_FUMBLE[Math.floor(Math.random() * FORTUNA_FUMBLE.length)];
+                } else {
+                    fortuna = FORTUNA_NORMAL[Math.floor(Math.random() * FORTUNA_NORMAL.length)];
+                }
+            } else {
+                fortuna = FORTUNA_NORMAL[Math.floor(Math.random() * FORTUNA_NORMAL.length)];
+            }
+            diceFortuna.textContent = fortuna;
+        }, 800);
+    }
+
+    panel.querySelectorAll('.dice-presets button').forEach(b => {
+        b.addEventListener('click', () => {
+            const [count, faces] = b.dataset.roll.split('d').map(Number);
+            document.getElementById('dice-count').value = count;
+            document.getElementById('dice-type').value = faces;
+            doRoll(b.dataset.roll);
+        });
+    });
+
+    document.getElementById('dice-roll-btn').addEventListener('click', () => {
+        const count = parseInt(document.getElementById('dice-count').value, 10) || 1;
+        const faces = parseInt(document.getElementById('dice-type').value, 10) || 20;
+        doRoll(`${count}d${faces}`);
     });
 }
 
@@ -376,9 +505,25 @@ let sistemasData = [];
 
 async function loadConteudoSistemas() {
     try {
-        const res = await fetch('conteudo_sistemas.json');
-        if (res.ok) conteudoData = await res.json();
-    } catch (e) { console.warn('Conteúdo por sistema não carregado, usando padrão.'); }
+        const url = new URL('conteudo_sistemas.json', window.location.href).href;
+        const res = await fetch(url);
+        if (res.ok) {
+            const data = await res.json();
+            if (data && (data.default || data.cthulhu)) {
+                conteudoData = data;
+            }
+        }
+    } catch (e) {
+        console.warn('Conteúdo por sistema não carregado via fetch:', e.message);
+    }
+    // Fallback: usar JSON embutido no HTML se fetch falhou
+    const fallbackEl = document.getElementById('conteudo-sistemas-json');
+    if (fallbackEl && (!conteudoData.default?.sabedoria)) {
+        try {
+            const data = JSON.parse(fallbackEl.textContent);
+            if (data && (data.default || data.cthulhu)) conteudoData = data;
+        } catch (err) { console.warn('Fallback JSON inválido:', err); }
+    }
 }
 
 async function loadSystems() {
@@ -498,6 +643,9 @@ function applyConteudoSistema(conteudoKey) {
     
     // Geradores (para story, hook)
     currentGeradores = c.geradores || null;
+
+    // Atualizar barra de progresso com os novos templates
+    updateProgress();
 }
 
 function setText(id, text) {

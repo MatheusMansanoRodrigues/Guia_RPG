@@ -54,6 +54,9 @@ const npcResult = document.getElementById('npcResult');
 const hookResult = document.getElementById('hookResult');
 const plannerOutput = document.getElementById('plannerOutput');
 
+// Conteúdo dinâmico por sistema (preenchido ao carregar conteudo_sistemas.json)
+let conteudoData = { default: {} };
+let currentGeradores = null;
 
 const storyPlaces = [
     'uma cidade élfica cercada por névoa eterna',
@@ -188,11 +191,16 @@ function pick(arr) {
 }
 
 document.getElementById('generateStoryBtn').addEventListener('click', function () {
+    const g = currentGeradores || {};
+    const places = g.storyPlaces || storyPlaces;
+    const problems = g.storyProblems || storyProblems;
+    const villains = g.storyVillains || storyVillains;
+    const twists = g.storyTwists || storyTwists;
     const story = `
-        <strong>Cenário:</strong> Em ${pick(storyPlaces)}.<br>
-        <strong>Problema:</strong> ${pick(storyProblems)}.<br>
-        <strong>Antagonista:</strong> Por trás disso está ${pick(storyVillains)}.<br>
-        <strong>Reviravolta:</strong> No entanto, ${pick(storyTwists)}.
+        <strong>Cenário:</strong> Em ${pick(places)}.<br>
+        <strong>Problema:</strong> ${pick(problems)}.<br>
+        <strong>Antagonista:</strong> Por trás disso está ${pick(villains)}.<br>
+        <strong>Reviravolta:</strong> No entanto, ${pick(twists)}.
       `;
     typeWriter(storyResult, story);
 });
@@ -220,8 +228,12 @@ document.getElementById('generateNpcBtn').addEventListener('click', function () 
 
 
 document.getElementById('generateHookBtn').addEventListener('click', function () {
+    const g = currentGeradores || {};
+    const starts = g.hookStarts || hookStarts;
+    const events = g.hookEvents || hookEvents;
+    const complications = g.hookComplications || hookComplications;
     const hook = `
-        ${pick(hookStarts)} ${pick(hookEvents)}, ${pick(hookComplications)}.
+        ${pick(starts)} ${pick(events)}, ${pick(complications)}.
       `;
     typeWriter(hookResult, hook);
 });
@@ -234,19 +246,26 @@ tips.forEach(tip => {
     });
 });
 
-const checks = document.querySelectorAll('.session-check');
 const progressFill = document.getElementById('progressFill');
 const progressText = document.getElementById('progressText');
+let progressTextTemplate = 'da sessão preparada — o pergaminho aguarda';
+let progressCompleteTemplate = 'O pergaminho está completo! Pronto para a aventura!';
 
 function updateProgress() {
+    const checks = document.querySelectorAll('.session-check');
     const total = checks.length;
     const checked = document.querySelectorAll('.session-check:checked').length;
     const percent = Math.round((checked / total) * 100);
 
-    progressFill.style.width = percent + '%';
-    progressText.textContent = percent === 100 ? '100% — O pergaminho está completo! Pronto para a aventura!' : percent + '% da sessão preparada — o pergaminho aguarda';
+    if (progressFill) progressFill.style.width = percent + '%';
+    if (progressText) {
+        progressText.textContent = percent === 100 
+            ? `100% — ${progressCompleteTemplate}` 
+            : `${percent}% ${progressTextTemplate}`;
+    }
 }
 
+const checks = document.querySelectorAll('.session-check');
 checks.forEach(check => check.addEventListener('change', updateProgress));
 
 document.getElementById('planSessionBtn').addEventListener('click', function () {
@@ -351,5 +370,285 @@ function createDiceRoller() {
     });
 }
 
-createDiceRoller();
+// ========== SISTEMAS COMO CATEGORIAS - GUIA DINÂMICO ==========
+const STORAGE_KEY = 'tomo_sistema_selecionado';
+let sistemasData = [];
+
+async function loadConteudoSistemas() {
+    try {
+        const res = await fetch('conteudo_sistemas.json');
+        if (res.ok) conteudoData = await res.json();
+    } catch (e) { console.warn('Conteúdo por sistema não carregado, usando padrão.'); }
+}
+
+async function loadSystems() {
+    const grid = document.getElementById('systems-grid');
+    if (!grid) return;
+
+    try {
+        await loadConteudoSistemas();
+        const response = await fetch('sistemas.json');
+        if (!response.ok) throw new Error('Falha ao carregar sistemas');
+        sistemasData = await response.json();
+        
+        renderSystemsAsCategories(sistemasData);
+        checkInitialView();
+    } catch (error) {
+        console.error('Erro loading systems:', error);
+        grid.innerHTML = '<p class="error">Não foi possível carregar os pergaminhos dos sistemas. Tente novamente mais tarde.</p>';
+    }
+}
+
+function applyConteudoSistema(conteudoKey) {
+    const c = conteudoData[conteudoKey] || conteudoData.default || {};
+    
+    // Sabedoria
+    if (c.sabedoria) {
+        const s = c.sabedoria;
+        setText('sabedoria-titulo', s.titulo);
+        setText('sabedoria-subtitulo', s.subtitulo);
+        setText('sabedoria-lore', s.lore);
+        const tipsList = document.getElementById('tips-list');
+        if (tipsList && s.tips) {
+            tipsList.innerHTML = s.tips.map((t, i) => `
+                <div class="tip">
+                    <button class="tip-btn">${t.btn}</button>
+                    <div class="tip-content">${t.content}</div>
+                </div>
+            `).join('');
+            tipsList.querySelectorAll('.tip').forEach(tip => {
+                tip.querySelector('.tip-btn').addEventListener('click', () => tip.classList.toggle('active'));
+            });
+        }
+    }
+    
+    // Arte de Contar Histórias
+    if (c.arte_historias) {
+        const a = c.arte_historias;
+        setText('arte-titulo', a.titulo);
+        setText('arte-subtitulo', a.subtitulo);
+        setText('arte-lore', a.lore);
+        const cardsEl = document.getElementById('arte-cards');
+        if (cardsEl && a.cards) {
+            cardsEl.innerHTML = a.cards.map(card => `
+                <div class="card">
+                    <span class="tag">${card.tag}</span>
+                    <h3>${card.titulo}</h3>
+                    <p>${card.conteudo}</p>
+                </div>
+            `).join('');
+        }
+    }
+    
+    // Oráculo
+    if (c.oraculo) {
+        const o = c.oraculo;
+        setText('oraculo-titulo', o.titulo);
+        setText('oraculo-subtitulo', o.subtitulo);
+        const btn = document.getElementById('generateStoryBtn');
+        if (btn) btn.textContent = o.btn_text || '✦ Conjurar História ✦';
+        if (storyResult) storyResult.textContent = o.placeholder || storyResult.textContent;
+    }
+    
+    // NPC
+    if (c.npc) {
+        const n = c.npc;
+        setText('npc-titulo', n.titulo);
+        setText('npc-subtitulo', n.subtitulo);
+        const btn = document.getElementById('generateNpcBtn');
+        if (btn) btn.textContent = n.btn_text || '✦ Conjurar NPC ✦';
+        if (npcResult) npcResult.textContent = n.placeholder || npcResult.textContent;
+    }
+    
+    // Gancho
+    if (c.gancho) {
+        const g = c.gancho;
+        setText('gancho-titulo', g.titulo);
+        setText('gancho-subtitulo', g.subtitulo);
+        const btn = document.getElementById('generateHookBtn');
+        if (btn) btn.textContent = g.btn_text || '✦ Conjurar Gancho ✦';
+        if (hookResult) hookResult.textContent = g.placeholder || hookResult.textContent;
+    }
+    
+    // Checklist
+    if (c.checklist) {
+        const ch = c.checklist;
+        setText('checklist-titulo', ch.titulo);
+        setText('checklist-subtitulo', ch.subtitulo);
+        const itemsEl = document.getElementById('checklist-items');
+        if (itemsEl && ch.items) {
+            itemsEl.innerHTML = ch.items.map(item => `
+                <label class="check-item"><input type="checkbox" class="session-check" /> ${item}</label>
+            `).join('');
+            itemsEl.querySelectorAll('.session-check').forEach(check => check.addEventListener('change', updateProgress));
+            updateProgress();
+        }
+    }
+    
+    // Planejador
+    if (c.planejador) {
+        const p = c.planejador;
+        setText('planejador-titulo', p.titulo);
+        setText('planejador-subtitulo', p.subtitulo);
+        const themeInput = document.getElementById('themeInput');
+        if (themeInput && p.theme_placeholder) themeInput.placeholder = p.theme_placeholder;
+        progressTextTemplate = p.progress_text || progressTextTemplate;
+        progressCompleteTemplate = p.progress_complete || progressCompleteTemplate;
+    }
+    
+    // Geradores (para story, hook)
+    currentGeradores = c.geradores || null;
+}
+
+function setText(id, text) {
+    const el = document.getElementById(id);
+    if (el && text != null) el.textContent = text;
+}
+
+function renderSystemsAsCategories(systems) {
+    const grid = document.getElementById('systems-grid');
+    grid.innerHTML = '';
+
+    systems.forEach(system => {
+        const card = document.createElement('div');
+        card.className = 'system-card system-card-selectable';
+        card.dataset.id = system.id;
+        card.dataset.category = system.categoria;
+        card.setAttribute('role', 'button');
+        card.setAttribute('tabindex', '0');
+        
+        card.innerHTML = `
+            <div class="system-tag">${system.tag}</div>
+            <h3>${system.nome}</h3>
+            <p>${system.resumo}</p>
+            <ul class="system-features">
+                ${system.caracteristicas.map(feat => `<li>${feat}</li>`).join('')}
+            </ul>
+            <span class="system-select-hint">Clique para abrir o guia completo →</span>
+        `;
+        
+        card.addEventListener('click', () => selectSystem(system.id));
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                selectSystem(system.id);
+            }
+        });
+        
+        grid.appendChild(card);
+    });
+}
+
+function selectSystem(systemId) {
+    const system = sistemasData.find(s => s.id === systemId);
+    if (!system) return;
+
+    localStorage.setItem(STORAGE_KEY, systemId);
+    showGuia(system);
+}
+
+function showGuia(system) {
+    const seletor = document.getElementById('seletor-sistemas');
+    const guia = document.getElementById('guia-completo');
+    const btnTrocar = document.getElementById('btnTrocarSistema');
+    const navGuia = document.querySelectorAll('.nav-guia');
+
+    if (seletor) seletor.style.display = 'none';
+    if (guia) guia.style.display = 'block';
+    if (btnTrocar) btnTrocar.style.display = 'inline-block';
+    const navSistemas = document.getElementById('navSistemas');
+    if (navSistemas) navSistemas.style.display = 'none';
+    navGuia.forEach(el => el.style.display = '');
+
+    // Atualizar título e meta
+    document.title = `O Tomo do Mestre — Guia ${system.nome}`;
+    
+    const badge = document.getElementById('badge-sistema');
+    const titulo = document.getElementById('titulo-guia');
+    const desc = document.getElementById('descricao-guia');
+    
+    if (badge) badge.textContent = `Guia ${system.tag}`;
+    if (titulo) titulo.textContent = `O Tomo do Mestre — ${system.nome}`;
+    if (desc) desc.textContent = system.resumo;
+
+    // Preencher essenciais do mestre
+    const essenciais = document.getElementById('essenciais-conteudo');
+    if (essenciais && system.essenciais_mestre) {
+        const e = system.essenciais_mestre;
+        let html = '<ul>';
+        if (e.mecanica_core) html += `<li><strong>Mecânica core:</strong> ${e.mecanica_core}</li>`;
+        if (e.combate) html += `<li><strong>Combate:</strong> ${e.combate}</li>`;
+        if (e.progressao) html += `<li><strong>Progressão:</strong> ${e.progressao}</li>`;
+        if (e.descanso) html += `<li><strong>Descanso:</strong> ${e.descanso}</li>`;
+        if (e.economia_acao) html += `<li><strong>Ações:</strong> ${e.economia_acao}</li>`;
+        if (e.falha_critica) html += `<li><strong>Falha crítica:</strong> ${e.falha_critica}</li>`;
+        if (e.saude) html += `<li><strong>Saúde:</strong> ${e.saude}</li>`;
+        if (e.pontos) html += `<li><strong>Pontos:</strong> ${e.pontos}</li>`;
+        if (e.dano) html += `<li><strong>Dano:</strong> ${e.dano}</li>`;
+        if (e.aces) html += `<li><strong>Aces:</strong> ${e.aces}</li>`;
+        if (e.shaken) html += `<li><strong>Shaken:</strong> ${e.shaken}</li>`;
+        if (e.aspectos) html += `<li><strong>Aspectos:</strong> ${e.aspectos}</li>`;
+        if (e.consequencias) html += `<li><strong>Consequências:</strong> ${e.consequencias}</li>`;
+        if (e.agendas) html += `<li><strong>Agendas:</strong> ${e.agendas}</li>`;
+        if (e.moves) html += `<li><strong>Moves:</strong> ${e.moves}</li>`;
+        if (e.push) html += `<li><strong>Push:</strong> ${e.push}</li>`;
+        if (e.letalidade) html += `<li><strong>Letalidade:</strong> ${e.letalidade}</li>`;
+        if (e.sanidade) html += `<li><strong>Sanidade:</strong> ${e.sanidade}</li>`;
+        if (e.esforco) html += `<li><strong>Esforço:</strong> ${e.esforco}</li>`;
+        if (e.cyphers) html += `<li><strong>Cyphers:</strong> ${e.cyphers}</li>`;
+        if (e.dica_mestre) html += `<li class="dica-destaque"><strong>Dica do mestre:</strong> ${e.dica_mestre}</li>`;
+        html += '</ul>';
+        essenciais.innerHTML = html;
+    }
+
+    // Aplicar conteúdo dinâmico (Sabedoria, Arte, Oráculo, NPC, Gancho, Checklist, Planejador)
+    const conteudoKey = system.conteudo || 'default';
+    applyConteudoSistema(conteudoKey);
+
+    // Scroll suave para o topo do guia
+    document.getElementById('hero-guia')?.scrollIntoView({ behavior: 'smooth' });
+}
+
+function showSeletor() {
+    const seletor = document.getElementById('seletor-sistemas');
+    const guia = document.getElementById('guia-completo');
+    const btnTrocar = document.getElementById('btnTrocarSistema');
+    const navGuia = document.querySelectorAll('.nav-guia');
+
+    localStorage.removeItem(STORAGE_KEY);
+    document.title = 'O Tomo do Mestre — Guia Medieval de RPG';
+
+    if (seletor) seletor.style.display = 'block';
+    if (guia) guia.style.display = 'none';
+    if (btnTrocar) btnTrocar.style.display = 'none';
+    const navSistemas = document.getElementById('navSistemas');
+    if (navSistemas) navSistemas.style.display = '';
+    navGuia.forEach(el => el.style.display = 'none');
+
+    document.getElementById('inicio')?.scrollIntoView({ behavior: 'smooth' });
+}
+
+function checkInitialView() {
+    const savedId = localStorage.getItem(STORAGE_KEY);
+    const system = sistemasData.find(s => s.id === savedId);
+    
+    if (system) {
+        showGuia(system);
+    } else {
+        const btnTrocar = document.getElementById('btnTrocarSistema');
+        const navGuia = document.querySelectorAll('.nav-guia');
+        if (btnTrocar) btnTrocar.style.display = 'none';
+        navGuia.forEach(el => el.style.display = 'none');
+    }
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', () => {
+    loadSystems();
+    createDiceRoller();
+    
+    document.getElementById('btnTrocarSistema')?.addEventListener('click', () => {
+        showSeletor();
+    });
+});
 

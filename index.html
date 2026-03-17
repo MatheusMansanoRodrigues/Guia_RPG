@@ -23,46 +23,69 @@
             <button class="menu-toggle" aria-label="Abrir menu">☰</button>
             <nav class="menu">
                 <a href="#inicio">Início</a>
-                <a href="#racas">Raças & Criaturas</a>
-                <a href="#dicas">Sabedoria</a>
-                <a href="#historia">Histórias</a>
-                <a href="#npc">NPCs</a>
-                <a href="#checklist">Checklist</a>
-                <a href="#planejador">Planejador</a>
+                <a href="#racas" class="nav-guia">Raças & Criaturas</a>
+                <a href="#sistemas" id="navSistemas">Sistemas</a>
+                <a href="#dicas" class="nav-guia">Sabedoria</a>
+                <a href="#historia" class="nav-guia">Histórias</a>
+                <a href="#npc" class="nav-guia">NPCs</a>
+                <a href="#checklist" class="nav-guia">Checklist</a>
+                <a href="#planejador" class="nav-guia">Planejador</a>
+                <button type="button" class="btn btn-secondary btn-trocar-sistema" id="btnTrocarSistema" style="display:none;">Trocar Sistema</button>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="hero" id="inicio">
+        <!-- Tela de seleção: sistemas como categorias -->
+        <div id="seletor-sistemas">
+        <section class="hero hero-seletor" id="inicio">
             <div class="container hero-grid">
                 <div>
-                    <span class="scroll-badge">Compêndio para Mestres das Terras Antigas</span>
-                    <h1>O Tomo do Mestre — Guia das Terras Fantásticas</h1>
+                    <span class="scroll-badge">Escolha seu universo</span>
+                    <h1>O Tomo do Mestre — Escolha seu Sistema</h1>
                     <p>
-                        Nas eras em que elfos caminhavam pelas florestas imemoriais, anões forjavam
-                        nas profundezas das montanhas, gnomos inventavam maravilhas em suas oficinas
-                        ocultas e fadas dançavam sob o luar — os mestres de RPG eram os guardiões
-                        dessas histórias. Este tomo reúne a sabedoria ancestral para criar aventuras
-                        que ecoam através dos reinos, envolvendo jogadores em mundos de magia, perigo
-                        e maravilha.
+                        Cada sistema de RPG tem suas próprias leis, mecânicas e sabedoria. Selecione abaixo
+                        o universo que você deseja dominar — e este tomo se transformará em um guia completo
+                        dedicado exclusivamente àquele modelo de RPG.
                     </p>
+                </div>
+            </div>
+        </section>
 
+        <section id="sistemas">
+            <div class="container">
+                <div class="section-header">
+                    <div class="scroll-badge">Compêndio de Mecânicas</div>
+                    <h2 class="section-title">Grandes Sistemas de RPG</h2>
+                    <p class="section-subtitle">
+                        Cada mundo exige suas próprias leis. Escolha um sistema abaixo para transformar este tomo em um guia completo para aquele modelo de RPG.
+                    </p>
+                </div>
+                <div class="grid-3" id="systems-grid">
+                    <!-- Systems loaded dynamically from sistemas.json -->
+                </div>
+            </div>
+        </section>
+        </div><!-- fim seletor-sistemas -->
+
+        <!-- Guia completo: visível apenas após selecionar sistema -->
+        <div id="guia-completo" style="display:none;">
+        <section class="hero hero-guia" id="hero-guia">
+            <div class="container hero-grid">
+                <div>
+                    <span class="scroll-badge" id="badge-sistema">Guia do Mestre</span>
+                    <h1 id="titulo-guia">O Tomo do Mestre</h1>
+                    <p id="descricao-guia">
+                        Guia completo para mestrar suas aventuras.
+                    </p>
                     <div class="hero-buttons">
                         <a href="#historia" class="btn btn-primary">Conjurar uma história</a>
                         <a href="#checklist" class="btn btn-secondary">Preparar minha sessão</a>
                     </div>
                 </div>
-
-                <div class="hero-card">
-                    <h3>Os Cinco Pilares do Bom Mestre</h3>
-                    <ul>
-                        <li>Forja ganchos que atraem os heróis como a luz atrai as fadas</li>
-                        <li>Escuta o grupo e adapta a aventura como um elfo adapta-se à floresta</li>
-                        <li>Equilibra regras, narrativa e diversão como um gnomo equilibra engrenagens</li>
-                        <li>Improvisa quando o grupo sai do roteiro — como um anão improvisa na forja</li>
-                        <li>Transforma escolhas em consequências reais que ecoam pelos reinos</li>
-                    </ul>
+                <div class="hero-card" id="card-essenciais">
+                    <h3>Essenciais do Sistema</h3>
+                    <div id="essenciais-conteudo"><!-- preenchido via JS --></div>
                 </div>
             </div>
         </section>
@@ -77,99 +100,19 @@
                         criaturas que darão vida às suas campanhas.
                     </p>
                 </div>
-
                 <div class="lore-block">
                     "Nos tempos antigos, quando o mundo ainda era jovem, as raças surgiram das mãos
                     dos deuses ou das profundezas da terra. Elfos receberam a graça e a longevidade;
                     anões, a força e a perseverança; gnomos, a curiosidade e o engenho; e as fadas,
-                    a magia pura e o capricho. Cada povo carrega em si a essência de sua origem,
-                    e o mestre sábio sabe honrar essas diferenças em sua narrativa."
+                    a magia pura e o capricho."
                 </div>
-
                 <div class="grid-3">
-                    <div class="race-card icon-elf">
-                        <div class="race-icon"></div>
-                        <h3>Elfos</h3>
-                        <p>
-                            Os elfos são seres de beleza etérea e vida longa, conectados às florestas
-                            antigas e à magia natural. Graciosos e perspicazes, possuem sentidos
-                            aguçados e uma visão de mundo que transcende as preocupações mortais.
-                            Em suas campanhas, elfos podem ser aliados sábios, guardiões das fronteiras
-                            entre mundos, ou criaturas distantes que observam os mortais com desdém
-                            benevolente. Suas sociedades valorizam arte, música e o equilíbrio com a natureza.
-                        </p>
-                    </div>
-
-                    <div class="race-card icon-dwarf">
-                        <div class="race-icon"></div>
-                        <h3>Anões</h3>
-                        <p>
-                            Os anões nascem das montanhas e das profundezas da terra. Ferreiros
-                            lendários, mineradores incansáveis e guerreiros de coração firme, eles
-                            constroem impérios sob as rochas. Valorizam honra, tradição e um bom
-                            hidromel. Em suas aventuras, anões podem oferecer armas forjadas em
-                            runas, conhecimento de túneis esquecidos ou uma rivalidade ancestral
-                            com os elfos. Suas fortalezas subterrâneas escondem tesouros e segredos
-                            de eras passadas.
-                        </p>
-                    </div>
-
-                    <div class="race-card icon-gnome">
-                        <div class="race-icon"></div>
-                        <h3>Gnomos</h3>
-                        <p>
-                            Pequenos em estatura mas gigantes em inventividade, os gnomos são
-                            mestres da mecânica, da alquimia e das artes ilusionistas. Vivem em
-                            comunidades ocultas, muitas vezes em colinas perfuradas por túneis
-                            repletos de engrenagens e experimentos. Curiosos por natureza, podem
-                            ser aliados excêntricos que fornecem artefatos estranhos — ou
-                            criaturas que inadvertidamente causam o caos com suas invenções.
-                            Sua visão de mundo é única e frequentemente incompreensível para as
-                            outras raças.
-                        </p>
-                    </div>
-
-                    <div class="race-card icon-fairy">
-                        <div class="race-icon"></div>
-                        <h3>Fadas</h3>
-                        <p>
-                            As fadas habitam os limites entre o mundo visível e o reino das
-                            maravilhas. Caprichosas, poderosas e imprevisíveis, podem conceder
-                            bênçãos ou maldições com igual facilidade. Dançam em círculos de
-                            cogumelos sob a lua cheia e guardam portais para reinos de pesadelo
-                            e sonho. Em campanhas, fadas podem ser patronos misteriosos, fontes
-                            de quests impossíveis ou antagonistas que jogam com os heróis como
-                            peças em um jogo eterno. Respeite-as — ou sofra as consequências.
-                        </p>
-                    </div>
-
-                    <div class="race-card icon-orcs">
-                        <div class="race-icon"></div>
-                        <h3>Orcs e Goblinoides</h3>
-                        <p>
-                            Frequentemente retratados como brutais, orcs e goblins possuem
-                            culturas complexas de sobrevivência e honra tribal. Guerreiros
-                            nascidos da adversidade, podem ser inimigos temíveis ou aliados
-                            inesperados quando o verdadeiro mal ameaça as terras. Em campanhas
-                            mais profundas, explore a nuance: orcs que buscam redenção, goblins
-                            que são vítimas de preconceito, ou tribos que simplesmente desejam
-                            um lar. A complexidade enriquece qualquer narrativa.
-                        </p>
-                    </div>
-
-                    <div class="race-card icon-other-creatures">
-                        <div class="race-icon"></div>
-                        <h3>Outras Criaturas</h3>
-                        <p>
-                            Além das raças jogáveis, os reinos abrigam dragões anciãos, sereias
-                            nas costas traiçoeiras, centauros nas planícies, tritões nas
-                            profundezas oceânicas, e incontáveis seres mágicos. Cada criatura
-                            carrega sua própria mitologia — use-as para criar encontros
-                            memoráveis, aliados inesperados ou antagonistas que transcendem
-                            o simples "monstro a ser derrotado". O mundo vive quando suas
-                            criaturas têm propósito e história.
-                        </p>
-                    </div>
+                    <div class="race-card icon-elf"><div class="race-icon"></div><h3>Elfos</h3><p>Seres de beleza etérea e vida longa, conectados às florestas antigas e à magia natural.</p></div>
+                    <div class="race-card icon-dwarf"><div class="race-icon"></div><h3>Anões</h3><p>Ferreiros lendários e guerreiros de coração firme, constroem impérios sob as rochas.</p></div>
+                    <div class="race-card icon-gnome"><div class="race-icon"></div><h3>Gnomos</h3><p>Mestres da mecânica e da alquimia, curiosos por natureza e excêntricos aliados.</p></div>
+                    <div class="race-card icon-fairy"><div class="race-icon"></div><h3>Fadas</h3><p>Caprichosas e imprevisíveis, habitam os limites entre o mundo visível e o reino das maravilhas.</p></div>
+                    <div class="race-card icon-orcs"><div class="race-icon"></div><h3>Orcs e Goblinoides</h3><p>Culturas complexas de sobrevivência e honra tribal — inimigos ou aliados inesperados.</p></div>
+                    <div class="race-card icon-other-creatures"><div class="race-icon"></div><h3>Outras Criaturas</h3><p>Dragões, sereias, centauros, tritões — use-as para criar encontros memoráveis.</p></div>
                 </div>
             </div>
         </section>
@@ -177,14 +120,14 @@
         <section id="dicas">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Sabedoria dos Mestres Ancestrais</h2>
-                    <p class="section-subtitle">
+                    <h2 class="section-title" id="sabedoria-titulo">Sabedoria dos Mestres Ancestrais</h2>
+                    <p class="section-subtitle" id="sabedoria-subtitulo">
                         Os grandes narradores das eras passadas deixaram ensinamentos gravados em pergaminhos.
                         Clique em cada preceito para revelar a sabedoria oculta.
                     </p>
                 </div>
 
-                <div class="lore-block">
+                <div class="lore-block" id="sabedoria-lore">
                     "Assim como o ferreiro aprende com o martelo e a bigorna, o mestre aprende com cada
                     sessão. A sabedoria não vem da perfeição, mas da reflexão sobre o que funcionou
                     e o que falhou. Guarde esses preceitos em seu coração e suas histórias ecoarão
@@ -192,7 +135,7 @@
                 </div>
 
                 <div class="interactive-box">
-                    <div class="tips-list">
+                    <div class="tips-list" id="tips-list">
                         <div class="tip">
                             <button class="tip-btn">I. Comece com uma vila, não com um império</button>
                             <div class="tip-content">
@@ -267,15 +210,15 @@
         <section id="cards">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">A Arte de Contar Histórias Épicas</h2>
-                    <p class="section-subtitle">
+                    <h2 class="section-title" id="arte-titulo">A Arte de Contar Histórias Épicas</h2>
+                    <p class="section-subtitle" id="arte-subtitulo">
                         Três pilares sustentam toda narrativa memorável, desde as sagas dos elfos
                         até as canções dos bardos anões. Domine-os e suas campanhas transcenderão
                         o comum.
                     </p>
                 </div>
 
-                <div class="grid-3">
+                <div class="grid-3" id="arte-cards">
                     <div class="card">
                         <span class="tag">Conflito</span>
                         <h3>O Problema que Agita os Reinos</h3>
@@ -316,7 +259,7 @@
                     </div>
                 </div>
 
-                <div class="lore-block" style="margin-top: 40px;">
+                <div class="lore-block" id="arte-lore" style="margin-top: 40px;">
                     "Os reinos das terras antigas são diversos como as raças que os habitam. Florestas
                     élficas onde o tempo flui diferente; montanhas anãs perfuradas por cidades
                     subterrâneas; colinas gnômicas repletas de túneis e invenções; círculos de
@@ -330,8 +273,8 @@
         <section id="historia">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Oráculo das Histórias — Gerador de Aventuras</h2>
-                    <p class="section-subtitle">
+                    <h2 class="section-title" id="oraculo-titulo">Oráculo das Histórias — Gerador de Aventuras</h2>
+                    <p class="section-subtitle" id="oraculo-subtitulo">
                         Como os videntes que consultavam as runas sob o luar, invoque o oráculo para
                         receber uma semente de aventura. Cada conjuração revela cenário, conflito,
                         antagonista e reviravolta — prontos para serem tecidos em sua campanha.
@@ -350,8 +293,8 @@
         <section id="npc">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Livro das Almas — Gerador de NPCs</h2>
-                    <p class="section-subtitle">
+                    <h2 class="section-title" id="npc-titulo">Livro das Almas — Gerador de NPCs</h2>
+                    <p class="section-subtitle" id="npc-subtitulo">
                         Cada taverna, cada castelo, cada floresta esconde personagens que podem
                         definir o rumo da aventura. O Livro das Almas conjura nomes, traços,
                         segredos e objetivos — seja um elfo misterioso, um anão taciturno ou
@@ -371,8 +314,8 @@
         <section id="gancho">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Ganchos de Aventura — O Início da Saga</h2>
-                    <p class="section-subtitle">
+                    <h2 class="section-title" id="gancho-titulo">Ganchos de Aventura — O Início da Saga</h2>
+                    <p class="section-subtitle" id="gancho-subtitulo">
                         Toda jornada começa com um momento — um estranho na taverna, um sussurro
                         na floresta, um artefato que brilha sob a lua. Gere ganchos prontos para
                         iniciar sua sessão e prender os jogadores desde o primeiro instante.
@@ -391,8 +334,8 @@
         <section id="checklist">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Pergaminho da Preparação — Checklist do Mestre</h2>
-                    <p class="section-subtitle">
+                    <h2 class="section-title" id="checklist-titulo">Pergaminho da Preparação — Checklist do Mestre</h2>
+                    <p class="section-subtitle" id="checklist-subtitulo">
                         Antes de convocar os jogadores à mesa, o mestre sábio verifica seu
                         pergaminho. Marque cada item conforme prepara sua sessão e acompanhe
                         o progresso até estar pronto para conduzir a aventura.
@@ -400,7 +343,7 @@
                 </div>
 
                 <div class="interactive-box">
-                    <div class="checklist">
+                    <div class="checklist" id="checklist-items">
                         <label class="check-item"><input type="checkbox" class="session-check" /> Defini o objetivo
                             principal da sessão</label>
                         <label class="check-item"><input type="checkbox" class="session-check" /> Preparei pelo menos um
@@ -428,8 +371,8 @@
         <section id="planejador">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Planejador Rápido de Sessão — A Estrutura da Saga</h2>
-                    <p class="section-subtitle">
+                    <h2 class="section-title" id="planejador-titulo">Planejador Rápido de Sessão — A Estrutura da Saga</h2>
+                    <p class="section-subtitle" id="planejador-subtitulo">
                         Insira um tema — necromantes, reinos élficos, cidades anãs, círculos de fadas —
                         escolha o tom e deixe o planejador tecer a estrutura de início, meio e fim.
                         Uma base sólida para construir sua aventura.
@@ -485,6 +428,7 @@
                 </div>
             </div>
         </section>
+        </div><!-- fim guia-completo -->
     </main>
 
     <footer>

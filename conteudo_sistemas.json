@@ -1,0 +1,144 @@
+{
+  "default": {
+    "sabedoria": {
+      "titulo": "Sabedoria dos Mestres Ancestrais",
+      "subtitulo": "Os grandes narradores das eras passadas deixaram ensinamentos gravados em pergaminhos. Clique em cada preceito para revelar a sabedoria oculta.",
+      "lore": "\"Assim como o ferreiro aprende com o martelo e a bigorna, o mestre aprende com cada sessão. A sabedoria não vem da perfeição, mas da reflexão sobre o que funcionou e o que falhou. Guarde esses preceitos em seu coração e suas histórias ecoarão através dos tempos.\"",
+      "tips": [
+        { "btn": "I. Comece com uma vila, não com um império", "content": "Assim como uma árvore cresce de uma semente, um mundo nasce de um lugar pequeno. Uma vila com um problema, um objetivo claro e personagens memoráveis é o suficiente para muitas sessões. Os elfos antigos dizem: \"Quem tenta abraçar o mundo inteiro acaba segurando nada.\"" },
+        { "btn": "II. Conceda escolhas que ecoam pelos reinos", "content": "Um bom RPG não é um pergaminho selado — é um rio que muda de curso com cada decisão. Quando os jogadores escolhem salvar o vilarejo em vez do tesouro, ou aliar-se ao dragão em vez de combatê-lo, o mundo deve responder. Os anões ensinam: \"Cada golpe da forja altera o metal. Assim são as escolhas dos heróis.\"" },
+        { "btn": "III. Abrace o caos — os gnomos o fazem", "content": "Jogadores são imprevisíveis como fadas. Eles inventarão soluções que você nunca imaginou. Em vez de forçá-los de volta ao roteiro, use essas surpresas. Adapte. Improvise. O melhor da narrativa nasce quando o mestre e os jogadores co-criam." },
+        { "btn": "IV. Dê alma aos seus NPCs", "content": "Um mercador que fala com sotaque, um guarda que tem medo de escuro — um único detalhe transforma um nome em pessoa. Os jogadores lembram do NPC que sempre cheirava a lavanda. Personalidade cria memória. Memória cria envolvimento." },
+        { "btn": "V. Termine no abismo — deixe-os querendo mais", "content": "O melhor momento para encerrar é quando a tensão atinge o ápice. Uma porta se abre para a escuridão. Um aliado revela-se traidor. O \"até a próxima sessão\" deve ecoar na mente dos jogadores como um gancho de ferro." },
+        { "btn": "VI. Conheça seus jogadores como um elfo conhece a floresta", "content": "Cada grupo é único. Alguns amam combate tático; outros, intriga política; outros ainda, exploração. Observe o que os anima. Adapte o tom e o ritmo. Um mestre que serve seu grupo cria sessões que todos aguardam com ansiedade." }
+      ]
+    },
+    "arte_historias": {
+      "titulo": "A Arte de Contar Histórias Épicas",
+      "subtitulo": "Três pilares sustentam toda narrativa memorável, desde as sagas dos elfos até as canções dos bardos anões. Domine-os e suas campanhas transcenderão o comum.",
+      "cards": [
+        { "tag": "Conflito", "titulo": "O Problema que Agita os Reinos", "conteudo": "Toda grande história nasce da tensão. Um reino dividido por guerra civil, uma seita que invoca entidades antigas, uma criatura adormecida que desperta — o conflito central é a forja onde os heróis são temperados. Sem ele, não há jornada. Sem jornada, não há glória." },
+        { "tag": "Motivação", "titulo": "O Fogo que Move os Heróis", "conteudo": "Por que os personagens se importam? Ouro e glória funcionam, mas laços pessoais, ameaças àqueles que amam, segredos do passado criam envolvimento profundo. Um herói que luta para proteger alguém é inesquecível. Dê a cada jogador pelo menos um gancho emocional ligado à trama." },
+        { "tag": "Consequência", "titulo": "O Eco das Decisões", "conteudo": "Quando uma escolha gera resultado visível, o mundo ganha peso. O vilarejo que eles salvaram os recebe com gratidão sessões depois. O NPC que eles traíram retorna como inimigo. Consequências mostram que as ações importam — e isso transforma jogadores em participantes ativos." }
+      ],
+      "lore": "\"Os reinos das terras antigas são diversos como as raças que os habitam. Florestas élficas, montanhas anãs, círculos de cogumelos que levam ao reino das fadas. Cada local carrega sua própria história — e o mestre que os conhece cria mundos que respiram.\""
+    },
+    "oraculo": {
+      "titulo": "Oráculo das Histórias — Gerador de Aventuras",
+      "subtitulo": "Como os videntes que consultavam as runas sob o luar, invoque o oráculo para receber uma semente de aventura. Cada conjuração revela cenário, conflito, antagonista e reviravolta — prontos para serem tecidos em sua campanha.",
+      "btn_text": "✦ Conjurar História ✦",
+      "placeholder": "O oráculo aguarda. Pressione o botão e deixe o destino revelar sua próxima saga..."
+    },
+    "npc": {
+      "titulo": "Livro das Almas — Gerador de NPCs",
+      "subtitulo": "Cada taverna, cada castelo, cada floresta esconde personagens que podem definir o rumo da aventura. O Livro das Almas conjura nomes, traços, segredos e objetivos.",
+      "btn_text": "✦ Conjurar NPC ✦",
+      "placeholder": "Nome, raça, traço, segredo e objetivo serão revelados pelo Livro das Almas..."
+    },
+    "gancho": {
+      "titulo": "Ganchos de Aventura — O Início da Saga",
+      "subtitulo": "Toda jornada começa com um momento — um estranho na taverna, um sussurro na floresta, um artefato que brilha sob a lua. Gere ganchos prontos para iniciar sua sessão.",
+      "btn_text": "✦ Conjurar Gancho ✦",
+      "placeholder": "O destino prepara um começo memorável. Convoque-o..."
+    },
+    "checklist": {
+      "titulo": "Pergaminho da Preparação — Checklist do Mestre",
+      "subtitulo": "Antes de convocar os jogadores à mesa, o mestre sábio verifica seu pergaminho. Marque cada item conforme prepara sua sessão.",
+      "items": [
+        "Defini o objetivo principal da sessão",
+        "Preparei pelo menos um conflito digno dos heróis",
+        "Criei dois ou três NPCs memoráveis (elfos, anões, gnomos...)",
+        "Pensei em possíveis escolhas e consequências",
+        "Separei nomes, locais e eventos para improviso",
+        "Planejei um final com gancho que deixe todos inquietos"
+      ]
+    },
+    "planejador": {
+      "titulo": "Planejador Rápido de Sessão — A Estrutura da Saga",
+      "subtitulo": "Insira um tema — necromantes, reinos élficos, cidades anãs, círculos de fadas — escolha o tom e deixe o planejador tecer a estrutura de início, meio e fim.",
+      "theme_placeholder": "Ex: necromantes nas ruínas élficas, rivalidade anão-gnomo, círculo de fadas na floresta, dragão adormecido sob a montanha",
+      "progress_text": "da sessão preparada — o pergaminho aguarda",
+      "progress_complete": "O pergaminho está completo! Pronto para a aventura!"
+    },
+    "geradores": {
+      "storyPlaces": ["uma cidade élfica cercada por névoa eterna", "um reino anão dividido por guerra civil nas montanhas", "uma floresta onde fadas e o tempo se comportam de forma estranha", "uma ilha que surge apenas em noites sem lua", "um vilarejo humano construído sobre ruínas esquecidas", "uma fortaleza anã abandonada nas profundezas da terra", "um círculo de cogumelos onde o reino das fadas se abre", "uma torre repleta de engrenagens e artefatos estranhos"],
+      "storyProblems": ["pessoas estão desaparecendo sem deixar rastros", "um artefato antigo começou a alterar a realidade ao redor", "os mortos passaram a sussurrar segredos proibidos nas ruínas", "um culto está recrutando inocentes para um ritual", "um rei governa mesmo depois da própria morte", "um portal foi aberto embaixo do templo central", "uma guerra iminente entre povos antigos", "dragões adormecidos estão despertando"],
+      "storyVillains": ["um sacerdote corrompido que traiu seu povo", "uma criatura ancestral aprisionada pelos antigos", "um nobre que fez pacto com uma entidade", "um mago que quer reescrever a história", "um general que deseja provocar o caos", "uma criatura anciã que considera os mortais brinquedos"],
+      "storyTwists": ["o verdadeiro inimigo é um aliado próximo do grupo", "o vilão acredita genuinamente que está salvando o mundo", "um dos personagens tem ligação direta com o problema", "a ameaça foi criada por um erro dos próprios heróis do passado", "a cidade inteira já está sob efeito de uma ilusão", "a solução exige sacrificar algo importante"],
+      "hookStarts": ["Durante um festival local na praça da vila,", "Na primeira noite de viagem pela floresta,", "Logo após uma tempestade que pareceu conjurada,", "Enquanto descansam em uma taverna,", "Ao cruzarem os portões da cidade,", "Durante o enterro de um nobre importante,", "Sob o luar, próximo a um círculo de cogumelos,", "Dentro das ruínas de uma fortaleza abandonada,"],
+      "hookEvents": ["um estranho misterioso entrega ao grupo um mapa incompleto", "uma criança aparece pedindo ajuda", "os sinos do templo tocam sozinhos em uma melodia antiga", "um corpo cai do céu diante de todos", "uma figura mascarada chama os heróis pelo nome", "um incêndio revela uma passagem subterrânea", "uma figura aparece e oferece um pacto perigoso", "runas antigas começam a brilhar nas paredes"],
+      "hookComplications": ["e guardas chegam acusando os aventureiros", "mas ninguém além deles parece notar o problema", "enquanto uma antiga runa começa a brilhar", "e um aliado desaparece no meio da confusão", "e tudo isso acontece exatamente onde eles deveriam estar"]
+    }
+  },
+  "cthulhu": {
+    "sabedoria": {
+      "titulo": "Sabedoria dos Guardiões do Conhecimento Proibido",
+      "subtitulo": "Os mestres de Call of Cthulhu aprenderam que o horror vem do desconhecido. Clique em cada preceito para revelar a sabedoria dos que sobreviveram para contar.",
+      "lore": "\"Aqueles que narram as histórias de horror cósmico sabem: a sanidade é um recurso tão precioso quanto a vida. O mestre sábio constrói o medo lentamente, revelando apenas o suficiente para manter os investigadores à beira do abismo — sem empurrá-los de uma vez.\"",
+      "tips": [
+        { "btn": "I. Comece com um mistério local, não com o fim do mundo", "content": "Uma morte estranha em uma mansão. Um artefato encontrado em um leilão. Uma carta de um parente desaparecido. O horror cósmico funciona melhor quando começa pequeno e pessoal. Deixe os Mitos de Cthulhu emergirem gradualmente — a revelação gradual é mais terrível que o monstro à vista." },
+        { "btn": "II. A investigação é a protagonista", "content": "Em Cthulhu, os jogadores não são heróis invencíveis. São investigadores frágeis que usam lógica, perícias e coragem limitada. Projete cenários onde pistas levam a mais pistas. O combate deve ser o último recurso — e quando acontecer, que seja letal e desesperado." },
+        { "btn": "III. Use a sanidade como narrativa, não como punição", "content": "Perder sanidade não é falha — é drama. Alucinações, fobias e manias podem criar cenas memoráveis. Um investigador que vê coisas que não existem adiciona tensão. O mestre sábio faz a sanidade servir a história, não apenas penalizar o jogador." },
+        { "btn": "IV. Dê alma aos NPCs — inclusive aos suspeitos", "content": "O cultista não é apenas um vilão; pode ser um vizinho amável com uma família. O bibliotecário sabe mais do que revela. Cada NPC deve ter motivações que façam sentido — mesmo as mais sombrias. O horror é mais forte quando as pessoas parecem reais antes de revelarem o que escondem." },
+        { "btn": "V. Termine com mais perguntas que respostas", "content": "O melhor cenário de Cthulhu deixa os jogadores inquietos. Eles podem ter fechado o portal, mas o que viram lá mudou algo neles. Um sobrevivente que sussurra algo em uma língua que não deveria existir. O horror verdadeiro é o que fica depois que a sessão termina." },
+        { "btn": "VI. O desconhecido é mais assustador que o monstro", "content": "Mostrar o monstro pode ser anticlímax. Sombras que se movem errado. Sons de passos onde não há ninguém. Textos que fazem os olhos sangrarem ao serem lidos. O mestre de Cthulhu domina a arte de sugerir — e de deixar a imaginação dos jogadores fazer o trabalho pesado." }
+      ]
+    },
+    "arte_historias": {
+      "titulo": "A Arte de Contar Histórias de Horror Cósmico",
+      "subtitulo": "Três pilares sustentam toda investigação memorável em Call of Cthulhu. Domine-os e seus cenários mergulharão os jogadores no abismo.",
+      "cards": [
+        { "tag": "Mistério", "titulo": "O Enigma que Atrai os Investigadores", "conteudo": "Todo cenário de Cthulhu nasce de um mistério. Um cadáver com marcas impossíveis. Um livro que não deveria existir. Um desaparecimento que desafia a lógica. O mistério central deve ser intrigante o suficiente para que os investigadores queiram — precisem — descobrir a verdade, mesmo sabendo que o conhecimento pode custar a sanidade." },
+        { "tag": "Pistas", "titulo": "O Fio que Conduz ao Abismo", "conteudo": "Pistas devem levar a mais pistas. Um endereço na margem de um diário. Uma foto com um rosto riscado. Um nome mencionado por um NPC moribundo. Nunca bloqueie a progressão — se os jogadores falharem um teste, ofereça uma rota alternativa. O objetivo é que eles cheguem ao horror, não que fiquem presos em um beco sem saída." },
+        { "tag": "Consequência", "titulo": "O Preço do Conhecimento", "conteudo": "Em Cthulhu, toda descoberta tem custo. Ler o grimório custa sanidade. Ver o que não deveria ser visto deixa marcas. O investigador que sobrevive não é o mesmo que começou. As consequências — físicas e mentais — mostram que o mundo dos Mitos é implacável. O horror ganha peso quando as ações têm preço real." }
+      ],
+      "lore": "\"Os Mitos de Cthulhu habitam os cantos sombrios da realidade: bibliotecas proibidas, mansões decadentes, ilhas que não constam em mapas, ruínas de civilizações que existiram antes do homem. Cada local carrega segredos que a humanidade não foi feita para conhecer — e o mestre sábio sabe revelá-los gota a gota.\""
+    },
+    "oraculo": {
+      "titulo": "Oráculo das Investigações — Gerador de Cenários",
+      "subtitulo": "Como os estudiosos que consultavam textos proibidos, invoque o oráculo para receber a semente de uma investigação. Cada conjuração revela local, mistério, antagonista e reviravolta — prontos para mergulhar seus investigadores no horror.",
+      "btn_text": "✦ Conjurar Investigação ✦",
+      "placeholder": "O oráculo aguarda. Pressione o botão e deixe o destino revelar sua próxima investigação..."
+    },
+    "npc": {
+      "titulo": "Livro das Almas — Gerador de NPCs",
+      "subtitulo": "Cada mansão, cada biblioteca, cada sanatório esconde personagens que podem definir o rumo da investigação. O Livro das Almas conjura investigadores, suspeitos, cultistas e testemunhas.",
+      "btn_text": "✦ Conjurar NPC ✦",
+      "placeholder": "Nome, ocupação, traço, segredo e objetivo serão revelados pelo Livro das Almas..."
+    },
+    "gancho": {
+      "titulo": "Ganchos de Investigação — O Início do Mistério",
+      "subtitulo": "Toda investigação começa com um momento — uma carta misteriosa, um cadáver com marcas estranhas, um pedido de ajuda de alguém que depois desaparece. Gere ganchos prontos para iniciar sua sessão.",
+      "btn_text": "✦ Conjurar Gancho ✦",
+      "placeholder": "O destino prepara um começo inquietante. Convoque-o..."
+    },
+    "checklist": {
+      "titulo": "Pergaminho da Preparação — Checklist do Guardião",
+      "subtitulo": "Antes de convocar os investigadores à mesa, o mestre verifica seu pergaminho. Marque cada item conforme prepara sua sessão de horror.",
+      "items": [
+        "Defini o mistério central e o que os jogadores devem descobrir",
+        "Preparei pelo menos três pistas que levam ao próximo passo",
+        "Criei NPCs memoráveis — suspeitos, aliados e possíveis cultistas",
+        "Pensei em testes de Sanidade e quando aplicá-los",
+        "Separei nomes, locais e eventos para improviso",
+        "Planejei um final que deixe os jogadores inquietos — ou traumatizados"
+      ]
+    },
+    "planejador": {
+      "titulo": "Planejador Rápido de Investigação — A Estrutura do Horror",
+      "subtitulo": "Insira um tema — culto em uma universidade, artefato em um museu, desaparecimentos em uma cidade costeira — escolha o tom e deixe o planejador tecer a estrutura de início, meio e fim.",
+      "theme_placeholder": "Ex: culto nas catacumbas da universidade, artefato egípcio no museu, desaparecimentos na costa de Innsmouth, manuscrito em uma mansão abandonada",
+      "progress_text": "da investigação preparada — o pergaminho aguarda",
+      "progress_complete": "O pergaminho está completo! Pronto para o horror!"
+    },
+    "geradores": {
+      "storyPlaces": ["uma mansão decadente nos arredores da cidade", "uma biblioteca universitária com uma seção restrita", "uma cidade costeira com segredos nas docas", "um sanatório abandonado nas colinas", "um museu com uma coleção egípcia suspeita", "uma ilha que não consta em mapas oficiais", "um vilarejo onde os habitantes evitam falar do passado", "um asilo com pacientes que sussurram em línguas antigas"],
+      "storyProblems": ["pessoas estão desaparecendo após visitarem um local específico", "um artefato antigo causa sonhos perturbadores em quem o toca", "cadáveres aparecem com marcas que não são humanas", "um culto está recrutando membros da alta sociedade", "um livro proibido foi roubado de uma coleção particular", "alguém está reencenando rituais descritos em manuscritos antigos", "uma expedição arqueológica não retornou e os diários são inquietantes", "uma doença estranha está se espalhando — e os sintomas não são físicos"],
+      "storyVillains": ["um professor universitário que fez pacto com uma entidade", "um curador de museu obcecado por artefatos proibidos", "um médico que acredita que o conhecimento pode salvar a humanidade", "um cultista que uma vez foi um investigador", "um aristocrata que herdou um segredo de família", "uma figura que pode não ser humana há décadas"],
+      "storyTwists": ["o principal suspeito é na verdade a próxima vítima", "o artefato que buscavam já estava com um dos investigadores", "o culto acredita genuinamente que está salvando o mundo", "um dos NPCs confiáveis está há anos sob influência", "a verdade é pior do que imaginavam — e envolve alguém do grupo", "o que parecia o fim era apenas o começo de algo maior"],
+      "hookStarts": ["Ao receberem uma carta de um parente desaparecido,", "Quando um cadáver é encontrado com marcas inexplicáveis,", "Durante uma visita a um leilão de antiguidades,", "Ao investigarem o sumiço de um colega acadêmico,", "Quando um paciente do asilo pede para falar com eles,", "Ao descobrirem um diário em um livro antigo,", "Durante uma tempestade que isola a mansão,", "Quando um estranho os aborda na estação de trem,"],
+      "hookEvents": ["um envelope contém apenas um endereço e uma data", "as autoridades pedem ajuda discreta — o caso é muito estranho", "um item leiloado parece pulsar quando tocado", "alguém deixa um recado urgente e depois some", "o paciente sussurra coordenadas antes de ser silenciado", "o diário menciona um lugar que não deveria existir", "a luz falha e algo se move nos corredores", "o estranho entrega um pacote e desaparece na multidão"],
+      "hookComplications": ["e a polícia começa a suspeitar dos próprios investigadores", "mas ninguém mais parece ter visto o que eles viram", "enquanto alguém os observa de uma janela", "e o único testemunha \"comete suicídio\" na mesma noite", "e o local que buscavam foi demolido há anos"]
+    }
+  }
+}

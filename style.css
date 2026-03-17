@@ -10,6 +10,7 @@
     --shadow: 0 8px 32px rgba(44, 24, 16, 0.2);
     --border-ornate: 3px double var(--gold);
     --torch-radius: 800px;
+    --card-bg: linear-gradient(180deg, rgba(244, 228, 188, 0.08), rgba(244, 228, 188, 0.03));
 }
 
 
@@ -120,6 +121,12 @@ header {
 .menu a:hover {
     color: var(--gold-light);
     border-color: var(--gold);
+}
+
+.menu .btn-trocar-sistema {
+    margin-left: 10px;
+    padding: 6px 14px;
+    font-size: 0.9rem;
     background: rgba(184, 134, 11, 0.1);
 }
 
@@ -304,6 +311,139 @@ section {
     color: var(--gold-light);
     font-family: 'Cinzel', serif;
     font-size: 1.15rem;
+}
+
+/* System Cards */
+.system-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(184, 134, 11, 0.3);
+    padding: 30px;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow: hidden;
+}
+
+.system-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.system-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: var(--gold);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5);
+    background: rgba(244, 228, 188, 0.1);
+}
+
+.system-card:hover::before {
+    transform: scaleX(1);
+}
+
+.system-tag {
+    align-self: flex-start;
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 4px 10px;
+    background: rgba(184, 134, 11, 0.15);
+    color: var(--gold-light);
+    border: 1px solid rgba(184, 134, 11, 0.4);
+    border-radius: 2px;
+}
+
+.system-card h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--parchment);
+    font-size: 1.4rem;
+    margin: 5px 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.system-card p {
+    color: var(--parchment-dark);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.system-features {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.system-features li {
+    font-size: 0.85rem;
+    color: var(--gold-light);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.system-features li::before {
+    content: '✦';
+    font-size: 0.7rem;
+    color: var(--gold);
+}
+
+/* Categories specific colors (subtle) */
+.system-card[data-category="tradicional"] { border-left: 3px solid #b8860b; }
+.system-card[data-category="narrativo"] { border-left: 3px solid #722f37; }
+.system-card[data-category="simulacionista"] { border-left: 3px solid #2d5016; }
+.system-card[data-category="hibrido"] { border-left: 3px solid #daa520; }
+
+/* System cards as selectable categories */
+.system-card-selectable {
+    cursor: pointer;
+}
+.system-select-hint {
+    font-size: 0.8rem;
+    color: var(--gold);
+    opacity: 0.8;
+    margin-top: 10px;
+    display: block;
+}
+.system-card-selectable:hover .system-select-hint {
+    opacity: 1;
+}
+
+/* Essenciais do sistema no guia */
+#essenciais-conteudo ul {
+    list-style: none;
+    padding: 0;
+}
+#essenciais-conteudo li {
+    margin-bottom: 12px;
+    padding-left: 1.2em;
+    position: relative;
+}
+#essenciais-conteudo li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+}
+#essenciais-conteudo .dica-destaque {
+    margin-top: 16px;
+    padding: 12px;
+    background: rgba(184, 134, 11, 0.1);
+    border-left: 3px solid var(--gold);
 }
 
 .card p {
@@ -694,6 +834,11 @@ footer {
     .grid-3,
     .grid-2 {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .system-card {
+        padding: 20px;
     }
 
     .hero-buttons {

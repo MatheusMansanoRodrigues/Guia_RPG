@@ -2,145 +2,121 @@
   {
     "id": "d20",
     "nome": "D20 System",
+    "conteudo": "d20",
     "categoria": "tradicional",
     "tag": "Clássico",
     "resumo": "O coração de D&D 3.5 e Pathfinder. Focado em atributos, perícias e talentos.",
-    "caracteristicas": [
-      "Alta customização",
-      "Focado em combate tático",
-      "OGL (Licença Aberta)"
-    ],
+    "caracteristicas": ["Alta customização", "Focado em combate tático", "OGL (Licença Aberta)"],
     "essenciais_mestre": {
-        "mecanica_core": "D20 + Modificadores vs CD (Classe de Dificuldade).",
-        "combate": "Iniciativa individual, ataques de oportunidade e ações específicas (padrão, movimento, livre).",
-        "progressão": "Níveis de 1 a 20, com ganho de talentos e bônus base de ataque.",
-        "dica_mestre": "Foque no equilíbrio de encontros através do ND (Nível de Desafio) e recompensas de tesouro por nível."
+      "mecanica_core": "D20 + Modificadores vs CD (Classe de Dificuldade).",
+      "combate": "Iniciativa individual, ataques de oportunidade e ações específicas (padrão, movimento, livre).",
+      "progressão": "Níveis de 1 a 20, com ganho de talentos e bônus base de ataque.",
+      "dica_mestre": "Foque no equilíbrio de encontros através do ND (Nível de Desafio) e recompensas de tesouro por nível."
     }
   },
   {
     "id": "dnd5e",
     "nome": "Dungeons & Dragons 5e",
+    "conteudo": "dnd5e",
     "categoria": "tradicional",
     "tag": "Popular",
     "resumo": "A quinta edição do maior RPG do mundo. Simplificou as regras para focar na fluidez.",
-    "caracteristicas": [
-      "Regra de Vantagem/Desvantagem",
-      "Comunidade massiva",
-      "Equilíbrio entre regras e RP"
-    ],
+    "caracteristicas": ["Regra de Vantagem/Desvantagem", "Comunidade massiva", "Equilíbrio entre regras e RP"],
     "essenciais_mestre": {
-        "mecanica_core": "Vantagem (rola 2 pega maior) / Desvantagem (rola 2 pega menor).",
-        "descanso": "Descansos Curtos e Longos gerenciam recursos como magias e vida.",
-        "economia_acao": "Ação, Ação Bônus, Reação e Movimento.",
-        "dica_mestre": "Use a Bounded Accuracy (Precisão Limitada) para manter monstros de nível baixo relevantes por mais tempo."
+      "mecanica_core": "Vantagem (rola 2 pega maior) / Desvantagem (rola 2 pega menor).",
+      "descanso": "Descansos Curtos e Longos gerenciam recursos como magias e vida.",
+      "economia_acao": "Ação, Ação Bônus, Reação e Movimento.",
+      "dica_mestre": "Use a Bounded Accuracy (Precisão Limitada) para manter monstros de nível baixo relevantes por mais tempo."
     }
   },
   {
     "id": "storyteller",
     "nome": "Storyteller / Storytelling",
+    "conteudo": "storyteller",
     "categoria": "narrativo",
     "tag": "Sombrio",
     "resumo": "O motor de Mundo das Trevas. Prioriza o drama pessoal e horror.",
-    "caracteristicas": [
-      "Foco em interpretação",
-      "Ambientação urbana e gótica",
-      "Mecânica de 'Dots' (Pontos)"
-    ],
+    "caracteristicas": ["Foco em interpretação", "Ambientação urbana e gótica", "Mecânica de 'Dots' (Pontos)"],
     "essenciais_mestre": {
-        "mecanica_core": "Pool de Dados (Atributo + Perícia) D10 contra Dificuldade fixa (geralmente 6 ou 7).",
-        "falha_critica": "O '1' no dado pode anular um sucesso, gerando falhas dramáticas.",
-        "saude": "Níveis de vitalidade que aplicam penalidades conforme o dano aumenta.",
-        "dica_mestre": "Priorize a humanidade dos personagens e os dilemas morais sobre a rolagem de combate."
+      "mecanica_core": "Pool de Dados (Atributo + Perícia) D10 contra Dificuldade fixa (geralmente 6 ou 7).",
+      "falha_critica": "O '1' no dado pode anular um sucesso, gerando falhas dramáticas.",
+      "saude": "Níveis de vitalidade que aplicam penalidades conforme o dano aumenta.",
+      "dica_mestre": "Priorize a humanidade dos personagens e os dilemas morais sobre a rolagem de combate."
     }
   },
   {
     "id": "gurps",
     "nome": "GURPS",
+    "conteudo": "gurps",
     "categoria": "simulacionista",
     "tag": "Universal",
     "resumo": "O Sistema Genérico e Universal. Realismo matemático e liberdade total.",
-    "caracteristicas": [
-      "3D6 (rolar abaixo)",
-      "Modular e realista",
-      "Qualquer cenário possível"
-    ],
+    "caracteristicas": ["3D6 (rolar abaixo)", "Modular e realista", "Qualquer cenário possível"],
     "essenciais_mestre": {
-        "mecanica_core": "Rolar 3D6 e obter um valor igual ou menor que o seu Nível de Habilidade.",
-        "pontos": "Criação de personagem puramente por pontos, sem classes ou níveis.",
-        "dano": "Letalidade alta; o dano é subtraído da RD (Resistência a Dano) antes de afetar os PV.",
-        "dica_mestre": "Não use todas as regras opcionais de uma vez. GURPS é um toolkit; pegue apenas o que precisa."
+      "mecanica_core": "Rolar 3D6 e obter um valor igual ou menor que o seu Nível de Habilidade.",
+      "pontos": "Criação de personagem puramente por pontos, sem classes ou níveis.",
+      "dano": "Letalidade alta; o dano é subtraído da RD (Resistência a Dano) antes de afetar os PV.",
+      "dica_mestre": "Não use todas as regras opcionais de uma vez. GURPS é um toolkit; pegue apenas o que precisa."
     }
   },
   {
     "id": "savage_worlds",
     "nome": "Savage Worlds",
+    "conteudo": "savage_worlds",
     "categoria": "tradicional",
     "tag": "Ágil",
     "resumo": "'Rápido! Furioso! Divertido!'. Troca a complexidade por agilidade cinematográfica.",
-    "caracteristicas": [
-      "Dados explosivos",
-      "Iniciativa com cartas de baralho",
-      "Fácil de mestrar"
-    ],
+    "caracteristicas": ["Dados explosivos", "Iniciativa com cartas de baralho", "Fácil de mestrar"],
     "essenciais_mestre": {
-        "mecanica_core": "Rolar o Dado de Atributo + o Dado Selvagem (D6) e pegar o melhor resultado.",
-        "aces": "Qualquer dado que tire o valor máximo explode (é rolado novamente e somado).",
-        "shaken": "Personagens ficam 'Abalados' antes de sofrerem ferimentos reais.",
-        "dica_mestre": "Use Bennies generosamente para incentivar riscos e interpretação heróica."
+      "mecanica_core": "Rolar o Dado de Atributo + o Dado Selvagem (D6) e pegar o melhor resultado.",
+      "aces": "Qualquer dado que tire o valor máximo explode (é rolado novamente e somado).",
+      "shaken": "Personagens ficam 'Abalados' antes de sofrerem ferimentos reais.",
+      "dica_mestre": "Use Bennies generosamente para incentivar riscos e interpretação heróica."
     }
   },
   {
     "id": "fate",
     "nome": "Fate",
+    "conteudo": "fate",
     "categoria": "narrativo",
     "tag": "Cooperativo",
     "resumo": "Personagens proativos e competentes. Tudo gira em torno de 'Aspectos'.",
-    "caracteristicas": [
-      "Narrativa compartilhada",
-      "Aspectos dinâmicos",
-      "Dados Fate/Fudge"
-    ],
+    "caracteristicas": ["Narrativa compartilhada", "Aspectos dinâmicos", "Dados Fate/Fudge"],
     "essenciais_mestre": {
-        "mecanica_core": "4 Dados Fate (-1, 0, +1) + Perícia vs Dificuldade ou Oposição.",
-        "aspectos": "Frases que podem ser Invocadas (bônus) ou Compelidas (complicações por pontos).",
-        "consequencias": "Em vez de HP, os personagens sofrem feridas narrativas que ocupam slots de aspectos.",
-        "dica_mestre": "Peça aos jogadores para ajudarem a descrever os cenários e os NPCs; o mestre aqui é um facilitador."
+      "mecanica_core": "4 Dados Fate (-1, 0, +1) + Perícia vs Dificuldade ou Oposição.",
+      "aspectos": "Frases que podem ser Invocadas (bônus) ou Compelidas (complicações por pontos).",
+      "consequencias": "Em vez de HP, os personagens sofrem feridas narrativas que ocupam slots de aspectos.",
+      "dica_mestre": "Peça aos jogadores para ajudarem a descrever os cenários e os NPCs; o mestre aqui é um facilitador."
     }
   },
   {
     "id": "pbta",
     "nome": "Powered by the Apocalypse",
+    "conteudo": "pbta",
     "categoria": "narrativo",
     "tag": "Moderno",
     "resumo": "Focado em 'Movimentos' que impulsionam a ficção e narrativa compartilhada.",
-    "caracteristicas": [
-      "Playbooks de arquétipos",
-      "Ficção primeiro",
-      "Baixa preparação"
-    ],
+    "caracteristicas": ["Playbooks de arquétipos", "Ficção primeiro", "Baixa preparação"],
     "essenciais_mestre": {
-        "mecanica_core": "2D6 + Atributo. 10+ Sucesso Total, 7-9 Sucesso Parcial, 6- Falha (Mestre age).",
-        "agendas": "O Mestre tem diretrizes rígidas: 'Diga o que a honestidade exige', 'Faça do mundo algo fantástico'.",
-        "moves": "Só role os dados quando um 'Movimento' for disparado pela narrativa.",
-        "dica_mestre": "Jogue para ver o que acontece. Não prepare tramas rígidas, apenas situações instáveis."
+      "mecanica_core": "2D6 + Atributo. 10+ Sucesso Total, 7-9 Sucesso Parcial, 6- Falha (Mestre age).",
+      "agendas": "O Mestre tem diretrizes rígidas: 'Diga o que a honestidade exige', 'Faça do mundo algo fantástico'.",
+      "moves": "Só role os dados quando um 'Movimento' for disparado pela narrativa.",
+      "dica_mestre": "Jogue para ver o que acontece. Não prepare tramas rígidas, apenas situações instáveis."
     }
   },
   {
     "id": "year_zero",
     "nome": "Year Zero Engine",
+    "conteudo": "year_zero",
     "categoria": "simulacionista",
     "tag": "Cinematográfico",
     "resumo": "Combina pools de dados D6 com letalidade tátil e tensão constante.",
-    "caracteristicas": [
-      "Letal e visceral",
-      "Mecânica de estresse/pânico",
-      "Design visual impecável"
-    ],
+    "caracteristicas": ["Letal e visceral", "Mecânica de estresse/pânico", "Design visual impecável"],
     "essenciais_mestre": {
-        "mecanica_core": "Pool de D6 (Atributo + Perícia + Equipamento). Um '6' é um sucesso.",
-        "push": "Você pode relançar os dados que não foram 6 ou 1, mas arrisca sofrer dano ou trauma.",
-        "letalidade": "Combates são curtos e brutais. Ferimentos críticos são comuns e perigosos.",
-        "dica_mestre": "Mantenha a escassez de recursos. O sistema brilha quando o grupo está no limite."
+      "mecanica_core": "Pool de D6 (Atributo + Perícia + Equipamento). Um '6' é um sucesso.",
+      "push": "Você pode relançar os dados que não foram 6 ou 1, mas arrisca sofrer dano ou trauma.",
+      "letalidade": "Combates são curtos e brutais. Ferimentos críticos são comuns e perigosos.",
+      "dica_mestre": "Mantenha a escassez de recursos. O sistema brilha quando o grupo está no limite."
     }
   },
   {
@@ -150,34 +126,27 @@
     "categoria": "tradicional",
     "tag": "Investigação",
     "resumo": "O clássico do horror cósmico. Investigadores frágeis contra horrores indescritíveis.",
-    "caracteristicas": [
-      "Sistema Percentual",
-      "Mecânica de Sanidade",
-      "Mortífero"
-    ],
+    "caracteristicas": ["Sistema Percentual", "Mecânica de Sanidade", "Mortífero"],
     "essenciais_mestre": {
-        "mecanica_core": "Rolar D100 abaixo ou igual ao valor da Perícia.",
-        "sanidade": "Encontros com o oculto exigem testes de Sanidade. Perder muitos pontos causa insanidade temporária.",
-        "combate": "Deve ser o último recurso. Investigadores geralmente morrem ou ficam loucos se lutarem.",
-        "dica_mestre": "Construa o clima de mistério e desamparo. O horror vem do desconhecido."
+      "mecanica_core": "Rolar D100 abaixo ou igual ao valor da Perícia.",
+      "sanidade": "Encontros com o oculto exigem testes de Sanidade. Perder muitos pontos causa insanidade temporária.",
+      "combate": "Deve ser o último recurso. Investigadores geralmente morrem ou ficam loucos se lutarem.",
+      "dica_mestre": "Construa o clima de mistério e desamparo. O horror vem do desconhecido."
     }
   },
   {
     "id": "cypher",
     "nome": "Cypher System",
+    "conteudo": "cypher",
     "categoria": "hibrido",
     "tag": "Elegante",
     "resumo": "Foca na exploração e no uso de itens de uso único (Cyphers). Mestre não rola dados.",
-    "caracteristicas": [
-      "Inteligente e leve",
-      "D20 contra dificuldades",
-      "Focado em exploração"
-    ],
+    "caracteristicas": ["Inteligente e leve", "D20 contra dificuldades", "Focado em exploração"],
     "essenciais_mestre": {
-        "mecanica_core": "GM define Nível (1-10); Dificuldade = Nível x 3. Jogador rola D20 para bater o valor.",
-        "esforço": "Jogadores gastam pontos de suas 'Reservas' (Might, Speed, Intellect) para baixar a dificuldade.",
-        "cyphers": "Itens estranhos que dão poderes incríveis por uma única vez. Devem circular rápido no grupo.",
-        "dica_mestre": "Não tenha medo de dar Cyphers poderosos. Eles são consumíveis; incentive o uso criativo."
+      "mecanica_core": "GM define Nível (1-10); Dificuldade = Nível x 3. Jogador rola D20 para bater o valor.",
+      "esforço": "Jogadores gastam pontos de suas 'Reservas' (Might, Speed, Intellect) para baixar a dificuldade.",
+      "cyphers": "Itens estranhos que dão poderes incríveis por uma única vez. Devem circular rápido no grupo.",
+      "dica_mestre": "Não tenha medo de dar Cyphers poderosos. Eles são consumíveis; incentive o uso criativo."
     }
   }
 ]

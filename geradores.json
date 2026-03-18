@@ -1,0 +1,967 @@
+{
+  "d20": {
+    "geradores": {
+      "storyPlaces": [
+        "uma fortaleza de fronteira cercada por tribos hostis",
+        "uma masmorra esquecida sob uma antiga capela",
+        "um reino em disputa entre casas nobres rivais",
+        "uma cidade mercantil dominada por guildas corruptas",
+        "um templo arruinado erguido sobre um selo antigo",
+        "uma estrada infestada por bandidos e criaturas noturnas",
+        "uma mina abandonada repleta de passagens instáveis",
+        "uma torre arcana onde experimentos saíram do controle"
+      ],
+      "storyProblems": [
+        "um artefato poderoso foi roubado e pode cair em mãos erradas",
+        "criaturas começaram a emergir das profundezas durante a noite",
+        "um senhor local desapareceu antes de assinar uma trégua importante",
+        "um culto está reunindo componentes para um ritual proibido",
+        "uma região inteira foi tomada por mortos-vivos errantes",
+        "um mago renegado abriu acesso a planos perigosos",
+        "uma guerra entre facções ameaça explodir dentro da cidade",
+        "rumores sobre um tesouro antigo atraíram aventureiros demais para o mesmo lugar"
+      ],
+      "storyVillains": [
+        "um necromante obcecado por poder e imortalidade",
+        "um comandante mercenário financiado por nobres secretos",
+        "um sumo-sacerdote que distorce profecias para manipular o povo",
+        "uma criatura ancestral despertada por acidente",
+        "um mago de batalha expulso por práticas proibidas",
+        "um senhor feudal que alimenta o caos para expandir domínio"
+      ],
+      "storyTwists": [
+        "o contratante da missão esconde a verdadeira natureza do artefato",
+        "o suposto vilão estava tentando conter uma ameaça maior",
+        "um membro respeitado da cidade está financiando o culto",
+        "o local inteiro foi construído sobre um erro antigo de heróis do passado",
+        "um dos aliados do grupo foi marcado magicamente pelo antagonista",
+        "a recompensa prometida nunca existiu de verdade"
+      ],
+      "hookStarts": [
+        "Durante uma feira de mercadores na praça principal,",
+        "Logo após a chegada do grupo a uma cidade murada,",
+        "Enquanto descansam em uma estalagem superlotada,",
+        "No momento em que atravessam uma ponte fortificada,",
+        "Durante o funeral de uma figura importante,",
+        "Ao aceitarem um contrato aparentemente simples,"
+      ],
+      "hookEvents": [
+        "um mensageiro ferido entrega um mapa manchado de sangue",
+        "os sinos de alarme tocam sem explicação clara",
+        "um cavaleiro acusa publicamente alguém de traição",
+        "um sobrevivente surge dizendo que a masmorra foi reaberta",
+        "uma carroça explode e espalha símbolos ritualísticos",
+        "um prisioneiro implora por escolta antes que seja tarde demais"
+      ],
+      "hookComplications": [
+        "e o grupo passa a ser observado por soldados locais",
+        "mas outra facção tenta tomar a missão para si",
+        "enquanto o tempo para agir diminui rapidamente",
+        "e ninguém parece contar a história completa",
+        "mas a área já está contaminada por magia instável"
+      ],
+      "npcRaces": {
+        "humano": "human.png",
+        "elfo": "elf.png",
+        "anão": "dwarf.png",
+        "meio-elfo": "half-elf.png",
+        "halfling": "halfling.png",
+        "meio-orc": "half-orc.png"
+      },
+      "npcNames": [
+        "Aldren", "Seraphine", "Brom", "Kaelis", "Mira", "Tharok",
+        "Elric", "Velka", "Darian", "Lysandra", "Torvin", "Maelis"
+      ],
+      "npcTraits": [
+        "fala como alguém acostumado a dar ordens em campo de batalha",
+        "analisa cada pessoa como se estivesse calculando risco e vantagem",
+        "mantém uma calma treinada mesmo sob pressão",
+        "tem modos nobres, mas olhos de oportunista",
+        "nunca responde sem antes medir as palavras",
+        "age com a disciplina de alguém moldado por anos de guerra"
+      ],
+      "npcSecrets": [
+        "aceitou dinheiro de duas facções inimigas ao mesmo tempo",
+        "carrega um item amaldiçoado sem revelar isso a ninguém",
+        "é herdeiro ilegítimo de uma linhagem influente",
+        "participou do fracasso que arruinou a região anos atrás",
+        "tem pacto com uma entidade menor em troca de proteção",
+        "está guiando o grupo para um objetivo paralelo"
+      ],
+      "npcGoals": [
+        "subir na hierarquia custe o que custar",
+        "recuperar um item perdido de sua família",
+        "eliminar discretamente um rival político",
+        "comprar a própria liberdade de um passado vergonhoso",
+        "provar seu valor em uma missão impossível",
+        "destruir evidências de um erro antigo"
+      ]
+    }
+  },
+
+  "dnd5e": {
+    "geradores": {
+      "storyPlaces": [
+        "uma vila costeira aterrorizada por ataques noturnos",
+        "uma ruína élfica recém-revelada por um deslizamento",
+        "uma floresta antiga ligada ao Feywild",
+        "um mosteiro isolado nas montanhas geladas",
+        "uma cidade portuária cheia de intrigas entre guildas",
+        "uma fortaleza tomada por um culto dracônico",
+        "um pântano onde luzes feéricas atraem viajantes",
+        "uma estrada real cortada por monstros e deserções"
+      ],
+      "storyProblems": [
+        "desaparecimentos recentes coincidem com o surgimento de uma lua vermelha",
+        "um dragão jovem começou a extorquir povoados vizinhos",
+        "um grupo de aventureiros sumiu após explorar uma cripta local",
+        "uma relíquia sagrada foi corrompida por magia sombria",
+        "criaturas feéricas estão sequestrando moradores durante a madrugada",
+        "um nobre está reunindo forças para romper uma aliança frágil",
+        "uma entidade presa sob as ruínas está voltando a despertar",
+        "um pacto antigo entre povos foi quebrado"
+      ],
+      "storyVillains": [
+        "uma arquimaga que acredita estar protegendo o reino de si mesmo",
+        "um cavaleiro caído transformado em campeão de uma força obscura",
+        "um arquifada caprichoso manipulando mortais por diversão",
+        "um líder de culto devoto a uma divindade esquecida",
+        "um dragão jovem orgulhoso e calculista",
+        "um conselheiro real que serve interesses extraplanares"
+      ],
+      "storyTwists": [
+        "o verdadeiro alvo do inimigo é um dos personagens",
+        "a ameaça foi libertada por quem agora pede ajuda ao grupo",
+        "a relíquia corrompida está ligada ao passado de um aliado",
+        "o monstro agia em resposta a algo ainda pior enterrado abaixo",
+        "o reino inimigo foi manipulado pela mesma força que ameaça todos",
+        "o portal que precisa ser fechado também é a única saída para alguém inocente"
+      ],
+      "hookStarts": [
+        "Enquanto o grupo celebra em uma taverna após uma missão menor,",
+        "Ao chegarem em uma cidade tomada por rumores e medo,",
+        "Durante uma cerimônia religiosa interrompida por gritos,",
+        "Ao receberem um pedido urgente de uma velha conhecida,",
+        "Quando rastros de magia selvagem aparecem na estrada,",
+        "Durante a escolta de uma carroça aparentemente comum,"
+      ],
+      "hookEvents": [
+        "um mensageiro celestial cai do céu gravemente ferido",
+        "um caçador retorna trazendo algo impossível preso à flecha",
+        "uma criança desaparecida reaparece com memórias que não são dela",
+        "um animal sagrado invade a praça e leva todos a um local proibido",
+        "um guerreiro chega carregando metade de um mapa lendário",
+        "uma fenda luminosa se abre por alguns segundos diante do grupo"
+      ],
+      "hookComplications": [
+        "mas a guarda local quer esconder o caso",
+        "e uma segunda facção reivindica o mesmo problema",
+        "enquanto sinais de magia caótica começam a se espalhar",
+        "mas o responsável aparenta não agir sozinho",
+        "e o grupo descobre que já foi escolhido para isso"
+      ],
+      "npcRaces": {
+        "humano": "human.png",
+        "elfo": "elf.png",
+        "anão": "dwarf.png",
+        "halfling": "halfling.png",
+        "meio-elfo": "half-elf.png",
+        "meio-orc": "half-orc.png",
+        "fada": "fairy.png"
+      },
+      "npcNames": [
+        "Elara", "Brannik", "Talia", "Corvin", "Nyra", "Fenric",
+        "Alwen", "Roderic", "Sivra", "Beren", "Mave", "Orrin"
+      ],
+      "npcTraits": [
+        "sorri com confiança de quem já escapou do impossível",
+        "trata perigos como se fossem parte natural da estrada",
+        "fala de forma acolhedora, mas sempre omite algo",
+        "demonstra fé inabalável em presságios e sinais",
+        "age como alguém que já viu monstros demais",
+        "tem entusiasmo contagiante por qualquer ruína antiga"
+      ],
+      "npcSecrets": [
+        "é agente de uma ordem que monitora magia proibida",
+        "carrega sangue feérico e teme perder o controle",
+        "foi o único sobrevivente de uma expedição maldita",
+        "deve favores perigosos a uma criatura extraplanar",
+        "roubou uma relíquia que agora o está perseguindo",
+        "serviu brevemente ao antagonista antes de desertar"
+      ],
+      "npcGoals": [
+        "reunir heróis capazes de deter uma ameaça maior",
+        "salvar um parente preso além do véu feérico",
+        "limpar o nome da própria família",
+        "encontrar um artefato antes que forças malignas o façam",
+        "cumprir uma profecia que ninguém acredita",
+        "impedir o retorno de algo que já quase destruiu a região"
+      ]
+    }
+  },
+
+  "storyteller": {
+    "geradores": {
+      "storyPlaces": [
+        "um bairro nobre apodrecido por segredos antigos",
+        "uma boate exclusiva usada para encontros clandestinos",
+        "um hospital decadente onde prontuários desaparecem",
+        "um cemitério urbano cercado por disputas silenciosas",
+        "um prédio abandonado ocupado por figuras que ninguém registra",
+        "uma igreja onde confissões recentes ficaram estranhamente vazias",
+        "uma cobertura luxuosa que virou centro de manipulação",
+        "um subúrbio onde a violência parece cuidadosamente administrada"
+      ],
+      "storyProblems": [
+        "várias pessoas próximas começaram a agir como se compartilhassem o mesmo pesadelo",
+        "alguém está usando segredos íntimos para controlar figuras influentes",
+        "uma sequência de mortes foi abafada como overdose, mas segue um padrão",
+        "um pacto antigo entre facções urbanas foi quebrado discretamente",
+        "um personagem importante desapareceu deixando sinais contraditórios",
+        "um predador está ultrapassando limites que mantinham a cidade estável",
+        "um culto moderno vem atraindo gente demais entre ricos e desesperados",
+        "uma guerra fria entre grupos sobrenaturais está prestes a se tornar pública"
+      ],
+      "storyVillains": [
+        "uma figura carismática que se alimenta da culpa alheia",
+        "um ancião manipulador obcecado por controle social",
+        "uma líder de culto que promete libertação emocional em troca de submissão",
+        "um predador elegante que destrói reputações antes de destruir vidas",
+        "um investigador corrupto que vende silêncio ao maior interessado",
+        "um protegido do sistema que acredita poder fazer qualquer coisa impunemente"
+      ],
+      "storyTwists": [
+        "a vítima inicial vinha manipulando todos ao redor",
+        "o antagonista está protegendo alguém ainda mais perigoso",
+        "um aliado do grupo provocou a crise sem perceber",
+        "a cidade inteira já se adaptou ao horror e prefere negar a verdade",
+        "a solução moralmente correta coloca inocentes em risco",
+        "o maior inimigo do personagem conhece seu passado melhor do que ele mesmo"
+      ],
+      "hookStarts": [
+        "Durante uma madrugada chuvosa em que a cidade parece mais vazia do que deveria,",
+        "Logo após um encontro social aparentemente comum,",
+        "Ao receberem uma mensagem enviada de um número impossível,",
+        "Durante o velório de alguém que não deveria ter morrido assim,",
+        "Quando um velho contato reaparece pedindo abrigo,",
+        "Ao perceberem que várias câmeras de segurança apagaram exatamente o mesmo intervalo,"
+      ],
+      "hookEvents": [
+        "um nome do passado volta a circular entre as pessoas erradas",
+        "um vídeo perturbador chega sem remetente identificável",
+        "uma testemunha muda de versão toda vez que é interrogada",
+        "uma figura conhecida surge coberta de sangue sem lembrar o que fez",
+        "um envelope com fotografias comprometedores é deixado na porta",
+        "um corpo aparece em um lugar simbólico demais para ser coincidência"
+      ],
+      "hookComplications": [
+        "e a imprensa começa a tocar perto demais da verdade",
+        "mas ninguém envolvido parece contar tudo",
+        "enquanto antigas lealdades começam a ruir",
+        "e alguém dentro do círculo íntimo está mentindo",
+        "mas a própria cidade parece reagir contra quem investiga"
+      ],
+      "npcRaces": {
+        "humano": "human.png"
+      },
+      "npcNames": [
+        "Helena Voss", "Marco Diniz", "Isadora Vale", "Dante Ferraz",
+        "Lívia Moura", "Caio Bastos", "Verônica Salazar", "Tomás Leme",
+        "Bianca Azevedo", "Rafael Neri", "Marta Vilar", "Otávio Seixas"
+      ],
+      "npcTraits": [
+        "fala com tranquilidade demais para alguém sob pressão",
+        "observa as reações alheias antes de responder qualquer coisa",
+        "parece emocionalmente exausto, mas continua funcional",
+        "tem charme natural e manipula a conversa sem esforço",
+        "demonstra empatia sincera que pode ser real ou calculada",
+        "carrega nos olhos o peso de decisões que não admite"
+      ],
+      "npcSecrets": [
+        "apagou provas para proteger alguém que ama",
+        "participou de um ritual urbano que saiu do controle",
+        "mantém um pacto silencioso com gente poderosa",
+        "viu algo monstruoso e escolheu se beneficiar disso",
+        "está usando o grupo para chegar a um rival antigo",
+        "forjou a própria versão dos fatos por anos"
+      ],
+      "npcGoals": [
+        "preservar o próprio status sem perder a máscara pública",
+        "vingar uma humilhação antiga com elegância cruel",
+        "proteger alguém inocente a qualquer custo",
+        "subir dentro da hierarquia sobrenatural da cidade",
+        "enterrar a verdade antes que ela destrua tudo",
+        "tomar controle de um território simbólico"
+      ]
+    }
+  },
+
+  "gurps": {
+    "geradores": {
+      "storyPlaces": [
+        "uma zona de conflito urbano sob vigilância pesada",
+        "uma instalação científica parcialmente evacuada",
+        "um complexo industrial afastado e cheio de protocolos rígidos",
+        "uma travessia perigosa em território hostil",
+        "uma cidade onde tensão política e escassez caminham juntas",
+        "um centro de pesquisa comprometido por sabotagem interna",
+        "uma área rural isolada onde comunicações falharam",
+        "uma base logística usada por múltiplos interesses ocultos"
+      ],
+      "storyProblems": [
+        "dados críticos sumiram pouco antes de uma negociação sensível",
+        "um especialista essencial desapareceu sem deixar rastro confiável",
+        "um erro operacional colocou vidas inocentes em risco imediato",
+        "equipamentos começaram a falhar sob circunstâncias suspeitas",
+        "uma infiltração externa foi detectada tarde demais",
+        "um grupo armado assumiu controle parcial de uma rota vital",
+        "a missão oficial foi baseada em informações incompletas",
+        "um incidente técnico pode virar desastre se não for contido logo"
+      ],
+      "storyVillains": [
+        "um estrategista frio disposto a sacrificar terceiros por eficiência",
+        "um agente duplo que vende acesso e informação",
+        "um executivo que trata pessoas como variáveis descartáveis",
+        "um extremista convencido de que o caos trará ordem",
+        "um comandante que encobriu um erro catastrófico",
+        "um pesquisador que ultrapassou limites éticos há muito tempo"
+      ],
+      "storyTwists": [
+        "o objetivo declarado era apenas cobertura para uma segunda missão",
+        "o grupo aliado já estava comprometido antes do início da operação",
+        "o alvo do resgate não quer ser resgatado",
+        "a falha foi provocada por alguém da cadeia de comando",
+        "a solução segura é lenta demais para o tempo disponível",
+        "o verdadeiro problema não é o ataque, mas o vazamento de informação"
+      ],
+      "hookStarts": [
+        "Pouco antes do início de uma operação considerada simples,",
+        "Durante uma transferência de pessoal e equipamento,",
+        "Ao chegarem a um ponto de encontro fora do radar,",
+        "Depois de uma ordem emergencial emitida sem explicação completa,",
+        "Durante uma vistoria de rotina que sai do esperado,",
+        "Quando a comunicação principal cai sem aviso,"
+      ],
+      "hookEvents": [
+        "um contato entrega um pacote que não deveria existir naquele local",
+        "um relatório contradiz toda a versão oficial do caso",
+        "um ferido aparece dizendo ter escapado por pouco",
+        "sensores identificam movimento em área já declarada limpa",
+        "uma equipe de apoio some durante o deslocamento",
+        "um arquivo criptografado aponta para sabotagem interna"
+      ],
+      "hookComplications": [
+        "e a cadeia de comando começa a se contradizer",
+        "mas a janela de resposta é extremamente curta",
+        "enquanto civis continuam entrando na zona de risco",
+        "e ninguém sabe exatamente em quem confiar",
+        "mas agir rápido demais pode piorar tudo"
+      ],
+      "npcRaces": {
+        "humano": "human.png"
+      },
+      "npcNames": [
+        "Ricardo Salles", "Nadia Volkov", "Júlia Ferraz", "Henrique Lobo",
+        "Mikhail Orlov", "Paula Nogueira", "Daniel Krauss", "Renata Sá",
+        "Elias Brandt", "Clara Damas", "Victor Mello", "Sofia Leite"
+      ],
+      "npcTraits": [
+        "mantém precisão quase militar em tudo que faz",
+        "fala pouco e observa detalhes operacionais o tempo inteiro",
+        "pensa sempre em contingência antes de agir",
+        "age como alguém que confia mais em procedimento do que em pessoas",
+        "tem frieza técnica mesmo em situações alarmantes",
+        "mostra desgaste emocional escondido atrás de profissionalismo"
+      ],
+      "npcSecrets": [
+        "alterou um relatório crucial para encobrir responsabilidade",
+        "vende informação sensível por motivos pessoais",
+        "aceitou uma ordem ilegal e agora tenta apagar vestígios",
+        "está comprometido por chantagem externa",
+        "participou de um projeto que nunca deveria ter existido",
+        "preparou uma rota de fuga só para si"
+      ],
+      "npcGoals": [
+        "sair vivo da situação sem se tornar bode expiatório",
+        "manter controle da operação a qualquer custo",
+        "resgatar alguém preso no centro da crise",
+        "proteger segredos institucionais sensíveis",
+        "concluir a missão minimizando exposição política",
+        "encontrar provas suficientes para derrubar um superior"
+      ]
+    }
+  },
+
+  "savage_worlds": {
+    "geradores": {
+      "storyPlaces": [
+        "um trem desgovernado atravessando terreno hostil",
+        "uma cidade pequena prestes a virar palco de caos absoluto",
+        "um templo em colapso cheio de armadilhas e fumaça",
+        "um dirigível luxuoso sequestrado em pleno voo",
+        "uma mina prestes a explodir com gente demais lá dentro",
+        "uma arena clandestina usada por criminosos extravagantes",
+        "um cassino tomado por mercenários e truques sujos",
+        "uma ponte gigantesca onde tudo acontece ao mesmo tempo"
+      ],
+      "storyProblems": [
+        "um roubo ousado desencadeou perseguições em cadeia",
+        "um vilão carismático está recrutando seguidores rápido demais",
+        "uma relíquia instável pode explodir ou pior",
+        "um comboio vital precisa atravessar território impossível",
+        "um monstro improvável surgiu no pior lugar possível",
+        "uma disputa entre facções virou guerra aberta",
+        "um plano de sabotagem foi acionado antes da hora",
+        "um herói local desapareceu justamente quando mais faz falta"
+      ],
+      "storyVillains": [
+        "um magnata sem escrúpulos com recursos aparentemente infinitos",
+        "uma caçadora implacável que adora transformar tudo em espetáculo",
+        "um cientista excêntrico guiado por genialidade e ego",
+        "um fora-da-lei lendário cercado por fanáticos",
+        "um sacerdote incendiário que trata destruição como purificação",
+        "um general teatral que transforma guerra em show"
+      ],
+      "storyTwists": [
+        "o maior perigo não era o vilão, mas o cenário desabando ao redor",
+        "o objeto roubado foi trocado por uma falsificação armada",
+        "um rival do grupo surge na hora exata para piorar tudo",
+        "o aliado mais confiável estava improvisando tanto quanto os heróis",
+        "a fuga era o objetivo real desde o começo",
+        "o antagonista quer deliberadamente atrair os personagens para algo maior"
+      ],
+      "hookStarts": [
+        "No exato momento em que a música para e todos percebem que algo deu errado,",
+        "Durante uma perseguição que já começa tarde demais,",
+        "Quando um golpe espetacular explode no centro da cidade,",
+        "Ao aceitarem um trabalho bom demais para ser limpo,",
+        "Durante um evento lotado que vira zona de desastre,",
+        "No instante em que um plano aparentemente genial falha com estilo,"
+      ],
+      "hookEvents": [
+        "uma explosão abre caminho para inimigos inesperados",
+        "um veículo surge em alta velocidade rompendo tudo pela frente",
+        "um mensageiro entrega um artefato e desmaia no ato",
+        "um criminoso procurado pede ajuda em troca de informação",
+        "uma multidão entra em pânico diante de algo impossível",
+        "um rival dos heróis anuncia sua presença da forma mais barulhenta possível"
+      ],
+      "hookComplications": [
+        "e o cenário começa a ruir rápido demais",
+        "mas o relógio corre contra todos",
+        "enquanto mais gente armada entra na confusão",
+        "e ninguém ali parece estar totalmente do mesmo lado",
+        "mas a saída mais segura já não existe"
+      ],
+      "npcRaces": {
+        "humano": "human.png"
+      },
+      "npcNames": [
+        "Jack Mercer", "Rosa Vega", "Duke Harlan", "Valerie Cross",
+        "Tommy Blaze", "Nina Colt", "Frank Maddox", "Ivy Kane",
+        "Cole Hunter", "Mara Flint", "Dex Rowan", "Sally Vance"
+      ],
+      "npcTraits": [
+        "entra em qualquer sala como se já fosse dono dela",
+        "fala rápido e decide mais rápido ainda",
+        "transforma perigo em piada antes de sacar a arma",
+        "tem energia de quem vive um segundo antes da explosão",
+        "encara tudo como desafio pessoal",
+        "faz promessas impossíveis com convicção total"
+      ],
+      "npcSecrets": [
+        "planeja roubar a recompensa no último segundo",
+        "deve favores a gente muito pior do que aparenta",
+        "está sendo caçado e não contou isso ao grupo",
+        "forjou a própria reputação em cima de outra pessoa",
+        "sabota discretamente qualquer plano que não controle",
+        "trabalha para dois lados enquanto puder lucrar"
+      ],
+      "npcGoals": [
+        "sobreviver ao caos com estilo e lucro",
+        "dar o maior golpe de sua carreira",
+        "provar que ainda é o melhor no que faz",
+        "escapar de um passado que finalmente o alcançou",
+        "derrubar um rival em público",
+        "tirar alguém importante da linha de fogo"
+      ]
+    }
+  },
+
+  "fate": {
+    "geradores": {
+      "storyPlaces": [
+        "uma cidade suspensa cheia de alianças frágeis",
+        "um distrito industrial prestes a entrar em colapso social",
+        "uma corte diplomática onde cada palavra vira arma",
+        "uma estação de pesquisa cercada por fenômenos improváveis",
+        "uma metrópole em que reputação vale mais que riqueza",
+        "um deserto atravessado por rotas antigas e promessas quebradas",
+        "uma academia onde rivalidade e ambição moldam o destino",
+        "um arquipélago dividido por juramentos, tempestades e segredos"
+      ],
+      "storyProblems": [
+        "uma verdade inconveniente ameaça desmontar o equilíbrio político local",
+        "um aspecto do cenário saiu do controle e começou a afetar todos ao redor",
+        "uma rivalidade antiga voltou em um momento crítico",
+        "uma figura influente desapareceu levando consigo a única solução conhecida",
+        "um acordo essencial está prestes a ruir por orgulho e medo",
+        "uma crise pública expôs fragilidades que ninguém queria admitir",
+        "um símbolo de esperança foi desmoralizado de forma calculada",
+        "uma escolha pessoal pode virar catástrofe coletiva"
+      ],
+      "storyVillains": [
+        "uma estrategista brilhante que transforma pessoas em peças narrativas",
+        "um líder idealista disposto a piorar o mundo para reconstruí-lo",
+        "uma rival carismática que conhece as fraquezas do grupo",
+        "um manipulador social que domina reputações e favores",
+        "uma autoridade desgastada agarrada ao próprio poder",
+        "uma figura pública que converte crise em vantagem"
+      ],
+      "storyTwists": [
+        "o verdadeiro conflito não é externo, mas entre lealdades incompatíveis",
+        "a pior complicação nasce de um aspecto criado pelos próprios heróis",
+        "um aliado oferece ajuda no momento exato em que mais complica tudo",
+        "a solução exige aceitar um custo narrativo pesado demais para ignorar",
+        "um fracasso parcial pode ser melhor do que uma vitória total",
+        "o cenário inteiro muda de sentido quando uma verdade vem à tona"
+      ],
+      "hookStarts": [
+        "Quando uma situação aparentemente controlada ganha novas camadas,",
+        "Durante uma reunião em que todos fingem estar em paz,",
+        "Logo após uma declaração pública alterar completamente o clima,",
+        "No instante em que uma figura do passado ressurge,",
+        "Quando os personagens percebem que o cenário virou contra eles,",
+        "Ao receberem uma proposta impossível de aceitar sem custo,"
+      ],
+      "hookEvents": [
+        "um segredo vem à tona no pior momento possível",
+        "uma oportunidade brilhante se apresenta junto de um preço alto",
+        "um rival oferece cooperação sob termos perigosos",
+        "um símbolo importante é atacado diante de todos",
+        "uma crise secundária ameaça eclipsar a principal",
+        "um detalhe ignorado da cena se torna central"
+      ],
+      "hookComplications": [
+        "e cada escolha fortalece um problema diferente",
+        "mas a melhor saída exige abrir mão de algo importante",
+        "enquanto a pressão pública cresce rapidamente",
+        "e o grupo percebe que já está emocionalmente envolvido",
+        "mas qualquer vitória limpa saiu de cena há muito tempo"
+      ],
+      "npcRaces": {
+        "humano": "human.png"
+      },
+      "npcNames": [
+        "Amara Sol", "Theo Marlow", "Lina Voss", "Evan Crest",
+        "Mira Holt", "Jonas Vale", "Celia North", "Noah Quinn",
+        "Iris Cade", "Damian Frost", "Nora Bell", "Adrian Pike"
+      ],
+      "npcTraits": [
+        "tem presença forte e faz qualquer cena girar em torno dela",
+        "vê oportunidade dramática em tudo que acontece",
+        "fala com sinceridade desconcertante quando convém",
+        "age como quem já calculou o custo emocional da situação",
+        "sabe provocar exatamente a reação necessária",
+        "carrega uma vulnerabilidade que humaniza até seus erros"
+      ],
+      "npcSecrets": [
+        "está sustentando a própria imagem sobre uma mentira útil",
+        "causou parte do problema tentando evitar algo pior",
+        "precisa do grupo mais do que admite",
+        "está emocionalmente ligado ao antagonista",
+        "forçou eventos para expor a verdade cedo demais",
+        "pretende usar a crise para redefinir a própria posição"
+      ],
+      "npcGoals": [
+        "redirecionar a narrativa pública a seu favor",
+        "proteger alguém sem revelar por quê",
+        "reconquistar confiança perdida",
+        "impedir que uma antiga falha volte a dominá-lo",
+        "ganhar espaço em uma disputa de influência",
+        "forçar os heróis a escolher entre duas verdades ruins"
+      ]
+    }
+  },
+
+  "pbta": {
+    "geradores": {
+      "storyPlaces": [
+        "uma comunidade à beira de ruptura interna",
+        "uma fronteira viva onde ninguém controla totalmente o que acontece",
+        "um assentamento sobrevivendo entre medo e improviso",
+        "um bairro onde facções locais fazem a própria lei",
+        "uma estação isolada cheia de tensão mal contida",
+        "uma estrada perigosa onde cada parada muda o rumo da história",
+        "um refúgio precário cercado por ameaças crescentes",
+        "um território onde rumores já são tão perigosos quanto fatos"
+      ],
+      "storyProblems": [
+        "uma ameaça conhecida piorou exatamente quando todos estavam distraídos",
+        "um acordo instável entre grupos importantes está desmoronando",
+        "alguém tomou uma decisão impulsiva e colocou a comunidade em risco",
+        "o grupo descobriu tarde demais que já faz parte do problema",
+        "recursos essenciais desapareceram em meio ao caos",
+        "uma liderança local perdeu legitimidade de forma pública",
+        "um inimigo silencioso começou a agir através de gente próxima",
+        "algo perigoso está prestes a acontecer se ninguém intervir já"
+      ],
+      "storyVillains": [
+        "um líder desesperado que acredita estar fazendo o necessário",
+        "uma figura oportunista que cresce em tempos de pânico",
+        "um pregador de certezas perigosas",
+        "um sobrevivente endurecido disposto a sacrificar quem for preciso",
+        "uma autoridade que usa medo como método de controle",
+        "uma ameaça coletiva que ganha força da divisão entre as pessoas"
+      ],
+      "storyTwists": [
+        "ninguém ali é tão inocente quanto parecia",
+        "a pior consequência vem de uma escolha bem-intencionada",
+        "o problema principal esconde outro mais urgente por trás",
+        "a solução disponível favorece um grupo e destrói outro",
+        "o inimigo já está dentro das relações mais próximas",
+        "o grupo descobre que chegou tarde, mas ainda pode decidir o dano final"
+      ],
+      "hookStarts": [
+        "No meio de uma situação que já começou errada,",
+        "Logo depois de uma decisão tomada sob pressão,",
+        "Quando o grupo percebe que o clima no lugar virou de vez,",
+        "Durante uma conversa que rapidamente deixa de ser só conversa,",
+        "Ao chegarem onde teoricamente deveriam encontrar ajuda,",
+        "No instante em que algo urgente exige resposta imediata,"
+      ],
+      "hookEvents": [
+        "uma pessoa aparece ferida e culpando a pessoa errada",
+        "um boato se confirma do pior jeito possível",
+        "uma facção faz sua jogada antes do esperado",
+        "um desaparecimento revela uma tensão que todos evitavam nomear",
+        "um recurso vital deixa de existir de uma hora para outra",
+        "uma figura importante exige que o grupo escolha um lado"
+      ],
+      "hookComplications": [
+        "e qualquer resposta vai criar um novo problema",
+        "mas ninguém tem tempo para discutir direito",
+        "enquanto o mundo ao redor continua piorando",
+        "e a comunidade cobra ação antes de entender os fatos",
+        "mas a verdade completa ainda não está na mesa"
+      ],
+      "npcRaces": {
+        "humano": "human.png"
+      },
+      "npcNames": [
+        "Rosa", "Davi", "Mina", "Cael", "Téo", "Nara",
+        "Jon", "Luma", "Sasha", "Ravi", "Cora", "Bento"
+      ],
+      "npcTraits": [
+        "reage primeiro e pensa depois, mas nem sempre erra",
+        "carrega tensão no corpo como quem nunca descansa de verdade",
+        "fala com franqueza desconfortável",
+        "tenta manter todos unidos mesmo estando por um fio",
+        "esconde medo atrás de ironia seca",
+        "age como se o pior já tivesse acontecido antes"
+      ],
+      "npcSecrets": [
+        "causou parte da crise tentando proteger alguém",
+        "fez um acordo ruim e agora precisa sustentar isso",
+        "está repassando informação a outro grupo",
+        "mentiu sobre o que viu para evitar pânico",
+        "planeja fugir assim que surgir oportunidade",
+        "sabe quem realmente começou tudo"
+      ],
+      "npcGoals": [
+        "manter sua gente viva até o próximo dia",
+        "forçar o grupo a agir antes que seja tarde",
+        "preservar uma relação importante acima do bem coletivo",
+        "tomar controle de uma situação sem parecer que quer poder",
+        "pagar uma dívida antiga em meio ao caos",
+        "impedir que uma verdade destrua o pouco que restou"
+      ]
+    }
+  },
+
+  "year_zero": {
+    "geradores": {
+      "storyPlaces": [
+        "um abrigo quase sem recursos viáveis",
+        "uma zona contaminada repleta de estruturas quebradas",
+        "um laboratório isolado por falha de contenção",
+        "uma rota de evacuação parcialmente destruída",
+        "um comboio cercado por clima hostil e pouca munição",
+        "uma instalação subterrânea onde o sistema de suporte falha aos poucos",
+        "um assentamento improvisado em território imprevisível",
+        "uma estação remota onde o silêncio começou a parecer errado"
+      ],
+      "storyProblems": [
+        "o estoque essencial acabou mais cedo do que deveria",
+        "um equipamento central falhou e ninguém sabe por quanto tempo",
+        "uma infecção, contaminação ou pânico começou a se espalhar",
+        "uma equipe enviada para reconhecimento não retornou",
+        "o grupo precisa atravessar uma área letal sem preparo suficiente",
+        "uma criatura ou força hostil começou a testar as defesas",
+        "informações críticas foram perdidas junto com quem as carregava",
+        "o único plano possível exige empurrar os limites até o risco total"
+      ],
+      "storyVillains": [
+        "um líder endurecido que raciona compaixão como se fosse recurso",
+        "uma presença hostil que conhece o ambiente melhor que o grupo",
+        "um sobrevivente oportunista disposto a condenar outros para seguir vivo",
+        "uma autoridade que escolheu ocultar a gravidade da situação",
+        "um fanático que acredita haver propósito no colapso",
+        "uma força imprevisível da própria zona que devora planejamento"
+      ],
+      "storyTwists": [
+        "o lugar seguro planejado já não existe mais",
+        "a pessoa em quem todos confiavam sabia do risco e omitiu",
+        "o problema externo é só reflexo de uma falha interna antiga",
+        "o empurrão final resolve a missão mas destrói parte do grupo",
+        "o resgate esperado nunca foi enviado",
+        "a escassez foi provocada deliberadamente"
+      ],
+      "hookStarts": [
+        "Quando o grupo percebe que o plano inicial já falhou,",
+        "Pouco depois de uma noite sem descanso real,",
+        "No instante em que os alarmes voltam a soar,",
+        "Durante uma tentativa de economizar o último recurso viável,",
+        "Ao chegarem a um ponto que deveria estar seguro,",
+        "Logo após alguém decidir empurrar uma rolagem longe demais,"
+      ],
+      "hookEvents": [
+        "um sobrevivente aparece em estado crítico trazendo má notícia",
+        "o sistema principal entra em colapso parcial",
+        "rastros recentes indicam que algo passou por ali há pouco",
+        "uma transmissão antiga volta a funcionar por segundos",
+        "um compartimento fechado contém exatamente o que faltava — e algo pior",
+        "o ambiente começa a se tornar fisicamente insustentável"
+      ],
+      "hookComplications": [
+        "e o grupo já está cansado demais para a melhor resposta",
+        "mas o custo de agir pode ser permanente",
+        "enquanto o pânico começa a contaminar decisões simples",
+        "e os recursos restantes não cobrem todos",
+        "mas esperar significa perder a única janela possível"
+      ],
+      "npcRaces": {
+        "humano": "human.png"
+      },
+      "npcNames": [
+        "Mara", "Anton", "Levi", "Signe", "Ivo", "Kira",
+        "Jonas", "Petra", "Nikolai", "Tess", "Erik", "Lina"
+      ],
+      "npcTraits": [
+        "fala como quem mede energia até para respirar",
+        "parece sempre um passo de distância do colapso",
+        "mantém controle prático mesmo em ambiente desesperador",
+        "mostra dureza adquirida por necessidade, não por orgulho",
+        "vive em estado de alerta como se nunca desligasse",
+        "esconde exaustão atrás de foco operacional"
+      ],
+      "npcSecrets": [
+        "guardou suprimentos sem contar ao restante do grupo",
+        "sabia do risco atual antes que todos os outros",
+        "empurrou uma situação até causar um dano irreversível",
+        "planeja abandonar parte do grupo se necessário",
+        "foi responsável por uma falha crítica no passado recente",
+        "esconde sintomas de algo que pode comprometer todos"
+      ],
+      "npcGoals": [
+        "garantir recurso suficiente para sobreviver mais alguns dias",
+        "tirar uma pessoa específica dali viva",
+        "chegar a um local seguro antes do corpo ceder",
+        "manter autoridade em meio ao desespero crescente",
+        "compensar um erro que custou caro demais",
+        "descobrir se ainda existe alguma esperança real"
+      ]
+    }
+  },
+
+  "cthulhu": {
+    "geradores": {
+      "storyPlaces": [
+        "uma mansão decadente nos arredores da cidade",
+        "uma biblioteca universitária com uma seção restrita",
+        "uma cidade costeira coberta por névoa persistente",
+        "um sanatório abandonado nas colinas",
+        "um museu com uma coleção arqueológica inquietante",
+        "um vilarejo onde ninguém fala sobre os desaparecimentos antigos",
+        "uma ilha que não aparece nos mapas mais recentes",
+        "um asilo onde pacientes murmuram a mesma frase durante o sono"
+      ],
+      "storyProblems": [
+        "pessoas desapareceram após visitarem um endereço específico",
+        "um artefato provoca sonhos idênticos e progressivamente piores",
+        "cadáveres estão surgindo com sinais incompatíveis com anatomia humana",
+        "um livro raro foi roubado antes de ser periciado",
+        "uma sociedade discreta está recrutando gente influente",
+        "relatos de vozes e compulsões começaram a se repetir em diferentes bairros",
+        "uma expedição retornou incompleta e com versões contraditórias",
+        "alguém está repetindo etapas de um ritual descrito em anotações antigas"
+      ],
+      "storyVillains": [
+        "um professor universitário que foi longe demais em sua pesquisa",
+        "um aristocrata que herdou mais do que apenas fortuna",
+        "uma curadora de museu obcecada em despertar algo enterrado",
+        "um médico que trata o oculto como caminho para evolução",
+        "um cultista veterano que sabe parecer totalmente respeitável",
+        "uma figura que talvez já não seja humana há muito tempo"
+      ],
+      "storyTwists": [
+        "o principal suspeito é também a próxima vítima",
+        "o objeto buscado já estava com um dos investigadores sem que ele soubesse",
+        "o culto acredita sinceramente estar evitando algo pior",
+        "uma testemunha confiável está sob influência há meses",
+        "a verdade toca diretamente o passado de um dos envolvidos",
+        "fechar o caso não elimina a fonte do horror"
+      ],
+      "hookStarts": [
+        "Ao receberem uma carta de teor urgente e incompleto,",
+        "Quando um cadáver é encontrado em condições impossíveis,",
+        "Durante uma visita a um leilão de antiguidades,",
+        "Ao investigarem o desaparecimento de alguém respeitado,",
+        "No momento em que uma tempestade isola a região,",
+        "Quando um estranho aborda o grupo em uma estação quase vazia,"
+      ],
+      "hookEvents": [
+        "um envelope revela apenas um nome, uma data e um endereço",
+        "uma testemunha em choque repete algo que não deveria conhecer",
+        "um item aparentemente inerte reage ao toque humano",
+        "um diário menciona um local que já não deveria existir",
+        "um paciente pede ajuda e some antes do amanhecer",
+        "um pacote é entregue ao grupo por engano — ou propósito"
+      ],
+      "hookComplications": [
+        "e a polícia passa a desconfiar dos próprios investigadores",
+        "mas ninguém além deles parece perceber o detalhe mais perturbador",
+        "enquanto alguém os observa à distância desde o começo",
+        "e a única testemunha morre horas depois",
+        "mas o lugar que procuram foi demolido oficialmente há anos"
+      ],
+      "npcRaces": {
+        "humano": "human.png"
+      },
+      "npcNames": [
+        "Arthur Bell", "Eleanor Price", "Walter Crane", "Helen Ward",
+        "Edgar Whitmore", "Clara Hastings", "Samuel Pike", "Margaret Doyle",
+        "Louis Harrow", "Beatrice Cole", "Victor Hale", "Agnes Mercer"
+      ],
+      "npcTraits": [
+        "fala baixo como se temesse ser ouvido por algo além da sala",
+        "parece cansado de um jeito que o sono não resolve",
+        "olha para cantos vazios com frequência preocupante",
+        "mantém educação rígida mesmo sob evidente nervosismo",
+        "evita tocar em certos assuntos com rapidez excessiva",
+        "passa a sensação de estar ocultando mais medo do que informação"
+      ],
+      "npcSecrets": [
+        "leu parte de um texto que nunca deveria ter sido aberto",
+        "presenciou algo impossível e mentiu no depoimento",
+        "mantém contato discreto com um círculo ocultista",
+        "recebeu pagamentos para ignorar detalhes comprometedores",
+        "esconde um parente envolvido no caso",
+        "trouxe do passado um objeto que jamais deveria ter guardado"
+      ],
+      "npcGoals": [
+        "sobreviver ao caso sem enlouquecer completamente",
+        "enterrar uma verdade antes que ela alcance a imprensa",
+        "proteger alguém inocente do que está vindo",
+        "compreender o fenômeno mesmo ao custo da própria mente",
+        "destruir um documento ou objeto antes que seja estudado",
+        "impedir que o grupo vá fundo demais"
+      ]
+    }
+  },
+
+  "cypher": {
+    "geradores": {
+      "storyPlaces": [
+        "um vale repleto de estruturas impossíveis semi-enterradas",
+        "uma torre orgânica que reage à presença de pensamento consciente",
+        "um deserto de vidro com ruínas tecnológicas pulsantes",
+        "uma estação antiga orbitando baixa demais para ser segura",
+        "uma floresta onde máquinas esquecidas simulam vida",
+        "um lago negro cobrindo uma instalação ainda ativa",
+        "uma cidade construída ao redor de um artefato incompreensível",
+        "um labirinto de portas que se reorganiza sozinho"
+      ],
+      "storyProblems": [
+        "um dispositivo desconhecido começou a alterar o ambiente ao redor",
+        "pessoas estão desaparecendo após seguir sinais que não deveriam existir",
+        "uma inteligência antiga tenta se comunicar por meios perigosos",
+        "um cypher raro desencadeou efeitos em cadeia imprevisíveis",
+        "uma região inteira foi isolada por anomalias crescentes",
+        "um guardião não humano foi reativado sem controle",
+        "a exploração de uma ruína despertou sistemas ainda funcionais",
+        "algo enterrado sob a paisagem começou a emitir padrões estranhos"
+      ],
+      "storyVillains": [
+        "um explorador brilhante consumido pela obsessão por descoberta",
+        "uma inteligência remanescente que considera humanos transitórios",
+        "um colecionador de cyphers sem qualquer limite ético",
+        "uma entidade híbrida surgida da fusão entre mente e tecnologia antiga",
+        "um guardião automatizado que interpreta sua missão de forma extrema",
+        "um líder de expedição disposto a sacrificar todos por conhecimento"
+      ],
+      "storyTwists": [
+        "o objeto central não é arma nem chave, mas mensagem",
+        "o suposto antagonista estava tentando impedir acesso ao verdadeiro risco",
+        "a ruína reage especificamente a um dos personagens",
+        "cada uso do recurso necessário piora outra parte da situação",
+        "o local inteiro funciona como organismo sensível",
+        "a maior recompensa também é o maior gatilho para a catástrofe"
+      ],
+      "hookStarts": [
+        "Durante uma exploração que parecia rotineira até segundos atrás,",
+        "Ao seguirem um sinal vindo de uma região evitada por anos,",
+        "Quando um objeto impossível é encontrado no mercado local,",
+        "Ao chegarem a uma estrutura que não constava em mapa algum,",
+        "No momento em que um antigo mecanismo desperta sozinho,",
+        "Quando uma anomalia ilumina o horizonte sem qualquer explicação,"
+      ],
+      "hookEvents": [
+        "um artefato se ativa ao ser aproximado de sangue humano",
+        "um sobrevivente retorna com memórias claramente alteradas",
+        "uma ruína antes imóvel abre passagem para níveis mais profundos",
+        "um cypher recém-achado emite coordenadas para lugar nenhum conhecido",
+        "uma forma de vida estranha demonstra inteligência incomum",
+        "um campo invisível aprisiona todos em uma área crescente"
+      ],
+      "hookComplications": [
+        "e cada tentativa de compreender o fenômeno também o fortalece",
+        "mas o grupo tem recursos demais para ignorar a oportunidade",
+        "enquanto algo antigo parece observar cada passo",
+        "e o mapa conhecido deixa de fazer sentido",
+        "mas a saída mais segura exige abrir mão da descoberta"
+      ],
+      "npcRaces": {
+        "humano": "human.png"
+      },
+      "npcNames": [
+        "Ilya", "Soren", "Kaia", "Meren", "Tovin", "Asha",
+        "Darel", "Nim", "Oris", "Lyra", "Venn", "Sel"
+      ],
+      "npcTraits": [
+        "fala com fascínio quase infantil diante do desconhecido",
+        "trata anomalias como enigmas pessoais",
+        "mantém serenidade desconcertante diante do impossível",
+        "tem comportamento de estudioso mais do que de sobrevivente",
+        "parece já ter visto coisas que ninguém acreditaria",
+        "mede risco e maravilhamento com o mesmo olhar"
+      ],
+      "npcSecrets": [
+        "ativou um mecanismo antigo e nunca contou a verdade",
+        "carrega um cypher perigoso escondido do grupo",
+        "ouve padrões ou sinais que os outros não percebem",
+        "foi alterado por tecnologia antiga de forma irreversível",
+        "busca especificamente uma ruína ligada ao próprio passado",
+        "pretende reivindicar sozinho a descoberta central"
+      ],
+      "npcGoals": [
+        "alcançar uma descoberta que redefina tudo o que conhece",
+        "proteger uma ruína de exploradores imprudentes",
+        "encontrar uma tecnologia capaz de corrigir um erro antigo",
+        "provar que certos riscos valem qualquer preço",
+        "decifrar uma presença que tenta se comunicar",
+        "levar o grupo até um local impossível antes que ele desapareça"
+      ]
+    }
+  }
+}

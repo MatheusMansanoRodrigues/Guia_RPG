@@ -56,7 +56,10 @@ const plannerOutput = document.getElementById('plannerOutput');
 
 // Conteúdo dinâmico por sistema (preenchido ao carregar conteudo_sistemas.json)
 let conteudoData = { default: {} };
+let geradoresData = {};
 let currentGeradores = null;
+let currentFortuna = null;
+let currentPlannerTextos = null;
 
 const storyPlaces = [
     'uma cidade élfica cercada por névoa eterna',
@@ -206,17 +209,30 @@ document.getElementById('generateStoryBtn').addEventListener('click', function (
 });
 
 document.getElementById('generateNpcBtn').addEventListener('click', function () {
-    const race = pick(Object.keys(npcRaces));
-    const img = npcRaces[race];
-    const name = pick(npcNames);
-    const trait = pick(npcTraits);
-    const secret = pick(npcSecrets);
-    const goal = pick(npcGoals);
+    const g = currentGeradores || {};
+
+    const racesObj = g.npcRaces || npcRaces;
+    const namesArr = g.npcNames || npcNames;
+    const traitsArr = g.npcTraits || npcTraits;
+    const secretsArr = g.npcSecrets || npcSecrets;
+    const goalsArr = g.npcGoals || npcGoals;
+
+    const race = pick(Object.keys(racesObj));
+    const img = racesObj[race];
+    const name = pick(namesArr);
+    const trait = pick(traitsArr);
+    const secret = pick(secretsArr);
+    const goal = pick(goalsArr);
+
+    const showImage = img && img.trim() !== "";
 
     const npc = `
-        <div style="text-align:center; margin-bottom: 15px;"><img src="imgs/${img}" alt="${race}" style="width: 150px; height: 150px; border: 2px solid var(--gold); border-radius: 50%;"></div>
+        ${showImage ? `
+        <div style="text-align:center; margin-bottom: 15px;">
+            <img src="imgs/${img}" alt="${race}" style="width: 150px; height: 150px; border: 2px solid var(--gold); border-radius: 50%;">
+        </div>` : ""}
         <strong>Nome:</strong> ${name}<br>
-        <strong>Raça:</strong> ${race}<br>
+        <strong>Perfil:</strong> ${race}<br>
         <strong>Traço:</strong> ${trait}.<br>
         <strong>Segredo:</strong> ${secret}.<br>
         <strong>Objetivo:</strong> ${goal}.
@@ -224,8 +240,6 @@ document.getElementById('generateNpcBtn').addEventListener('click', function () 
 
     typeWriter(npcResult, npc);
 });
-
-
 
 document.getElementById('generateHookBtn').addEventListener('click', function () {
     const g = currentGeradores || {};
@@ -272,31 +286,49 @@ document.getElementById('planSessionBtn').addEventListener('click', function () 
     const theme = document.getElementById('themeInput').value.trim() || 'um mistério antigo';
     const tone = document.getElementById('toneSelect').value;
 
-    const openings = {
-        sombrio: `Os heróis chegam em meio a sinais perturbadores ligados a ${theme} — talvez runas antigas, sussurros nas ruínas élficas ou um aviso deixado por um anão moribundo.`,
-        epico: `Uma grande ameaça envolvendo ${theme} começa a se espalhar pelo reino. Elfos, anões e humanos precisarão unir forças — ou perecer separados.`,
-        misterioso: `Pistas desconexas sobre ${theme} surgem em locais improváveis: uma taverna de gnomos, um círculo de fadas na floresta, as profundezas das minas anãs.`,
-        leve: `Uma aventura inesperada relacionada a ${theme} convida o grupo a sair da rotina — talvez um gnomo precise de ajuda ou uma fada ofereça um desafio divertido.`
+    const pt = currentPlannerTextos;
+    const replaceTheme = (s) => (s || '').replace(/\{\{theme\}\}/g, theme);
+
+    const openings = pt?.openings ? {
+        sombrio: replaceTheme(pt.openings.sombrio),
+        epico: replaceTheme(pt.openings.epico),
+        misterioso: replaceTheme(pt.openings.misterioso),
+        leve: replaceTheme(pt.openings.leve)
+    } : {
+        sombrio: `Os heróis chegam em meio a sinais perturbadores ligados a ${theme}.`,
+        epico: `Uma grande ameaça envolvendo ${theme} começa a se espalhar.`,
+        misterioso: `Pistas desconexas sobre ${theme} surgem em locais improváveis.`,
+        leve: `Uma aventura inesperada relacionada a ${theme} convida o grupo.`
     };
 
-    const middle = {
-        sombrio: `No desenvolvimento, eles descobrem sacrifícios antigos, segredos enterrados nas montanhas anãs e alguém — talvez um elfo corrompido ou uma fada caprichosa — manipulando tudo nas sombras.`,
-        epico: `No meio da sessão, o grupo enfrenta desafios maiores: talvez um dragão, uma guerra entre raças ou um artefato élfico de poder imenso. Uma decisão crucial os aguarda.`,
-        misterioso: `No desenvolvimento, cada resposta abre novas dúvidas. Um aliado — elfo, gnomo ou humano — pode estar escondendo parte da verdade. As fadas observam e sussurram.`,
-        leve: `No meio da aventura, surgem confusões hilárias, rivais carismáticos (um anão orgulhoso? um gnomo excêntrico?) e obstáculos criativos que mantêm o ritmo divertido.`
+    const middle = pt?.middle ? {
+        sombrio: pt.middle.sombrio,
+        epico: pt.middle.epico,
+        misterioso: pt.middle.misterioso,
+        leve: pt.middle.leve
+    } : {
+        sombrio: 'No desenvolvimento, eles descobrem segredos e alguém manipulando tudo nas sombras.',
+        epico: 'No meio da sessão, o grupo enfrenta desafios maiores. Uma decisão crucial os aguarda.',
+        misterioso: 'No desenvolvimento, cada resposta abre novas dúvidas.',
+        leve: 'No meio da aventura, surgem confusões e obstáculos criativos.'
     };
 
-    const ending = {
-        sombrio: `No final, uma revelação cruel muda a visão do grupo — talvez sobre as fadas, os elfos ou o verdadeiro custo da magia. Um gancho pesado aguarda a próxima sessão.`,
-        epico: `No final, os heróis impedem uma catástrofe parcial, mas percebem que isso era apenas o começo. Uma ameaça maior se ergue no horizonte — e as raças antigas precisarão deles.`,
-        misterioso: `No final, uma pista decisiva aparece, mas o principal suspeito some sem deixar rastros — como se as fadas o tivessem levado. O mistério aprofunda-se.`,
-        leve: `No final, o grupo resolve o problema imediato, mas encontra algo curioso — um portal élfico, um artefato gnômico, uma mensagem das fadas — que pode virar uma grande campanha.`
+    const ending = pt?.ending ? {
+        sombrio: pt.ending.sombrio,
+        epico: pt.ending.epico,
+        misterioso: pt.ending.misterioso,
+        leve: pt.ending.leve
+    } : {
+        sombrio: 'No final, uma revelação cruel muda a visão do grupo.',
+        epico: 'No final, os heróis impedem uma catástrofe parcial, mas uma ameaça maior se ergue.',
+        misterioso: 'No final, uma pista decisiva aparece. O mistério aprofunda-se.',
+        leve: 'No final, o grupo resolve o problema e encontra algo curioso para a próxima campanha.'
     };
 
     plannerOutput.innerHTML = `
-        <div class="planner-block"><strong>Início:</strong> ${openings[tone]}</div>
-        <div class="planner-block"><strong>Meio:</strong> ${middle[tone]}</div>
-        <div class="planner-block"><strong>Fim:</strong> ${ending[tone]}</div>
+        <div class="planner-block"><strong>Início:</strong> ${openings[tone] || openings.sombrio}</div>
+        <div class="planner-block"><strong>Meio:</strong> ${middle[tone] || middle.sombrio}</div>
+        <div class="planner-block"><strong>Fim:</strong> ${ending[tone] || ending.sombrio}</div>
       `;
 });
 
@@ -463,21 +495,24 @@ function createDiceRoller() {
             diceValue.textContent = display;
             diceValue.className = 'dice-value';
 
+            const fortunaCrit = (currentFortuna?.crit?.length ? currentFortuna.crit : FORTUNA_CRIT);
+            const fortunaFumble = (currentFortuna?.fumble?.length ? currentFortuna.fumble : FORTUNA_FUMBLE);
+            const fortunaNormal = (currentFortuna?.normal?.length ? currentFortuna.normal : FORTUNA_NORMAL);
             let fortuna = '';
             if (count === 1 && faces === 20) {
                 if (rolls[0] === 20) {
                     diceValue.classList.add('crit');
-                    fortuna = FORTUNA_CRIT[Math.floor(Math.random() * FORTUNA_CRIT.length)];
+                    fortuna = fortunaCrit[Math.floor(Math.random() * fortunaCrit.length)];
                     const rect = resultArea.getBoundingClientRect();
                     createParticles(rect.left + rect.width / 2, rect.top + rect.height / 2, '#daa520');
                 } else if (rolls[0] === 1) {
                     diceValue.classList.add('fumble');
-                    fortuna = FORTUNA_FUMBLE[Math.floor(Math.random() * FORTUNA_FUMBLE.length)];
+                    fortuna = fortunaFumble[Math.floor(Math.random() * fortunaFumble.length)];
                 } else {
-                    fortuna = FORTUNA_NORMAL[Math.floor(Math.random() * FORTUNA_NORMAL.length)];
+                    fortuna = fortunaNormal[Math.floor(Math.random() * fortunaNormal.length)];
                 }
             } else {
-                fortuna = FORTUNA_NORMAL[Math.floor(Math.random() * FORTUNA_NORMAL.length)];
+                fortuna = fortunaNormal[Math.floor(Math.random() * fortunaNormal.length)];
             }
             diceFortuna.textContent = fortuna;
         }, 800);
@@ -509,20 +544,22 @@ async function loadConteudoSistemas() {
         const res = await fetch(url);
         if (res.ok) {
             const data = await res.json();
-            if (data && (data.default || data.cthulhu)) {
+            if (data && typeof data === 'object') {
                 conteudoData = data;
             }
         }
     } catch (e) {
         console.warn('Conteúdo por sistema não carregado via fetch:', e.message);
     }
-    // Fallback: usar JSON embutido no HTML se fetch falhou
+
     const fallbackEl = document.getElementById('conteudo-sistemas-json');
     if (fallbackEl && (!conteudoData.default?.sabedoria)) {
         try {
             const data = JSON.parse(fallbackEl.textContent);
-            if (data && (data.default || data.cthulhu)) conteudoData = data;
-        } catch (err) { console.warn('Fallback JSON inválido:', err); }
+            if (data && typeof data === 'object') conteudoData = data;
+        } catch (err) {
+            console.warn('Fallback JSON inválido:', err);
+        }
     }
 }
 
@@ -531,7 +568,11 @@ async function loadSystems() {
     if (!grid) return;
 
     try {
-        await loadConteudoSistemas();
+        await Promise.all([
+            loadConteudoSistemas(),
+            loadGeradores()
+        ]);
+
         const response = await fetch('sistemas.json');
         if (!response.ok) throw new Error('Falha ao carregar sistemas');
         sistemasData = await response.json();
@@ -639,10 +680,24 @@ function applyConteudoSistema(conteudoKey) {
         if (themeInput && p.theme_placeholder) themeInput.placeholder = p.theme_placeholder;
         progressTextTemplate = p.progress_text || progressTextTemplate;
         progressCompleteTemplate = p.progress_complete || progressCompleteTemplate;
+        currentPlannerTextos = p.planner_textos || null;
+    } else {
+        currentPlannerTextos = null;
     }
 
-    // Geradores (para story, hook)
-    currentGeradores = c.geradores || null;
+    // Fortuna (Oráculo dos Dados)
+    currentFortuna = c.fortuna || null;
+
+    // Raças e Criaturas
+    if (c.racas) {
+        setText('racas-titulo', c.racas.titulo);
+        setText('racas-subtitulo', c.racas.subtitulo);
+        setText('racas-lore', c.racas.lore);
+    }
+
+    // Geradores (para story, hook, npc) - estrutura: { "d20": { "geradores": {...} } }
+    const geradoresSistema = geradoresData[conteudoKey] || geradoresData.default;
+    currentGeradores = geradoresSistema?.geradores || geradoresSistema || null;
 
     // Atualizar barra de progresso com os novos templates
     updateProgress();
@@ -868,3 +923,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+async function loadGeradores() {
+    try {
+        const url = new URL('geradores.json', window.location.href).href;
+        const res = await fetch(url);
+        if (!res.ok) throw new Error('Falha ao carregar geradores.json');
+
+        const data = await res.json();
+        if (data && typeof data === 'object') {
+            geradoresData = data;
+        }
+    } catch (e) {
+        console.warn('Geradores não carregados via fetch:', e.message);
+        geradoresData = {};
+    }
+}

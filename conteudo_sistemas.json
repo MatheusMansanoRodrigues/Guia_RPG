@@ -1,144 +1,931 @@
 {
-  "default": {
+  "d20": {
     "sabedoria": {
-      "titulo": "Sabedoria dos Mestres Ancestrais",
-      "subtitulo": "Os grandes narradores das eras passadas deixaram ensinamentos gravados em pergaminhos. Clique em cada preceito para revelar a sabedoria oculta.",
-      "lore": "\"Assim como o ferreiro aprende com o martelo e a bigorna, o mestre aprende com cada sessão. A sabedoria não vem da perfeição, mas da reflexão sobre o que funcionou e o que falhou. Guarde esses preceitos em seu coração e suas histórias ecoarão através dos tempos.\"",
+      "titulo": "Doutrina do Mestre Tático",
+      "subtitulo": "No D20, pequenas escolhas mecânicas criam grandes diferenças em mesa. Estes princípios ajudam a transformar números em desafios memoráveis.",
+      "lore": "\"Todo encontro em um sistema d20 é uma engrenagem. Modificadores, cobertura, talentos, alcance e posicionamento fazem a máquina girar. O bom mestre não luta contra isso: ele usa isso a seu favor.\"",
       "tips": [
-        { "btn": "I. Comece com uma vila, não com um império", "content": "Assim como uma árvore cresce de uma semente, um mundo nasce de um lugar pequeno. Uma vila com um problema, um objetivo claro e personagens memoráveis é o suficiente para muitas sessões. Os elfos antigos dizem: \"Quem tenta abraçar o mundo inteiro acaba segurando nada.\"" },
-        { "btn": "II. Conceda escolhas que ecoam pelos reinos", "content": "Um bom RPG não é um pergaminho selado — é um rio que muda de curso com cada decisão. Quando os jogadores escolhem salvar o vilarejo em vez do tesouro, ou aliar-se ao dragão em vez de combatê-lo, o mundo deve responder. Os anões ensinam: \"Cada golpe da forja altera o metal. Assim são as escolhas dos heróis.\"" },
-        { "btn": "III. Abrace o caos — os gnomos o fazem", "content": "Jogadores são imprevisíveis como fadas. Eles inventarão soluções que você nunca imaginou. Em vez de forçá-los de volta ao roteiro, use essas surpresas. Adapte. Improvise. O melhor da narrativa nasce quando o mestre e os jogadores co-criam." },
-        { "btn": "IV. Dê alma aos seus NPCs", "content": "Um mercador que fala com sotaque, um guarda que tem medo de escuro — um único detalhe transforma um nome em pessoa. Os jogadores lembram do NPC que sempre cheirava a lavanda. Personalidade cria memória. Memória cria envolvimento." },
-        { "btn": "V. Termine no abismo — deixe-os querendo mais", "content": "O melhor momento para encerrar é quando a tensão atinge o ápice. Uma porta se abre para a escuridão. Um aliado revela-se traidor. O \"até a próxima sessão\" deve ecoar na mente dos jogadores como um gancho de ferro." },
-        { "btn": "VI. Conheça seus jogadores como um elfo conhece a floresta", "content": "Cada grupo é único. Alguns amam combate tático; outros, intriga política; outros ainda, exploração. Observe o que os anima. Adapte o tom e o ritmo. Um mestre que serve seu grupo cria sessões que todos aguardam com ansiedade." }
+        { "btn": "I. Encontro bom não é só monstro forte", "content": "Terreno, cobertura, altura, obstáculos e objetivos paralelos tornam o combate muito mais interessante do que simplesmente aumentar números." },
+        { "btn": "II. Deixe as fichas brilharem", "content": "Se o guerreiro investiu em derrubar inimigos, dê alvos que possam cair. Se o ladino vive de mobilidade, crie espaços para isso importar." },
+        { "btn": "III. Pense em ação e reação", "content": "No D20, a economia de ações define o ritmo. Um inimigo fraco em grupo pode ser mais perigoso que um grande bruto sozinho." },
+        { "btn": "IV. Perícias devem abrir caminhos", "content": "Escalar, blefar, rastrear, perceber, investigar: perícias não devem ser apenas trava ou falha, mas portas para novas abordagens." },
+        { "btn": "V. Tesouro também conta história", "content": "Itens, recompensas e recursos devem refletir a aventura enfrentada. O loot precisa parecer conquistado, não despejado." },
+        { "btn": "VI. Equilíbrio é ponto de partida, não prisão", "content": "Use ND, níveis e ameaças como guia. A diversão aumenta quando o encontro parece vivo, não matematicamente estéril." }
       ]
     },
     "arte_historias": {
-      "titulo": "A Arte de Contar Histórias Épicas",
-      "subtitulo": "Três pilares sustentam toda narrativa memorável, desde as sagas dos elfos até as canções dos bardos anões. Domine-os e suas campanhas transcenderão o comum.",
+      "titulo": "A Estrutura da Aventura Clássica",
+      "subtitulo": "Campanhas em D20 brilham quando desafio, progressão e recompensa andam juntos.",
       "cards": [
-        { "tag": "Conflito", "titulo": "O Problema que Agita os Reinos", "conteudo": "Toda grande história nasce da tensão. Um reino dividido por guerra civil, uma seita que invoca entidades antigas, uma criatura adormecida que desperta — o conflito central é a forja onde os heróis são temperados. Sem ele, não há jornada. Sem jornada, não há glória." },
-        { "tag": "Motivação", "titulo": "O Fogo que Move os Heróis", "conteudo": "Por que os personagens se importam? Ouro e glória funcionam, mas laços pessoais, ameaças àqueles que amam, segredos do passado criam envolvimento profundo. Um herói que luta para proteger alguém é inesquecível. Dê a cada jogador pelo menos um gancho emocional ligado à trama." },
-        { "tag": "Consequência", "titulo": "O Eco das Decisões", "conteudo": "Quando uma escolha gera resultado visível, o mundo ganha peso. O vilarejo que eles salvaram os recebe com gratidão sessões depois. O NPC que eles traíram retorna como inimigo. Consequências mostram que as ações importam — e isso transforma jogadores em participantes ativos." }
+        { "tag": "Desafio", "titulo": "O obstáculo precisa testar recursos", "conteudo": "Uma boa cena em D20 esgota magia, consome itens, exige posicionamento e força o grupo a pensar além de atacar." },
+        { "tag": "Progressão", "titulo": "Cada vitória precisa empurrar a campanha", "conteudo": "Subir de nível, ganhar acesso a regiões, itens e aliados fortalece a sensação de avanço constante." },
+        { "tag": "Recompensa", "titulo": "O prêmio precisa justificar o risco", "conteudo": "Tesouros, favores, conhecimento e acesso narrativo funcionam melhor quando dialogam com o esforço do grupo." }
       ],
-      "lore": "\"Os reinos das terras antigas são diversos como as raças que os habitam. Florestas élficas, montanhas anãs, círculos de cogumelos que levam ao reino das fadas. Cada local carrega sua própria história — e o mestre que os conhece cria mundos que respiram.\""
+      "lore": "\"No coração do D20 vive a promessa da ascensão: aventureiros frágeis que, pouco a pouco, tornam-se lendas.\""
     },
     "oraculo": {
-      "titulo": "Oráculo das Histórias — Gerador de Aventuras",
-      "subtitulo": "Como os videntes que consultavam as runas sob o luar, invoque o oráculo para receber uma semente de aventura. Cada conjuração revela cenário, conflito, antagonista e reviravolta — prontos para serem tecidos em sua campanha.",
-      "btn_text": "✦ Conjurar História ✦",
-      "placeholder": "O oráculo aguarda. Pressione o botão e deixe o destino revelar sua próxima saga..."
+      "titulo": "Forja de Encontros",
+      "subtitulo": "Gere uma aventura com cenário, ameaça, antagonista e virada em espírito de fantasia clássica d20.",
+      "btn_text": "✦ Gerar Aventura d20 ✦",
+      "placeholder": "A engrenagem da aventura aguarda sua próxima rolagem..."
     },
     "npc": {
-      "titulo": "Livro das Almas — Gerador de NPCs",
-      "subtitulo": "Cada taverna, cada castelo, cada floresta esconde personagens que podem definir o rumo da aventura. O Livro das Almas conjura nomes, traços, segredos e objetivos.",
-      "btn_text": "✦ Conjurar NPC ✦",
-      "placeholder": "Nome, raça, traço, segredo e objetivo serão revelados pelo Livro das Almas..."
+      "titulo": "Arquivo de Arquétipos",
+      "subtitulo": "Mercenários, magos, clérigos, nobres, bandidos e monstros inteligentes prontos para entrar em cena.",
+      "btn_text": "✦ Gerar NPC d20 ✦",
+      "placeholder": "Classe, função, traço e ambição serão definidos..."
     },
     "gancho": {
-      "titulo": "Ganchos de Aventura — O Início da Saga",
-      "subtitulo": "Toda jornada começa com um momento — um estranho na taverna, um sussurro na floresta, um artefato que brilha sob a lua. Gere ganchos prontos para iniciar sua sessão.",
-      "btn_text": "✦ Conjurar Gancho ✦",
-      "placeholder": "O destino prepara um começo memorável. Convoque-o..."
+      "titulo": "Chamados para Missão",
+      "subtitulo": "Toda campanha d20 começa com um contrato, ruína, ameaça local ou recompensa tentadora.",
+      "btn_text": "✦ Gerar Missão ✦",
+      "placeholder": "Uma missão clássica está prestes a surgir..."
     },
     "checklist": {
-      "titulo": "Pergaminho da Preparação — Checklist do Mestre",
-      "subtitulo": "Antes de convocar os jogadores à mesa, o mestre sábio verifica seu pergaminho. Marque cada item conforme prepara sua sessão.",
+      "titulo": "Checklist do Mestre d20",
+      "subtitulo": "Revise desafio, recompensa, encontros e espaço para as builds dos personagens brilharem.",
       "items": [
-        "Defini o objetivo principal da sessão",
-        "Preparei pelo menos um conflito digno dos heróis",
-        "Criei dois ou três NPCs memoráveis (elfos, anões, gnomos...)",
-        "Pensei em possíveis escolhas e consequências",
-        "Separei nomes, locais e eventos para improviso",
-        "Planejei um final com gancho que deixe todos inquietos"
+        "Defini objetivo e oposição principal",
+        "Planejei pelo menos um combate com terreno relevante",
+        "Criei oportunidades para perícias e talentos brilharem",
+        "Separei recompensas coerentes com o risco",
+        "Pensei em recursos que o grupo vai gastar",
+        "Deixei uma consequência para a próxima sessão"
       ]
     },
     "planejador": {
-      "titulo": "Planejador Rápido de Sessão — A Estrutura da Saga",
-      "subtitulo": "Insira um tema — necromantes, reinos élficos, cidades anãs, círculos de fadas — escolha o tom e deixe o planejador tecer a estrutura de início, meio e fim.",
-      "theme_placeholder": "Ex: necromantes nas ruínas élficas, rivalidade anão-gnomo, círculo de fadas na floresta, dragão adormecido sob a montanha",
-      "progress_text": "da sessão preparada — o pergaminho aguarda",
-      "progress_complete": "O pergaminho está completo! Pronto para a aventura!"
+      "titulo": "Planejador de Aventura d20",
+      "subtitulo": "Monte rapidamente a espinha dorsal de uma aventura clássica com progressão, combate e descoberta.",
+      "theme_placeholder": "Ex: catacumbas infestadas, torre de mago, seita em cidade fortificada",
+      "progress_text": "da aventura d20 preparada — as fichas aguardam",
+      "progress_complete": "Aventura d20 pronta. Hora de rolar iniciativa.",
+      "planner_textos": {
+        "openings": {
+          "sombrio": "Os heróis chegam em meio a sinais perturbadores ligados a {{theme}} — talvez runas antigas, sussurros nas ruínas ou um aviso deixado por um moribundo.",
+          "epico": "Uma grande ameaça envolvendo {{theme}} começa a se espalhar pelo reino. Guerreiros e magos precisarão unir forças — ou perecer separados.",
+          "misterioso": "Pistas desconexas sobre {{theme}} surgem em locais improváveis: uma taverna, um círculo na floresta, as profundezas das minas.",
+          "leve": "Uma aventura inesperada relacionada a {{theme}} convida o grupo a sair da rotina — talvez um contrato simples ou um tesouro esquecido."
+        },
+        "middle": {
+          "sombrio": "No desenvolvimento, eles descobrem sacrifícios antigos, segredos enterrados e alguém manipulando tudo nas sombras.",
+          "epico": "No meio da sessão, o grupo enfrenta desafios maiores: talvez um dragão, uma guerra ou um artefato de poder imenso. Uma decisão crucial os aguarda.",
+          "misterioso": "No desenvolvimento, cada resposta abre novas dúvidas. Um aliado pode estar escondendo parte da verdade.",
+          "leve": "No meio da aventura, surgem confusões hilárias, rivais carismáticos e obstáculos criativos que mantêm o ritmo divertido."
+        },
+        "ending": {
+          "sombrio": "No final, uma revelação cruel muda a visão do grupo — talvez sobre o verdadeiro custo da magia. Um gancho pesado aguarda a próxima sessão.",
+          "epico": "No final, os heróis impedem uma catástrofe parcial, mas percebem que isso era apenas o começo. Uma ameaça maior se ergue no horizonte.",
+          "misterioso": "No final, uma pista decisiva aparece, mas o principal suspeito some sem deixar rastros. O mistério aprofunda-se.",
+          "leve": "No final, o grupo resolve o problema imediato, mas encontra algo curioso que pode virar uma grande campanha."
+        }
+      }
     },
-    "geradores": {
-      "storyPlaces": ["uma cidade élfica cercada por névoa eterna", "um reino anão dividido por guerra civil nas montanhas", "uma floresta onde fadas e o tempo se comportam de forma estranha", "uma ilha que surge apenas em noites sem lua", "um vilarejo humano construído sobre ruínas esquecidas", "uma fortaleza anã abandonada nas profundezas da terra", "um círculo de cogumelos onde o reino das fadas se abre", "uma torre repleta de engrenagens e artefatos estranhos"],
-      "storyProblems": ["pessoas estão desaparecendo sem deixar rastros", "um artefato antigo começou a alterar a realidade ao redor", "os mortos passaram a sussurrar segredos proibidos nas ruínas", "um culto está recrutando inocentes para um ritual", "um rei governa mesmo depois da própria morte", "um portal foi aberto embaixo do templo central", "uma guerra iminente entre povos antigos", "dragões adormecidos estão despertando"],
-      "storyVillains": ["um sacerdote corrompido que traiu seu povo", "uma criatura ancestral aprisionada pelos antigos", "um nobre que fez pacto com uma entidade", "um mago que quer reescrever a história", "um general que deseja provocar o caos", "uma criatura anciã que considera os mortais brinquedos"],
-      "storyTwists": ["o verdadeiro inimigo é um aliado próximo do grupo", "o vilão acredita genuinamente que está salvando o mundo", "um dos personagens tem ligação direta com o problema", "a ameaça foi criada por um erro dos próprios heróis do passado", "a cidade inteira já está sob efeito de uma ilusão", "a solução exige sacrificar algo importante"],
-      "hookStarts": ["Durante um festival local na praça da vila,", "Na primeira noite de viagem pela floresta,", "Logo após uma tempestade que pareceu conjurada,", "Enquanto descansam em uma taverna,", "Ao cruzarem os portões da cidade,", "Durante o enterro de um nobre importante,", "Sob o luar, próximo a um círculo de cogumelos,", "Dentro das ruínas de uma fortaleza abandonada,"],
-      "hookEvents": ["um estranho misterioso entrega ao grupo um mapa incompleto", "uma criança aparece pedindo ajuda", "os sinos do templo tocam sozinhos em uma melodia antiga", "um corpo cai do céu diante de todos", "uma figura mascarada chama os heróis pelo nome", "um incêndio revela uma passagem subterrânea", "uma figura aparece e oferece um pacto perigoso", "runas antigas começam a brilhar nas paredes"],
-      "hookComplications": ["e guardas chegam acusando os aventureiros", "mas ninguém além deles parece notar o problema", "enquanto uma antiga runa começa a brilhar", "e um aliado desaparece no meio da confusão", "e tudo isso acontece exatamente onde eles deveriam estar"]
+    "fortuna": {
+      "crit": ["Os deuses sorriem para você!", "O destino te escolheu!", "A sorte dos heróis está com você!", "As runas antigas se alinham!", "O vento carrega sua vitória!"],
+      "fumble": ["O destino conspira...", "Até os heróis tropeçam.", "A sorte virou as costas.", "As runas sussurram cautela.", "O próximo capítulo será melhor."],
+      "normal": ["O dado rola, a história continua.", "A sorte está no ar.", "O pergaminho aguarda.", "Que os dados decidam.", "A aventura continua."]
+    },
+    "racas": {
+      "titulo": "Raças e Criaturas das Terras Antigas",
+      "subtitulo": "Conheça os povos que habitam os reinos de fantasia — elfos, anões, gnomos, fadas e muitas outras criaturas que darão vida às suas campanhas d20.",
+      "lore": "Nos tempos antigos, quando o mundo ainda era jovem, as raças surgiram das mãos dos deuses ou das profundezas da terra. Elfos receberam a graça; anões, a força; gnomos, a curiosidade; e as fadas, a magia pura."
     }
   },
-  "cthulhu": {
+
+  "dnd5e": {
     "sabedoria": {
-      "titulo": "Sabedoria dos Guardiões do Conhecimento Proibido",
-      "subtitulo": "Os mestres de Call of Cthulhu aprenderam que o horror vem do desconhecido. Clique em cada preceito para revelar a sabedoria dos que sobreviveram para contar.",
-      "lore": "\"Aqueles que narram as histórias de horror cósmico sabem: a sanidade é um recurso tão precioso quanto a vida. O mestre sábio constrói o medo lentamente, revelando apenas o suficiente para manter os investigadores à beira do abismo — sem empurrá-los de uma vez.\"",
+      "titulo": "Conselhos para o Mestre da Quinta Edição",
+      "subtitulo": "Em D&D 5e, a mesa funciona melhor quando as regras apoiam o ritmo, não quando sufocam a imaginação.",
+      "lore": "\"A quinta edição recompensa clareza, ritmo e espaço para os personagens brilharem. O mestre sábio não complica o que já funciona.\"",
       "tips": [
-        { "btn": "I. Comece com um mistério local, não com o fim do mundo", "content": "Uma morte estranha em uma mansão. Um artefato encontrado em um leilão. Uma carta de um parente desaparecido. O horror cósmico funciona melhor quando começa pequeno e pessoal. Deixe os Mitos de Cthulhu emergirem gradualmente — a revelação gradual é mais terrível que o monstro à vista." },
-        { "btn": "II. A investigação é a protagonista", "content": "Em Cthulhu, os jogadores não são heróis invencíveis. São investigadores frágeis que usam lógica, perícias e coragem limitada. Projete cenários onde pistas levam a mais pistas. O combate deve ser o último recurso — e quando acontecer, que seja letal e desesperado." },
-        { "btn": "III. Use a sanidade como narrativa, não como punição", "content": "Perder sanidade não é falha — é drama. Alucinações, fobias e manias podem criar cenas memoráveis. Um investigador que vê coisas que não existem adiciona tensão. O mestre sábio faz a sanidade servir a história, não apenas penalizar o jogador." },
-        { "btn": "IV. Dê alma aos NPCs — inclusive aos suspeitos", "content": "O cultista não é apenas um vilão; pode ser um vizinho amável com uma família. O bibliotecário sabe mais do que revela. Cada NPC deve ter motivações que façam sentido — mesmo as mais sombrias. O horror é mais forte quando as pessoas parecem reais antes de revelarem o que escondem." },
-        { "btn": "V. Termine com mais perguntas que respostas", "content": "O melhor cenário de Cthulhu deixa os jogadores inquietos. Eles podem ter fechado o portal, mas o que viram lá mudou algo neles. Um sobrevivente que sussurra algo em uma língua que não deveria existir. O horror verdadeiro é o que fica depois que a sessão termina." },
-        { "btn": "VI. O desconhecido é mais assustador que o monstro", "content": "Mostrar o monstro pode ser anticlímax. Sombras que se movem errado. Sons de passos onde não há ninguém. Textos que fazem os olhos sangrarem ao serem lidos. O mestre de Cthulhu domina a arte de sugerir — e de deixar a imaginação dos jogadores fazer o trabalho pesado." }
+        { "btn": "I. Deixe a vantagem fazer o trabalho", "content": "Quando a situação claramente favorece ou atrapalha alguém, vantagem e desvantagem costumam resolver mais rápido do que empilhar bônus." },
+        { "btn": "II. Curto descanso é ferramenta de ritmo", "content": "A forma como você distribui descansos muda completamente o valor de classes, recursos e decisões táticas." },
+        { "btn": "III. Não reduza tudo a combate", "content": "Exploração, interação social e descoberta funcionam melhor quando geram escolhas reais, não só testes isolados." },
+        { "btn": "IV. Monstros simples podem ser memoráveis", "content": "Objetivos claros, terreno vivo e pressão narrativa fazem até criaturas comuns parecerem perigosas e interessantes." },
+        { "btn": "V. Dê espaço para antecedentes importarem", "content": "Backgrounds, vínculos e ideais ficam muito melhores quando reaparecem na história como problemas ou oportunidades." },
+        { "btn": "VI. Heroísmo não elimina risco", "content": "A 5e é cinematográfica, mas ainda ganha força quando escolhas ruins têm custo real." }
       ]
     },
     "arte_historias": {
-      "titulo": "A Arte de Contar Histórias de Horror Cósmico",
-      "subtitulo": "Três pilares sustentam toda investigação memorável em Call of Cthulhu. Domine-os e seus cenários mergulharão os jogadores no abismo.",
+      "titulo": "Campanhas Heroicas em 5e",
+      "subtitulo": "A 5e brilha quando aventura, vínculo e progressão trabalham juntos.",
       "cards": [
-        { "tag": "Mistério", "titulo": "O Enigma que Atrai os Investigadores", "conteudo": "Todo cenário de Cthulhu nasce de um mistério. Um cadáver com marcas impossíveis. Um livro que não deveria existir. Um desaparecimento que desafia a lógica. O mistério central deve ser intrigante o suficiente para que os investigadores queiram — precisem — descobrir a verdade, mesmo sabendo que o conhecimento pode custar a sanidade." },
-        { "tag": "Pistas", "titulo": "O Fio que Conduz ao Abismo", "conteudo": "Pistas devem levar a mais pistas. Um endereço na margem de um diário. Uma foto com um rosto riscado. Um nome mencionado por um NPC moribundo. Nunca bloqueie a progressão — se os jogadores falharem um teste, ofereça uma rota alternativa. O objetivo é que eles cheguem ao horror, não que fiquem presos em um beco sem saída." },
-        { "tag": "Consequência", "titulo": "O Preço do Conhecimento", "conteudo": "Em Cthulhu, toda descoberta tem custo. Ler o grimório custa sanidade. Ver o que não deveria ser visto deixa marcas. O investigador que sobrevive não é o mesmo que começou. As consequências — físicas e mentais — mostram que o mundo dos Mitos é implacável. O horror ganha peso quando as ações têm preço real." }
+        { "tag": "Aventura", "titulo": "Sempre deve haver algo convidando o grupo adiante", "conteudo": "Ruínas, segredos, monstros e facções movimentam a campanha quando o mundo parece maior que a estrada imediata." },
+        { "tag": "Personagens", "titulo": "Os backgrounds precisam entrar na trama", "conteudo": "Quando o passado dos personagens se cruza com os eventos, o grupo deixa de apenas visitar a história e passa a habitá-la." },
+        { "tag": "Escalada", "titulo": "O mundo precisa crescer com o grupo", "conteudo": "De problemas locais a ameaças épicas, a sensação de escala é parte da fantasia heroica da quinta edição." }
       ],
-      "lore": "\"Os Mitos de Cthulhu habitam os cantos sombrios da realidade: bibliotecas proibidas, mansões decadentes, ilhas que não constam em mapas, ruínas de civilizações que existiram antes do homem. Cada local carrega segredos que a humanidade não foi feita para conhecer — e o mestre sábio sabe revelá-los gota a gota.\""
+      "lore": "\"Reinos caem, deuses silenciam e dragões despertam — mas a campanha só se torna inesquecível quando o grupo sente que é parte viva desse mundo.\""
     },
     "oraculo": {
-      "titulo": "Oráculo das Investigações — Gerador de Cenários",
-      "subtitulo": "Como os estudiosos que consultavam textos proibidos, invoque o oráculo para receber a semente de uma investigação. Cada conjuração revela local, mistério, antagonista e reviravolta — prontos para mergulhar seus investigadores no horror.",
-      "btn_text": "✦ Conjurar Investigação ✦",
-      "placeholder": "O oráculo aguarda. Pressione o botão e deixe o destino revelar sua próxima investigação..."
+      "titulo": "Gerador de Jornada Heroica",
+      "subtitulo": "Convoque uma premissa em estilo 5e com ameaça, cenário e reviravolta dignos de campanha.",
+      "btn_text": "✦ Gerar Jornada 5e ✦",
+      "placeholder": "Os dados da quinta edição aguardam..."
     },
     "npc": {
-      "titulo": "Livro das Almas — Gerador de NPCs",
-      "subtitulo": "Cada mansão, cada biblioteca, cada sanatório esconde personagens que podem definir o rumo da investigação. O Livro das Almas conjura investigadores, suspeitos, cultistas e testemunhas.",
-      "btn_text": "✦ Conjurar NPC ✦",
-      "placeholder": "Nome, ocupação, traço, segredo e objetivo serão revelados pelo Livro das Almas..."
+      "titulo": "Compêndio de Aliados e Rivais",
+      "subtitulo": "Cavaleiros, patronos, donos de taverna, cultistas, monstros falantes e figuras que conectam o grupo ao mundo.",
+      "btn_text": "✦ Gerar NPC 5e ✦",
+      "placeholder": "Um novo rosto da campanha será revelado..."
     },
     "gancho": {
-      "titulo": "Ganchos de Investigação — O Início do Mistério",
-      "subtitulo": "Toda investigação começa com um momento — uma carta misteriosa, um cadáver com marcas estranhas, um pedido de ajuda de alguém que depois desaparece. Gere ganchos prontos para iniciar sua sessão.",
-      "btn_text": "✦ Conjurar Gancho ✦",
-      "placeholder": "O destino prepara um começo inquietante. Convoque-o..."
+      "titulo": "Ganchos para Grupo de Aventureiros",
+      "subtitulo": "Missões de guilda, pedidos urgentes, ruínas recém-abertas e problemas que escalam rápido.",
+      "btn_text": "✦ Gerar Gancho 5e ✦",
+      "placeholder": "Uma nova aventura heroica será chamada..."
     },
     "checklist": {
-      "titulo": "Pergaminho da Preparação — Checklist do Guardião",
-      "subtitulo": "Antes de convocar os investigadores à mesa, o mestre verifica seu pergaminho. Marque cada item conforme prepara sua sessão de horror.",
+      "titulo": "Checklist do Mestre 5e",
+      "subtitulo": "Revise ritmo, encontros, descanso e vínculos dos personagens.",
       "items": [
-        "Defini o mistério central e o que os jogadores devem descobrir",
-        "Preparei pelo menos três pistas que levam ao próximo passo",
-        "Criei NPCs memoráveis — suspeitos, aliados e possíveis cultistas",
-        "Pensei em testes de Sanidade e quando aplicá-los",
-        "Separei nomes, locais e eventos para improviso",
-        "Planejei um final que deixe os jogadores inquietos — ou traumatizados"
+        "Defini a ameaça principal da sessão",
+        "Planejei um encontro social ou exploratório além do combate",
+        "Pensei em como os personagens podem usar recursos de classe",
+        "Considerei o impacto de descansos curtos e longos",
+        "Incluí ao menos um elemento ligado a background",
+        "Preparei um gancho claro para o próximo passo"
       ]
     },
     "planejador": {
-      "titulo": "Planejador Rápido de Investigação — A Estrutura do Horror",
-      "subtitulo": "Insira um tema — culto em uma universidade, artefato em um museu, desaparecimentos em uma cidade costeira — escolha o tom e deixe o planejador tecer a estrutura de início, meio e fim.",
-      "theme_placeholder": "Ex: culto nas catacumbas da universidade, artefato egípcio no museu, desaparecimentos na costa de Innsmouth, manuscrito em uma mansão abandonada",
-      "progress_text": "da investigação preparada — o pergaminho aguarda",
-      "progress_complete": "O pergaminho está completo! Pronto para o horror!"
+      "titulo": "Planejador de Sessão 5e",
+      "subtitulo": "Estruture sessões heróicas com descoberta, conflito e escalada narrativa.",
+      "theme_placeholder": "Ex: dragão jovem na região, culto subterrâneo, ruína elemental recém-exposta",
+      "progress_text": "da sessão 5e preparada — o grupo está quase pronto",
+      "progress_complete": "Sessão 5e pronta. Que comece a aventura.",
+      "planner_textos": {
+        "openings": {
+          "sombrio": "Os heróis chegam em meio a sinais perturbadores ligados a {{theme}} — runas antigas, sussurros nas ruínas élficas ou um aviso deixado por um anão moribundo.",
+          "epico": "Uma grande ameaça envolvendo {{theme}} começa a se espalhar pelo reino. Elfos, anões e humanos precisarão unir forças — ou perecer separados.",
+          "misterioso": "Pistas desconexas sobre {{theme}} surgem em locais improváveis: uma taverna de gnomos, um círculo de fadas na floresta, as profundezas das minas anãs.",
+          "leve": "Uma aventura inesperada relacionada a {{theme}} convida o grupo — talvez um gnomo precise de ajuda ou uma fada ofereça um desafio divertido."
+        },
+        "middle": {
+          "sombrio": "No desenvolvimento, eles descobrem sacrifícios antigos, segredos enterrados nas montanhas e alguém — talvez um elfo corrompido — manipulando tudo nas sombras.",
+          "epico": "No meio da sessão, o grupo enfrenta desafios maiores: talvez um dragão, uma guerra entre raças ou um artefato élfico de poder imenso.",
+          "misterioso": "No desenvolvimento, cada resposta abre novas dúvidas. Um aliado — elfo, gnomo ou humano — pode estar escondendo parte da verdade.",
+          "leve": "No meio da aventura, surgem confusões hilárias, rivais carismáticos (um anão orgulhoso? um gnomo excêntrico?) e obstáculos criativos."
+        },
+        "ending": {
+          "sombrio": "No final, uma revelação cruel muda a visão do grupo — talvez sobre as fadas, os elfos ou o verdadeiro custo da magia.",
+          "epico": "No final, os heróis impedem uma catástrofe parcial, mas percebem que isso era apenas o começo. Uma ameaça maior se ergue — e as raças antigas precisarão deles.",
+          "misterioso": "No final, uma pista decisiva aparece, mas o principal suspeito some sem deixar rastros — como se as fadas o tivessem levado.",
+          "leve": "No final, o grupo resolve o problema imediato, mas encontra algo curioso — um portal élfico, um artefato gnômico — que pode virar uma grande campanha."
+        }
+      }
     },
-    "geradores": {
-      "storyPlaces": ["uma mansão decadente nos arredores da cidade", "uma biblioteca universitária com uma seção restrita", "uma cidade costeira com segredos nas docas", "um sanatório abandonado nas colinas", "um museu com uma coleção egípcia suspeita", "uma ilha que não consta em mapas oficiais", "um vilarejo onde os habitantes evitam falar do passado", "um asilo com pacientes que sussurram em línguas antigas"],
-      "storyProblems": ["pessoas estão desaparecendo após visitarem um local específico", "um artefato antigo causa sonhos perturbadores em quem o toca", "cadáveres aparecem com marcas que não são humanas", "um culto está recrutando membros da alta sociedade", "um livro proibido foi roubado de uma coleção particular", "alguém está reencenando rituais descritos em manuscritos antigos", "uma expedição arqueológica não retornou e os diários são inquietantes", "uma doença estranha está se espalhando — e os sintomas não são físicos"],
-      "storyVillains": ["um professor universitário que fez pacto com uma entidade", "um curador de museu obcecado por artefatos proibidos", "um médico que acredita que o conhecimento pode salvar a humanidade", "um cultista que uma vez foi um investigador", "um aristocrata que herdou um segredo de família", "uma figura que pode não ser humana há décadas"],
-      "storyTwists": ["o principal suspeito é na verdade a próxima vítima", "o artefato que buscavam já estava com um dos investigadores", "o culto acredita genuinamente que está salvando o mundo", "um dos NPCs confiáveis está há anos sob influência", "a verdade é pior do que imaginavam — e envolve alguém do grupo", "o que parecia o fim era apenas o começo de algo maior"],
-      "hookStarts": ["Ao receberem uma carta de um parente desaparecido,", "Quando um cadáver é encontrado com marcas inexplicáveis,", "Durante uma visita a um leilão de antiguidades,", "Ao investigarem o sumiço de um colega acadêmico,", "Quando um paciente do asilo pede para falar com eles,", "Ao descobrirem um diário em um livro antigo,", "Durante uma tempestade que isola a mansão,", "Quando um estranho os aborda na estação de trem,"],
-      "hookEvents": ["um envelope contém apenas um endereço e uma data", "as autoridades pedem ajuda discreta — o caso é muito estranho", "um item leiloado parece pulsar quando tocado", "alguém deixa um recado urgente e depois some", "o paciente sussurra coordenadas antes de ser silenciado", "o diário menciona um lugar que não deveria existir", "a luz falha e algo se move nos corredores", "o estranho entrega um pacote e desaparece na multidão"],
-      "hookComplications": ["e a polícia começa a suspeitar dos próprios investigadores", "mas ninguém mais parece ter visto o que eles viram", "enquanto alguém os observa de uma janela", "e o único testemunha \"comete suicídio\" na mesma noite", "e o local que buscavam foi demolido há anos"]
+    "fortuna": {
+      "crit": ["Os deuses sorriem para você!", "O destino te escolheu!", "A sorte dos heróis está com você!", "Até as fadas aplaudem!", "A aventura heroica continua!"],
+      "fumble": ["O destino conspira...", "Até os heróis tropeçam.", "A sorte virou as costas.", "O próximo capítulo será melhor.", "A mesa espera sua redenção."],
+      "normal": ["O dado rola, a história continua.", "A sorte está no ar.", "Os dados da 5e aguardam.", "Que os dados decidam.", "A aventura heroica continua."]
+    },
+    "racas": {
+      "titulo": "Raças e Criaturas das Terras Heroicas",
+      "subtitulo": "Cavaleiros, patronos, monstros falantes e figuras que conectam o grupo ao mundo — desde elfos imortais até dragões despertando.",
+      "lore": "Reinos caem, deuses silenciam e dragões despertam. As raças das terras heroicas — elfos, anões, gnomos, fadas — carregam histórias que se cruzam com a jornada do grupo."
+    }
+  },
+
+  "storyteller": {
+    "sabedoria": {
+      "titulo": "Mandamentos do Narrador das Sombras",
+      "subtitulo": "Storyteller vive menos de vitória e mais de desejo, queda, culpa e fome interior.",
+      "lore": "\"Nessas crônicas, monstros não são apenas inimigos. Muitas vezes, eles usam o rosto dos próprios protagonistas.\"",
+      "tips": [
+        { "btn": "I. Comece pelo drama, não pela ficha", "content": "Antes do poder, venha com o vazio, a falta, o vício, a ambição e a ferida emocional." },
+        { "btn": "II. A cidade também é personagem", "content": "Bairros, clubes, becos, capelas, boates e prédios abandonados precisam ter identidade própria." },
+        { "btn": "III. Todo poder cobra alguma coisa", "content": "Quanto maior a capacidade do personagem, maior deve ser o custo moral, social ou psicológico." },
+        { "btn": "IV. NPC bom em Storyteller é vínculo, ameaça e espelho", "content": "Ele quer algo, pode ferir alguém importante e revela algo desconfortável sobre os protagonistas." },
+        { "btn": "V. Conflito físico é só uma parte", "content": "Confrontos sociais, chantagem, decadência e lealdade rompida costumam ser ainda mais marcantes." },
+        { "btn": "VI. O horror mora no íntimo", "content": "O melhor momento não é só o susto; é quando o personagem percebe no que está se tornando." }
+      ]
+    },
+    "arte_historias": {
+      "titulo": "Crônicas de Desejo e Ruína",
+      "subtitulo": "Em Storyteller, histórias fortes nascem de identidade, tentação e consequência.",
+      "cards": [
+        { "tag": "Desejo", "titulo": "O personagem precisa querer algo intensamente", "conteudo": "Poder, redenção, vingança, amor, controle ou pertencimento." },
+        { "tag": "Tentação", "titulo": "Sempre exista uma saída mais fácil — e pior", "conteudo": "Quando o preço ético entra em cena, a crônica ganha dentes." },
+        { "tag": "Queda", "titulo": "Toda escolha deixa cicatriz", "conteudo": "Mesmo a vitória deve ter custo, lembrança ou perda." }
+      ],
+      "lore": "\"No coração da noite, a cidade observa. E ela se alimenta dos que acreditam controlá-la.\""
+    },
+    "oraculo": {
+      "titulo": "Gerador de Crônicas Urbanas",
+      "subtitulo": "Crie conflitos sombrios feitos de segredos, fome, culpa e poder.",
+      "btn_text": "✦ Gerar Crônica ✦",
+      "placeholder": "As luzes da cidade tremem. Uma nova crônica quer nascer..."
+    },
+    "npc": {
+      "titulo": "Registro de Almas Perdidas",
+      "subtitulo": "Príncipes, xerifes, neonatos, jornalistas, ocultistas, predadores e sobreviventes.",
+      "btn_text": "✦ Gerar Figura Sombria ✦",
+      "placeholder": "Uma nova presença da noite será revelada..."
+    },
+    "gancho": {
+      "titulo": "Incidentes de Crônica",
+      "subtitulo": "Todo horror urbano começa com uma dívida, uma quebra de máscara, um desaparecimento ou uma ordem errada.",
+      "btn_text": "✦ Gerar Incidente ✦",
+      "placeholder": "Algo podre está prestes a acontecer..."
+    },
+    "checklist": {
+      "titulo": "Checklist da Crônica",
+      "subtitulo": "Revise temas, vínculos, tensão moral e atmosfera.",
+      "items": [
+        "Defini o conflito íntimo da sessão",
+        "Criei ao menos um NPC emocionalmente perigoso",
+        "Planejei uma tentação real para os personagens",
+        "Pensei em consequências sociais e morais",
+        "Separei símbolos, locais e imagens de atmosfera",
+        "Decidi o que a sessão vai cobrar de alguém"
+      ]
+    },
+    "planejador": {
+      "titulo": "Planejador de Crônica",
+      "subtitulo": "Monte uma sessão focada em drama pessoal, tensão social e horror urbano.",
+      "theme_placeholder": "Ex: desaparecimentos em boate, chantagem entre clãs, culto em hospital abandonado",
+      "progress_text": "da crônica preparada — a noite está quase pronta",
+      "progress_complete": "Crônica pronta. A cidade já está esperando.",
+      "planner_textos": {
+        "openings": {
+          "sombrio": "A cidade revela sinais perturbadores ligados a {{theme}} — uma quebra de máscara, um desaparecimento inexplicável, uma dívida antiga sendo cobrada.",
+          "epico": "Uma crise envolvendo {{theme}} ameaça desestabilizar o equilíbrio sobrenatural da cidade. Facções precisarão escolher lados.",
+          "misterioso": "Pistas sobre {{theme}} surgem em lugares improváveis: uma boate exclusiva, um hospital decadente, um cemitério urbano.",
+          "leve": "Um incidente relacionado a {{theme}} convida o grupo a investigar — talvez um mal-entendido social ou um segredo que não deveria ter vindo à tona."
+        },
+        "middle": {
+          "sombrio": "No desenvolvimento, segredos íntimos vêm à tona, chantagem entra em jogo e alguém próximo revela um lado sombrio.",
+          "epico": "No meio da crônica, conflitos entre facções explodem, identidades são questionadas e o custo do poder se torna inescapável.",
+          "misterioso": "Cada descoberta abre novas perguntas. Quem está mentindo? Quem está sendo manipulado? A cidade guarda mais segredos do que parece.",
+          "leve": "Surge uma complicação social inesperada — um rival carismático, um mal-entendido que escala, uma oportunidade tentadora com preço oculto."
+        },
+        "ending": {
+          "sombrio": "No final, alguém paga um preço. A máscara cai. A crônica deixa marcas que não serão esquecidas facilmente.",
+          "epico": "O equilíbrio muda. O grupo influencia o poder na cidade — mas toda vitória tem custo em Storyteller.",
+          "misterioso": "Uma verdade perturbadora emerge, mas novas perguntas permanecem. A noite ainda guarda segredos.",
+          "leve": "O grupo resolve o incidente imediato, mas algo — um contato, uma dívida, um segredo — ficará reverberando."
+        }
+      }
+    },
+    "fortuna": {
+      "crit": ["A noite sorri para você.", "O sangue favorece seu lance.", "A máscara cai a seu favor.", "O destino da cidade pende para você.", "A crônica te escolheu."],
+      "fumble": ["A noite conspira...", "O sangue virou contra você.", "A máscara revelou demais.", "A cidade cobra seu preço.", "O próximo capítulo será mais sombrio."],
+      "normal": ["O dado rola na penumbra.", "A sorte pende no ar.", "A crônica aguarda.", "Que os dados decidam.", "A noite continua."]
+    },
+    "racas": {
+      "titulo": "Figuras da Noite Urbana",
+      "subtitulo": "Príncipes, xerifes, neonatos, jornalistas, ocultistas, predadores e sobreviventes — as almas que habitam a cidade sob as luzes e nas sombras.",
+      "lore": "No coração da noite, a cidade observa. Humanos com segredos, figuras que cruzam a linha entre o comum e o impossível. Cada um carrega uma máscara — e o preço de mantê-la."
+    }
+  },
+
+  "gurps": {
+    "sabedoria": {
+      "titulo": "Manual do Mestre de Simulação",
+      "subtitulo": "Em GURPS, consistência pesa mais que espetáculo gratuito. O mundo precisa parecer funcionar.",
+      "lore": "\"O poder de GURPS está na credibilidade. Quando causa e efeito se alinham, cada escolha ganha densidade.\"",
+      "tips": [
+        { "btn": "I. Escolha o recorte antes das regras", "content": "GURPS permite tudo, mas sua campanha não precisa usar tudo. Defina tom, tecnologia e letalidade primeiro." },
+        { "btn": "II. Limitação é design", "content": "Restringir vantagens, perícias e opções produz campanhas mais coesas." },
+        { "btn": "III. O realismo precisa servir à mesa", "content": "A profundidade é útil quando melhora decisões, não quando só atrasa o jogo." },
+        { "btn": "IV. Consequência é parte do prazer", "content": "GURPS funciona muito bem quando preparo, equipamento e cautela realmente importam." },
+        { "btn": "V. Especialização cria identidade", "content": "Deixe claro que personagens diferentes resolvem problemas de formas diferentes." },
+        { "btn": "VI. Ferramenta, não prisão", "content": "Você não precisa provar tudo o que o sistema consegue fazer em uma campanha só." }
+      ]
+    },
+    "arte_historias": {
+      "titulo": "Construindo Campanhas em GURPS",
+      "subtitulo": "O sistema brilha com coerência, preparação e impacto tangível.",
+      "cards": [
+        { "tag": "Coerência", "titulo": "O mundo precisa obedecer às próprias regras", "conteudo": "Tecnologia, magia, recursos e perigo devem seguir uma lógica reconhecível." },
+        { "tag": "Preparação", "titulo": "Escolhas antes da cena importam", "conteudo": "Equipamento, pesquisa, abordagem e planejamento são parte central da diversão." },
+        { "tag": "Impacto", "titulo": "O risco precisa ser palpável", "conteudo": "Quando ferimentos, erro e improviso têm peso real, a tensão sobe naturalmente." }
+      ],
+      "lore": "\"Em um mundo modelado com cuidado, até uma porta trancada pode virar uma cena memorável.\""
+    },
+    "oraculo": {
+      "titulo": "Gerador de Situações Táticas",
+      "subtitulo": "Crie um problema com contexto, risco e variáveis concretas para campanhas em GURPS.",
+      "btn_text": "✦ Gerar Situação GURPS ✦",
+      "placeholder": "Uma situação consistente e perigosa aguarda..."
+    },
+    "npc": {
+      "titulo": "Cadastro de Especialistas",
+      "subtitulo": "Soldados, médicos, negociadores, cientistas, espiões, investigadores e sobreviventes.",
+      "btn_text": "✦ Gerar NPC GURPS ✦",
+      "placeholder": "Um novo perfil técnico será construído..."
+    },
+    "gancho": {
+      "titulo": "Ganchos de Operação",
+      "subtitulo": "Missões, investigações, extrações, sabotagens e problemas de sobrevivência.",
+      "btn_text": "✦ Gerar Operação ✦",
+      "placeholder": "Uma nova operação está sendo definida..."
+    },
+    "checklist": {
+      "titulo": "Checklist do Mestre GURPS",
+      "subtitulo": "Revise escopo, letalidade, limitações e coerência do cenário.",
+      "items": [
+        "Defini o escopo real da campanha",
+        "Escolhi quais módulos e regras opcionais usar",
+        "Planejei riscos concretos e plausíveis",
+        "Pensei em abordagens não violentas",
+        "Separei desafios onde especialização importa",
+        "Garanti coerência entre tom e mecânica"
+      ]
+    },
+    "planejador": {
+      "titulo": "Planejador de Missão GURPS",
+      "subtitulo": "Monte sessões baseadas em preparação, lógica e consequência.",
+      "theme_placeholder": "Ex: resgate em zona hostil, infiltração industrial, investigação forense complexa",
+      "progress_text": "da operação preparada — os parâmetros estão quase fechados",
+      "progress_complete": "Operação pronta. Todos os vetores foram definidos.",
+      "planner_textos": {
+        "openings": {
+          "sombrio": "A operação envolvendo {{theme}} começa sob circunstâncias adversas — informações incompletas, janela curta, risco elevado.",
+          "epico": "Uma missão de escala maior envolvendo {{theme}} exige coordenação, recursos e decisões que afetarão o resultado final.",
+          "misterioso": "Dados contraditórios sobre {{theme}} exigem investigação antes da ação. O que parece simples esconde variáveis ocultas.",
+          "leve": "Uma tarefa aparentemente rotineira relacionada a {{theme}} se revela mais interessante do que o briefing sugeria."
+        },
+        "middle": {
+          "sombrio": "No desenvolvimento, falhas de equipamento, cadeia de comando comprometida ou civis em risco complicam cada decisão.",
+          "epico": "A operação escala. Contingências são ativadas. O grupo precisa improvisar mantendo coerência tática.",
+          "misterioso": "Cada descoberta revela que a missão oficial era apenas a ponta do iceberg. Quem está por trás?",
+          "leve": "Complicações surgem — mas o grupo tem recursos e especialização para lidar. O desafio é eficiência."
+        },
+        "ending": {
+          "sombrio": "A missão é concluída, mas com custo. Alguém não volta. Ou volta diferente. GURPS cobra o preço.",
+          "epico": "O objetivo principal é atingido. O grupo sai com reputação reforçada — e novas responsabilidades.",
+          "misterioso": "A operação fecha um capítulo, mas abre outro. O que descobriram exige decisão: enterrar ou agir.",
+          "leve": "Missão cumprida. O grupo sai intacto, com lições aprendidas e possíveis contratos futuros."
+        }
+      }
+    },
+    "fortuna": {
+      "crit": ["O 3d6 favorece você!", "Precisão cirúrgica.", "Os parâmetros se alinham.", "A simulação sorri.", "Resultado ótimo."],
+      "fumble": ["O dado conspira...", "Variável inesperada.", "A realidade cobra.", "Recalcule os parâmetros.", "Contingência necessária."],
+      "normal": ["O dado rola. Dados registrados.", "A operação continua.", "Parâmetros dentro do esperado.", "Próxima jogada.", "A missão segue."]
+    },
+    "racas": {
+      "titulo": "Perfis e Especialistas",
+      "subtitulo": "Soldados, médicos, negociadores, cientistas, espiões, investigadores e sobreviventes — os perfis que habitam cenários GURPS.",
+      "lore": "Em GURPS, o mundo obedece às próprias regras. Cada perfil traz pontos fortes, limitações e especialização. A credibilidade nasce da coerência."
+    }
+  },
+
+  "savage_worlds": {
+    "sabedoria": {
+      "titulo": "Rápido, Furioso e Divertido",
+      "subtitulo": "Savage Worlds pede ritmo, ousadia e cenas que parecem feitas para explodir em ação.",
+      "lore": "\"Se a cena não parece algo que você descreveria com um sorriso, talvez ela ainda não esteja selvagem o bastante.\"",
+      "tips": [
+        { "btn": "I. Entre tarde, saia cedo", "content": "Comece a cena perto do conflito e encerre assim que ela entregar o que precisava." },
+        { "btn": "II. Bennies movimentam a mesa", "content": "Recompense atitude, ousadia, interpretação e complicações divertidas." },
+        { "btn": "III. Faça o cenário balançar", "content": "Ponte caindo, carro capotando, ritual falhando, trem descarrilando: a ação deve ser viva." },
+        { "btn": "IV. Extras são massa dramática", "content": "Muitos inimigos simples ajudam a criar dinamismo sem travar o jogo." },
+        { "btn": "V. Selvagem é melhor que simétrico", "content": "A graça está na virada repentina, no dado que explode, no improvável que funciona." },
+        { "btn": "VI. Regras servem ao espetáculo", "content": "Se a cena ficou travada, simplifique e devolva energia à mesa." }
+      ]
+    },
+    "arte_historias": {
+      "titulo": "Cinema Pulp de Mesa",
+      "subtitulo": "Savage Worlds prospera com velocidade, perigo vistoso e reviravoltas.",
+      "cards": [
+        { "tag": "Ritmo", "titulo": "Toda cena precisa empurrar para frente", "conteudo": "Pouca gordura, bastante impulso." },
+        { "tag": "Impacto", "titulo": "Ação precisa parecer grande", "conteudo": "O risco deve ser visual, imediato e divertido." },
+        { "tag": "Virada", "titulo": "O inesperado é parte do charme", "conteudo": "Explosões, traições e chances absurdas combinam com o sistema." }
+      ],
+      "lore": "\"Em Savage Worlds, o impossível não pede desculpas — ele entra em cena de jaqueta esvoaçante.\""
+    },
+    "oraculo": {
+      "titulo": "Gerador de Ação Selvagem",
+      "subtitulo": "Crie aventuras rápidas, visuais e cheias de energia cinematográfica.",
+      "btn_text": "✦ Gerar Cena Selvagem ✦",
+      "placeholder": "A próxima explosão narrativa está pronta para sair..."
+    },
+    "npc": {
+      "titulo": "Galeria de Figuras Pulp",
+      "subtitulo": "Caçadores, pilotos, foras-da-lei, cientistas malucos e vilões carismáticos.",
+      "btn_text": "✦ Gerar NPC Selvagem ✦",
+      "placeholder": "Uma nova figura larger than life será revelada..."
+    },
+    "gancho": {
+      "titulo": "Ganchos de Ação",
+      "subtitulo": "Problemas urgentes, perseguições, golpes ousados e caos em movimento.",
+      "btn_text": "✦ Gerar Gancho Selvagem ✦",
+      "placeholder": "Uma nova encrenca cheia de adrenalina está surgindo..."
+    },
+    "checklist": {
+      "titulo": "Checklist Savage Worlds",
+      "subtitulo": "Revise ritmo, Bennies, extras e espetáculo da sessão.",
+      "items": [
+        "Defini uma abertura com impacto imediato",
+        "Planejei pelo menos uma complicação visual",
+        "Separei oportunidades para Bennies",
+        "Criei inimigos extras para manter o fluxo",
+        "Pensei em uma virada repentina",
+        "Garanti que a sessão vai ser rápida e ousada"
+      ]
+    },
+    "planejador": {
+      "titulo": "Planejador de Sessão Selvagem",
+      "subtitulo": "Monte aventuras rápidas, perigosas e cinematográficas.",
+      "theme_placeholder": "Ex: perseguição de trem, templo desabando, seita com dinamite, roubo impossível",
+      "progress_text": "da sessão selvagem preparada — a ação está esquentando",
+      "progress_complete": "Sessão pronta. Rápido, furioso e divertido.",
+      "planner_textos": {
+        "openings": {
+          "sombrio": "Algo dá errado com {{theme}} — explosão, perseguição ou golpe que começa no meio da ação. Entrem tarde, saiam cedo.",
+          "epico": "Uma empreitada grandiosa envolvendo {{theme}} — o cenário balança, os dados explodem, o impossível vira espetáculo.",
+          "misterioso": "Um golpe ou mistério em torno de {{theme}} — a verdade surge em meio a perseguições e reviravoltas.",
+          "leve": "Uma encrenca divertida com {{theme}} — caos controlado, vilões carismáticos e ação que faz rir."
+        },
+        "middle": {
+          "sombrio": "O cenário desaba. A ponte cai. O trem descarrila. Savage Worlds quer ação viva e consequências visíveis.",
+          "epico": "Extras em massa, Bennies em jogo, dado que explode no momento certo. O espetáculo está no ápice.",
+          "misterioso": "A perseguição revela segredos. O vilão tem motivos. A virada está a um dado de distância.",
+          "leve": "Confusão hilária, rival que entra em cena, truque sujo que vira piada. Rápido e divertido."
+        },
+        "ending": {
+          "sombrio": "Alguém sai quebrado — mas a cena termina no clímax. Até a próxima explosão.",
+          "epico": "Vitória com estilo. O grupo sai como heróis de filme. Até a próxima aventura larger than life.",
+          "misterioso": "A verdade vem à tona em meio ao caos. O que importava era a jornada — e a saída espetacular.",
+          "leve": "Problema resolvido com flair. Todos saem rindo. Rápido, furioso e divertido."
+        }
+      }
+    },
+    "fortuna": {
+      "crit": ["O dado explodiu!", "Savage!", "Rápido, furioso e a seu favor!", "Bennie merecido!", "O espetáculo é seu!"],
+      "fumble": ["Até os heróis tropeçam...", "O cenário cobra.", "Próxima cena será melhor.", "A sorte virou.", "Bennie pode ajudar."],
+      "normal": ["O dado rola. Ação continua.", "Rápido e furioso.", "A cena segue.", "Que os dados decidam.", "Próxima jogada."]
+    },
+    "racas": {
+      "titulo": "Galeria de Figuras Pulp",
+      "subtitulo": "Caçadores, pilotos, foras-da-lei, cientistas malucos e vilões carismáticos — personagens larger than life para suas sessões selvagens.",
+      "lore": "Em Savage Worlds, todo mundo é potencial protagonista de filme. O charme está na energia, na virada repentina e no improvável que funciona."
+    }
+  },
+
+  "fate": {
+    "sabedoria": {
+      "titulo": "Princípios do Facilitador Fate",
+      "subtitulo": "Fate funciona melhor quando a ficção é compartilhada e os aspectos estão sempre vivos.",
+      "lore": "\"Se ninguém está invocando, compelindo ou transformando aspectos, a mesa ainda não está jogando Fate em toda a sua força.\"",
+      "tips": [
+        { "btn": "I. Tudo importante deve virar aspecto", "content": "Cenários, personagens, alianças, feridas e pressões precisam existir como frases acionáveis." },
+        { "btn": "II. Complicação é combustível", "content": "Os problemas dos personagens não atrapalham a história; eles são a história." },
+        { "btn": "III. Deixe o cenário conversar", "content": "Nevasca densa, corredor estreito, multidão em pânico, prestígio arruinado: tudo isso deve entrar em jogo." },
+        { "btn": "IV. Personagens precisam ser competentes", "content": "Em Fate, a graça não é falhar como incapaz, mas pagar o preço de agir em grande escala." },
+        { "btn": "V. Incentive autoria compartilhada", "content": "Permita que jogadores proponham detalhes, conexões e elementos quando isso enriquecer a cena." },
+        { "btn": "VI. Não esconda a tensão", "content": "Declare claramente o que está em risco; Fate fica melhor quando a pressão é transparente." }
+      ]
+    },
+    "arte_historias": {
+      "titulo": "Narrativa Compartilhada em Fate",
+      "subtitulo": "Fate cresce com protagonismo, complicação e aspectos em movimento.",
+      "cards": [
+        { "tag": "Protagonismo", "titulo": "Os personagens são motores da história", "conteudo": "Eles não apenas reagem; provocam, definem e escalam conflitos." },
+        { "tag": "Complicação", "titulo": "A melhor história piora antes de melhorar", "conteudo": "Compels bons empurram os personagens para decisões interessantes." },
+        { "tag": "Aspectos", "titulo": "A mesa precisa enxergar o drama em frases curtas", "conteudo": "Quando os aspectos importam, a narrativa ganha forma jogável." }
+      ],
+      "lore": "\"Toda cena em Fate pergunta a mesma coisa: o que está verdadeiro aqui, e como isso pode ser usado a favor — ou contra — alguém?\""
+    },
+    "oraculo": {
+      "titulo": "Gerador de Premissas Fate",
+      "subtitulo": "Crie conflitos abertos, cheios de aspectos e complicações narrativas.",
+      "btn_text": "✦ Gerar Premissa Fate ✦",
+      "placeholder": "Uma nova situação cheia de aspectos aguarda..."
+    },
+    "npc": {
+      "titulo": "Personagens de Pressão e Vínculo",
+      "subtitulo": "Aliados, rivais, patronos e complicações ambulantes prontos para gerar drama.",
+      "btn_text": "✦ Gerar NPC Fate ✦",
+      "placeholder": "Um novo personagem orientado por aspectos será criado..."
+    },
+    "gancho": {
+      "titulo": "Complicações Iniciais",
+      "subtitulo": "Toda boa sessão Fate começa com pressão, escolha e verdade dramática em jogo.",
+      "btn_text": "✦ Gerar Complicação ✦",
+      "placeholder": "Uma complicação elegante está prestes a aparecer..."
+    },
+    "checklist": {
+      "titulo": "Checklist Fate",
+      "subtitulo": "Revise aspectos, riscos, compels e espaço de colaboração.",
+      "items": [
+        "Defini o problema central em termos narrativos",
+        "Criei aspectos para cena ou cenário",
+        "Preparei ao menos um compel interessante",
+        "Pensei em como os personagens podem mudar a situação",
+        "Deixei o risco da cena claro",
+        "Garanti espaço para autoria compartilhada"
+      ]
+    },
+    "planejador": {
+      "titulo": "Planejador de Sessão Fate",
+      "subtitulo": "Estruture uma sessão baseada em aspectos, pressão e protagonismo.",
+      "theme_placeholder": "Ex: reputação em ruínas, fronteira em guerra, cidade suspensa instável",
+      "progress_text": "da sessão Fate preparada — os aspectos estão alinhados",
+      "progress_complete": "Sessão Fate pronta. Os aspectos já estão em movimento.",
+      "planner_textos": {
+        "openings": {
+          "sombrio": "Uma situação envolvendo {{theme}} ganha peso dramático — aspectos são compelidos, escolhas custam caro.",
+          "epico": "Um conflito de escala envolvendo {{theme}} — os personagens são motores da história, não espectadores.",
+          "misterioso": "Pressão narrativa em torno de {{theme}} — a ficção exige que algo mude. Os aspectos estão vivos.",
+          "leve": "Uma complicação divertida com {{theme}} — drama sim, mas espaço para protagonismo e criatividade."
+        },
+        "middle": {
+          "sombrio": "Compels entram em cena. O custo narrativo sobe. Os personagens pagam o preço de serem competentes em escala.",
+          "epico": "Os aspectos definem o conflito. Invocações e compels movimentam a mesa. A narrativa compartilhada ganha forma.",
+          "misterioso": "Cada revelação adiciona aspectos. O cenário responde. O que está verdadeiro aqui — e como pode ser usado?",
+          "leve": "Complicações surgem, mas os personagens têm agência. O drama serve à diversão, não o contrário."
+        },
+        "ending": {
+          "sombrio": "Alguém paga um preço narrativo. O aspecto muda. A sessão deixa marcas na ficção.",
+          "epico": "Os personagens redirecionam a narrativa. Vitória ou custo — ambos importam. Os aspectos ecoam.",
+          "misterioso": "Uma verdade vem à tona. Novos aspectos entram em jogo. A mesa co-criou algo memorável.",
+          "leve": "O grupo resolve a pressão com estilo. Os aspectos brilharam. Fate funcionou como deve."
+        }
+      }
+    },
+    "fortuna": {
+      "crit": ["Os aspectos favorecem você!", "A ficção sorri.", "Invoke com orgulho!", "O dado Fate está do seu lado!", "Narrativa a seu favor!"],
+      "fumble": ["Compel à vista...", "A ficção cobra.", "Aspecto contra você.", "Próxima jogada será melhor.", "O custo narrativo sobe."],
+      "normal": ["O dado Fate rola.", "Os aspectos aguardam.", "A narrativa continua.", "Que os dados decidam.", "A sessão segue."]
+    },
+    "racas": {
+      "titulo": "Personagens de Pressão e Vínculo",
+      "subtitulo": "Aliados, rivais, patronos e complicações ambulantes — figuras que geram drama e movimentam aspectos na mesa Fate.",
+      "lore": "Em Fate, todo personagem importante é aspecto em movimento. Eles querem algo, podem ferir alguém e revelam verdades sobre os protagonistas."
+    }
+  },
+
+  "pbta": {
+    "sabedoria": {
+      "titulo": "Agenda do Mestre Powered by the Apocalypse",
+      "subtitulo": "No Powered by the Apocalypse, você não empurra a história à força: você apresenta pressão e responde com honestidade.",
+      "lore": "\"Prepare problemas, não soluções. Prepare tensão, não roteiro. O resto nasce quando a ficção se move.\"",
+      "tips": [
+        { "btn": "I. Ficção primeiro, sempre", "content": "A jogada só existe porque algo aconteceu na narrativa. Nunca o contrário." },
+        { "btn": "II. Faça perguntas de verdade", "content": "Perguntas ao grupo ajudam a construir mundo, relações e pressão com muito mais vida." },
+        { "btn": "III. Falha não é parar a cena", "content": "Em 6-, a história não trava: ela piora, complica ou cobra um preço." },
+        { "btn": "IV. Movimentos do mestre precisam empurrar", "content": "Mostre perigo, separe personagens, revele custo, anuncie desgraça iminente." },
+        { "btn": "V. Não proteja o status quo", "content": "Se nada muda, o sistema perde força. O mundo precisa responder o tempo todo." },
+        { "btn": "VI. Jogue para descobrir", "content": "Você não precisa saber o desfecho. Precisa saber só qual é a pressão atual." }
+      ]
+    },
+    "arte_historias": {
+      "titulo": "Ficção em Movimento",
+      "subtitulo": "Powered by the Apocalypse brilha quando a narrativa dispara movimentos e os movimentos devolvem mundo vivo.",
+      "cards": [
+        { "tag": "Pressão", "titulo": "Toda cena precisa ter algo apertando", "conteudo": "Tempo, ameaça, dúvida, escassez ou desejo." },
+        { "tag": "Resposta", "titulo": "O mundo reage com honestidade", "conteudo": "Sucessos avançam; sucessos parciais complicam; falhas cobram." },
+        { "tag": "Descoberta", "titulo": "A mesa descobre a história jogando", "conteudo": "Não há necessidade de trama engessada quando a ficção já anda sozinha." }
+      ],
+      "lore": "\"Em Powered by the Apocalypse, o mundo não espera os personagens decidirem viver. Ele já está caindo, queimando, chamando ou devorando.\""
+    },
+    "oraculo": {
+      "titulo": "Gerador de Situações Instáveis",
+      "subtitulo": "Crie problemas vivos, frágeis e prontos para explodir em movimentos.",
+      "btn_text": "✦ Gerar Situação Powered by the Apocalypse ✦",
+      "placeholder": "A ficção já está em movimento..."
+    },
+    "npc": {
+      "titulo": "Pessoas, Facções e Pressões",
+      "subtitulo": "No Powered by the Apocalypse, NPC bom não é ficha robusta: é função ficcional clara.",
+      "btn_text": "✦ Gerar Figura Powered by the Apocalypse ✦",
+      "placeholder": "Uma nova força ficcional será definida..."
+    },
+    "gancho": {
+      "titulo": "Faíscas de Jogo",
+      "subtitulo": "Toda sessão Powered by the Apocalypse começa melhor quando algo já está prestes a dar errado.",
+      "btn_text": "✦ Gerar Faísca ✦",
+      "placeholder": "Uma nova situação instável está prestes a começar..."
+    },
+    "checklist": {
+      "titulo": "Checklist Powered by the Apocalypse",
+      "subtitulo": "Revise pressão, perguntas, movimentos e honestidade ficcional.",
+      "items": [
+        "Defini uma situação instável inicial",
+        "Preparei perguntas para os jogadores",
+        "Pensei em consequências fortes para 6-",
+        "Separei ameaças ou frentes em andamento",
+        "Garanti que nada depende de roteiro fixo",
+        "Lembrei de jogar para descobrir"
+      ]
+    },
+    "planejador": {
+      "titulo": "Planejador de Situação Powered by the Apocalypse",
+      "subtitulo": "Estruture o ponto de ignição da sessão, não uma trama fechada.",
+      "theme_placeholder": "Ex: culto em ascensão, bairro em colapso, fronteira sitiada, estação isolada",
+      "progress_text": "da situação preparada — a pressão já está subindo",
+      "progress_complete": "Situação pronta. Agora é jogar para descobrir.",
+      "planner_textos": {
+        "openings": {
+          "sombrio": "Uma situação instável envolvendo {{theme}} — a pressão já está alta. O mundo não espera os personagens decidirem.",
+          "epico": "Uma crise de escala com {{theme}} — ameaças em andamento, frentes abertas. Jogue para ver o que acontece.",
+          "misterioso": "Algo está prestes a explodir em torno de {{theme}}. Prepare problemas, não soluções. A ficção dispara os movimentos.",
+          "leve": "Uma faísca divertida com {{theme}} — tensão sim, mas espaço para descoberta e improviso."
+        },
+        "middle": {
+          "sombrio": "Em 6-, a história não trava: piora. Movimentos do mestre empurram. Mostre perigo, separe personagens, revele custo.",
+          "epico": "O mundo responde. Sucessos avançam; 7-9 complicam; 6- cobra. A mesa descobre a história jogando.",
+          "misterioso": "Perguntas de verdade constroem o mundo. Ninguém é tão inocente quanto parecia. A pressão sobe.",
+          "leve": "A ficção se move. Problemas surgem, mas a mesa co-cria. Jogue para descobrir — e se divertir."
+        },
+        "ending": {
+          "sombrio": "Algo mudou. O status quo não foi protegido. O mundo respondeu com honestidade — e custo.",
+          "epico": "A sessão revelou o que ninguém sabia no início. Jogar para descobrir funcionou. Próxima sessão carrega as consequências.",
+          "misterioso": "Novas perguntas. O que parecia claro ganhou camadas. A ficção em movimento.",
+          "leve": "O grupo navegou a pressão. A situação evoluiu. Pronto para a próxima faísca."
+        }
+      }
+    },
+    "fortuna": {
+      "crit": ["10+! Sucesso total!", "A ficção favorece você!", "O movimento brilhou!", "Jogue para descobrir — e vencer!", "A mesa sorri!"],
+      "fumble": ["6-. O mestre age...", "A pressão sobe.", "A ficção cobra.", "Próximo movimento.", "Jogue para descobrir o que vem."],
+      "normal": ["O 2d6 rola.", "A ficção aguarda.", "A pressão está no ar.", "Que os dados decidam.", "A sessão continua."]
+    },
+    "racas": {
+      "titulo": "Pessoas, Facções e Pressões",
+      "subtitulo": "No Powered by the Apocalypse, NPC bom não é ficha robusta: é função ficcional clara. Pressionam, querem, ameaçam.",
+      "lore": "Prepare tensão, não roteiro. As pessoas e facções têm desejos, medos e agendas. O mundo já está caindo, queimando ou chamando."
+    }
+  },
+
+  "year_zero": {
+    "sabedoria": {
+      "titulo": "Manual de Sobrevivência do Mestre",
+      "subtitulo": "Year Zero vive de risco acumulado, desgaste e a sensação de que tudo pode piorar.",
+      "lore": "\"Quando o grupo está confortável demais, o sistema perde parte de sua força. Year Zero quer suor, escassez e urgência.\"",
+      "tips": [
+        { "btn": "I. Escassez é narrativa", "content": "Bala, comida, remédio, energia, tempo e abrigo precisam ser sentidos na prática." },
+        { "btn": "II. Push deve ser tentador", "content": "O sistema brilha quando o jogador pensa: 'eu não deveria fazer isso... mas vou'." },
+        { "btn": "III. O ambiente precisa machucar", "content": "Frio, fome, radiação, medo, infecção, isolamento — o mundo deve pressionar junto." },
+        { "btn": "IV. Vitórias devem parecer arrancadas", "content": "Nada de sucesso limpo demais. Mesmo quando tudo dá certo, algo custa." },
+        { "btn": "V. Combate é rápido e feio", "content": "Evite alongar lutas; mantenha a brutalidade seca e objetiva." },
+        { "btn": "VI. Atmosfera nasce do desgaste", "content": "O grupo precisa sentir que avançar cobra energia física e emocional." }
+      ]
+    },
+    "arte_historias": {
+      "titulo": "Tensão, Escassez e Impacto",
+      "subtitulo": "Year Zero cresce quando o grupo sente o custo de continuar.",
+      "cards": [
+        { "tag": "Escassez", "titulo": "Falta de recurso move decisões", "conteudo": "Quando não há o suficiente, cada escolha fica pesada." },
+        { "tag": "Pressão", "titulo": "O mundo piora se o grupo hesita", "conteudo": "Tempo, ameaça e ambiente devem seguir avançando." },
+        { "tag": "Custo", "titulo": "Sobreviver não é sair limpo", "conteudo": "O melhor resultado ainda deve deixar marcas." }
+      ],
+      "lore": "\"Em mundos Year Zero, a pergunta não é apenas se os personagens vencem — mas quanto de si eles perdem até lá.\""
+    },
+    "oraculo": {
+      "titulo": "Gerador de Sobrevivência",
+      "subtitulo": "Crie situações intensas de risco, falta de recursos e pressão crescente.",
+      "btn_text": "✦ Gerar Cenário Year Zero ✦",
+      "placeholder": "O próximo teste de sobrevivência aguarda..."
+    },
+    "npc": {
+      "titulo": "Perfis de Sobreviventes e Ameaças",
+      "subtitulo": "Líderes desgastados, oportunistas, feridos, fanáticos e pessoas quebradas pela pressão.",
+      "btn_text": "✦ Gerar Sobrevivente ✦",
+      "placeholder": "Um novo rosto marcado pela escassez será revelado..."
+    },
+    "gancho": {
+      "titulo": "Incidentes de Pressão",
+      "subtitulo": "Toda boa sessão Year Zero começa com algo faltando, falhando ou chegando tarde demais.",
+      "btn_text": "✦ Gerar Incidente Year Zero ✦",
+      "placeholder": "Um novo problema crítico está surgindo..."
+    },
+    "checklist": {
+      "titulo": "Checklist Year Zero",
+      "subtitulo": "Revise escassez, ameaça ambiental e custo de empurrar os limites.",
+      "items": [
+        "Defini o recurso que vai faltar",
+        "Planejei uma pressão ambiental real",
+        "Criei um risco forte para quem fizer push",
+        "Pensei em ferimentos ou desgaste relevantes",
+        "Deixei clara a urgência da situação",
+        "Garanti que a vitória terá custo"
+      ]
+    },
+    "planejador": {
+      "titulo": "Planejador de Sobrevivência",
+      "subtitulo": "Monte sessões onde o grupo precisa avançar mesmo estando no limite.",
+      "theme_placeholder": "Ex: bunker sem energia, comboio avariado, laboratório isolado, travessia contaminada",
+      "progress_text": "da sessão preparada — a tensão está aumentando",
+      "progress_complete": "Sessão pronta. Agora é sobreviver.",
+      "planner_textos": {
+        "openings": {
+          "sombrio": "O grupo percebe que {{theme}} já falhou ou está prestes a falhar. Recursos escassos, ambiente hostil. Push será tentador.",
+          "epico": "Uma travessia ou missão crítica envolvendo {{theme}} — o grupo está no limite. Escassez move decisões.",
+          "misterioso": "Algo está errado com {{theme}}. O que parecia seguro não é. Informações perdidas, equipe que não retornou.",
+          "leve": "Um desafio de sobrevivência com {{theme}} — tensão sim, mas o grupo tem uma chance. Se agirem certo."
+        },
+        "middle": {
+          "sombrio": "O ambiente machuca. Push custa. Alguém empurra longe demais. O desgaste é real — físico e emocional.",
+          "epico": "O grupo avança sob pressão. Vitórias parecem arrancadas. Mesmo o sucesso deixa marcas. Year Zero cobra.",
+          "misterioso": "Cada descoberta piora o quadro. O que faltava? Quem sabia? O custo de continuar sobe.",
+          "leve": "Obstáculos surgem, mas o grupo persiste. A escassez é sentida — mas ainda há esperança."
+        },
+        "ending": {
+          "sombrio": "Alguém não sai. Ou sai quebrado. A sessão cobrou. Sobreviver tem preço em Year Zero.",
+          "epico": "O grupo alcança o objetivo — mas o custo ficou. Recursos gastos, ferimentos, desgaste. Próxima sessão começa no limite.",
+          "misterioso": "A verdade sobre {{theme}} emerge. Não era o que esperavam. Ainda há esperança — ou não.",
+          "leve": "O grupo sobrevive. Cansados, mas vivos. A próxima travessia os aguarda."
+        }
+      }
+    },
+    "fortuna": {
+      "crit": ["O 6 apareceu!", "Push valeu a pena!", "Sobrevivência a seu favor!", "O recurso rendeu!", "A zona sorri — por agora."],
+      "fumble": ["O push cobrou...", "O dado traiu.", "O ambiente machuca.", "Próxima rolagem.", "O custo foi alto."],
+      "normal": ["O dado rola. O grupo avança.", "A tensão continua.", "Recursos contam.", "Que os dados decidam.", "Sobreviver mais um dia."]
+    },
+    "racas": {
+      "titulo": "Perfis de Sobreviventes e Ameaças",
+      "subtitulo": "Líderes desgastados, oportunistas, feridos, fanáticos e pessoas quebradas pela pressão — os que habitam mundos Year Zero.",
+      "lore": "Em mundos de escassez, a pergunta não é apenas se os personagens vencem — mas quanto de si eles perdem até lá."
+    }
+  },
+
+  "cthulhu": {
+    "sabedoria": {
+      "titulo": "Arquivo do Guardião — Princípios do Horror Investigativo",
+      "subtitulo": "Em histórias de horror cósmico, o medo não vem da batalha, mas da descoberta.",
+      "lore": "\"O terror verdadeiro não está no monstro revelado, mas na conclusão inevitável de que o mundo sempre foi pior do que parecia.\"",
+      "tips": [
+        { "btn": "I. O caso precisa parecer plausível no início", "content": "Uma herança, um desaparecimento, uma morte mal explicada. O horror entra devagar." },
+        { "btn": "II. Pistas são mais importantes que testes", "content": "A investigação precisa avançar mesmo quando a cena complica." },
+        { "btn": "III. Use a sanidade para distorcer percepção", "content": "A mente dos investigadores também é cenário." },
+        { "btn": "IV. Suspeitos precisam parecer humanos", "content": "Quanto mais crível o cotidiano, pior a rachadura no real." },
+        { "btn": "V. O horror cresce pelas ausências", "content": "Uma página arrancada pode ser mais assustadora que o monstro." },
+        { "btn": "VI. O final resolve o caso, não o universo", "content": "Algo sempre permanece além da compreensão." }
+      ]
+    },
+    "arte_historias": {
+      "titulo": "Estrutura de um Caso Inquietante",
+      "subtitulo": "Toda investigação memorável em horror cósmico se sustenta em indício, deterioração e revelação.",
+      "cards": [
+        { "tag": "Indício", "titulo": "Algo pequeno denuncia algo imenso", "conteudo": "O primeiro detalhe precisa ser plausível e perturbador." },
+        { "tag": "Deterioração", "titulo": "Quanto mais perto da verdade, pior fica", "conteudo": "Corpo, mente e confiança devem se desgastar." },
+        { "tag": "Revelação", "titulo": "A resposta precisa ser pior que a suspeita", "conteudo": "A verdade reorganiza tudo o que veio antes." }
+      ],
+      "lore": "\"Arquivos úmidos, corredores vazios, casas decadentes e bibliotecas fechadas: o horror nem sempre grita. Muitas vezes, ele sussurra.\""
+    },
+    "oraculo": {
+      "titulo": "Gerador de Casos",
+      "subtitulo": "Consulte o arquivo para receber um ponto de partida investigativo com local, ocorrência e complicação oculta.",
+      "btn_text": "✦ Abrir Caso ✦",
+      "placeholder": "O arquivo aguarda consulta..."
+    },
+    "npc": {
+      "titulo": "Registro de Pessoas de Interesse",
+      "subtitulo": "Testemunhas, acadêmicos, herdeiros, médicos, cultistas e sobreviventes.",
+      "btn_text": "✦ Registrar Pessoa ✦",
+      "placeholder": "Uma nova pessoa de interesse será catalogada..."
+    },
+    "gancho": {
+      "titulo": "Incidentes Iniciais",
+      "subtitulo": "Toda investigação começa com algo errado demais para ser ignorado.",
+      "btn_text": "✦ Gerar Incidente ✦",
+      "placeholder": "Um novo incidente está prestes a emergir..."
+    },
+    "checklist": {
+      "titulo": "Preparação do Caso",
+      "subtitulo": "Revise pista, progressão, custo e atmosfera.",
+      "items": [
+        "Defini a ocorrência inicial",
+        "Preparei pistas suficientes",
+        "Criei suspeitos e contatos ambíguos",
+        "Planejei momentos de sanidade e tensão",
+        "Separei documentos, nomes e locais",
+        "Defini uma revelação final perturbadora"
+      ]
+    },
+    "planejador": {
+      "titulo": "Montador de Investigação",
+      "subtitulo": "Organize incidente, pistas, agravamento e consequência final.",
+      "theme_placeholder": "Ex: internados repetem o mesmo sonho, manuscrito desaparecido, sumiços no porto",
+      "progress_text": "do caso estruturado — o dossiê está tomando forma",
+      "progress_complete": "Dossiê concluído. A investigação está pronta.",
+      "planner_textos": {
+        "openings": {
+          "sombrio": "Um caso envolvendo {{theme}} — cadáver com marcas impossíveis, desaparecimento inexplicável. O horror entra devagar.",
+          "epico": "Uma investigação de escala com {{theme}} — o que começa local revela conexões com os Mitos. A sanidade está em jogo.",
+          "misterioso": "Pistas sobre {{theme}} surgem em lugares improváveis: biblioteca, mansão, leilão. Algo não deveria existir.",
+          "leve": "Um mistério intrigante com {{theme}} — tensão sim, mas os investigadores têm ferramentas. Por enquanto."
+        },
+        "middle": {
+          "sombrio": "Cada descoberta custa sanidade. Pistas levam a mais pistas. O culto se revela. O horror cresce pelas ausências.",
+          "epico": "A investigação aprofunda. O que parecia humano não é. Textos proibidos, rituais antigos. O desconhecido é pior que o monstro.",
+          "misterioso": "Suspeitos parecem humanos. A página arrancada assusta mais que a criatura. A verdade reorganiza tudo.",
+          "leve": "O caso avança. Tensão controlada. Os investigadores usam lógica e perícias. O combate ainda é o último recurso."
+        },
+        "ending": {
+          "sombrio": "O caso fecha. Algo permanece. O que viram mudou os investigadores. O horror sussurra depois que a sessão termina.",
+          "epico": "O portal fecha. O culto é interrompido. Mas o conhecimento tem custo. A sanidade nunca será a mesma.",
+          "misterioso": "A revelação é pior que a suspeita. O arquivo está completo — mas os investigadores estão inquietos.",
+          "leve": "O mistério é resolvido. Os investigadores sobrevivem. Um gancho sutil para o próximo caso."
+        }
+      }
+    },
+    "fortuna": {
+      "crit": ["A sanidade aguenta!", "O dado favorece o investigador!", "A perícia brilhou!", "O conhecimento espera!", "O caso avança — por agora."],
+      "fumble": ["O dado conspira...", "A sanidade treme.", "O horror sussurra.", "Próximo teste.", "O desconhecido cobra."],
+      "normal": ["O d100 rola.", "A investigação continua.", "O arquivo aguarda.", "Que os dados decidam.", "A mente resiste."]
+    },
+    "racas": {
+      "titulo": "Registro de Pessoas de Interesse",
+      "subtitulo": "Testemunhas, acadêmicos, herdeiros, médicos, cultistas e sobreviventes — as figuras que habitam os casos de horror cósmico.",
+      "lore": "Em Call of Cthulhu, todo NPC pode ser suspeito, aliado ou vítima. O horror é mais forte quando as pessoas parecem reais antes de revelarem o que escondem."
+    }
+  },
+
+  "cypher": {
+    "sabedoria": {
+      "titulo": "Princípios do Mestre de Descoberta",
+      "subtitulo": "Cypher System funciona quando curiosidade, estranheza e decisão tática coexistem com leveza.",
+      "lore": "\"Em Cypher, o desconhecido não é só cenário. Ele é recompensa, ameaça e convite.\"",
+      "tips": [
+        { "btn": "I. O estranho precisa ser frequente", "content": "Objetos, fenômenos, lugares e entidades devem parecer intrigantes o bastante para estimular exploração." },
+        { "btn": "II. Dificuldade clara acelera a mesa", "content": "Quando o jogador entende o obstáculo, ele pensa em reduzir dificuldade de forma criativa." },
+        { "btn": "III. Cyphers devem circular", "content": "Não trate cyphers como relíquias raras demais; eles funcionam melhor quando usados com ousadia." },
+        { "btn": "IV. Descobrir vale tanto quanto vencer", "content": "Uma sala impossível ou tecnologia incompreensível pode ser mais marcante que um combate." },
+        { "btn": "V. Gaste GM Intrusions com intenção", "content": "Uma intrusão boa complica a cena sem matar seu impulso." },
+        { "btn": "VI. O mundo precisa sugerir grandeza", "content": "Ruínas, máquinas e entidades devem dar a sensação de que existe algo muito maior além do que foi visto." }
+      ]
+    },
+    "arte_historias": {
+      "titulo": "Exploração, Estranheza e Escolha",
+      "subtitulo": "Cypher brilha quando descoberta, gestão de recursos e imaginação se encontram.",
+      "cards": [
+        { "tag": "Descoberta", "titulo": "Sempre deve haver algo novo para compreender", "conteudo": "O sistema ama maravilhamento, ruína e tecnologia inexplicável." },
+        { "tag": "Escolha", "titulo": "Jogadores devem decidir como reduzir o impossível", "conteudo": "Esforço, recursos e criatividade fazem parte da solução." },
+        { "tag": "Estranheza", "titulo": "O cenário precisa ter identidade própria", "conteudo": "O desconhecido deve ser fascinante antes mesmo de ser perigoso." }
+      ],
+      "lore": "\"Em mundos Cypher, toda ruína é uma pergunta e todo objeto estranho é uma promessa de problema — ou milagre.\""
+    },
+    "oraculo": {
+      "titulo": "Gerador de Descobertas",
+      "subtitulo": "Crie aventuras movidas por exploração, mistério tecnológico e maravilhamento.",
+      "btn_text": "✦ Gerar Descoberta ✦",
+      "placeholder": "Uma nova estranheza aguarda ser explorada..."
+    },
+    "npc": {
+      "titulo": "Catálogo de Figuras Estranhas",
+      "subtitulo": "Exploradores, estudiosos, entidades bizarras, viajantes e guardiões de ruínas.",
+      "btn_text": "✦ Gerar NPC Cypher ✦",
+      "placeholder": "Uma nova presença incomum será revelada..."
+    },
+    "gancho": {
+      "titulo": "Convites para Exploração",
+      "subtitulo": "Toda boa sessão Cypher começa com uma descoberta que não deveria existir.",
+      "btn_text": "✦ Gerar Gancho Cypher ✦",
+      "placeholder": "Uma nova anomalia está chamando o grupo..."
+    },
+    "checklist": {
+      "titulo": "Checklist Cypher",
+      "subtitulo": "Revise descoberta, intrusão, exploração e circulação de cyphers.",
+      "items": [
+        "Defini o elemento estranho central",
+        "Planejei uma descoberta realmente curiosa",
+        "Separei cyphers interessantes para circular",
+        "Pensei em uma GM Intrusion marcante",
+        "Deixei espaço para soluções criativas",
+        "Garanti que o cenário inspire exploração"
+      ]
+    },
+    "planejador": {
+      "titulo": "Planejador de Exploração Cypher",
+      "subtitulo": "Monte sessões centradas em descoberta, estranheza e uso criativo de recursos.",
+      "theme_placeholder": "Ex: estrutura impossível, máquina enterrada, entidade alienígena, vale de anomalias",
+      "progress_text": "da exploração preparada — o desconhecido aguarda",
+      "progress_complete": "Exploração pronta. O estranho já está pulsando.",
+      "planner_textos": {
+        "openings": {
+          "sombrio": "Uma descoberta perturbadora envolvendo {{theme}} — o estranho não é só cenário. É ameaça e convite.",
+          "epico": "Uma exploração de escala com {{theme}} — ruínas impossíveis, tecnologia antiga. O mundo sugere grandeza.",
+          "misterioso": "Sinais sobre {{theme}} em regiões evitadas. O desconhecido é fascinante antes de ser perigoso.",
+          "leve": "Uma curiosidade intrigante com {{theme}} — cyphers circulam, a exploração convida. O risco é calculado."
+        },
+        "middle": {
+          "sombrio": "Cada tentativa de compreender fortalece ou piora. GM Intrusion à vista. O objeto central pode ser mensagem — ou armadilha.",
+          "epico": "A ruína reage. Descobrir vale tanto quanto vencer. Esforço e criatividade reduzem o impossível.",
+          "misterioso": "O mapa conhecido deixa de fazer sentido. Algo antigo observa. A maior recompensa pode ser o maior gatilho.",
+          "leve": "Cyphers circulam. O grupo usa recursos com ousadia. A descoberta recompensa a curiosidade."
+        },
+        "ending": {
+          "sombrio": "O grupo sai com conhecimento — e talvez algo mais. O estranho deixou marcas. A exploração cobrou.",
+          "epico": "A descoberta redefine o que conheciam. Ruínas, máquinas, entidades. O mundo é maior que imaginavam.",
+          "misterioso": "Uma verdade emerge. O objeto não era arma nem chave — era mensagem. Novas perguntas.",
+          "leve": "Exploração concluída. O grupo sai fascinado. O estranho pulsou. Pronto para a próxima descoberta."
+        }
+      }
+    },
+    "fortuna": {
+      "crit": ["O estranho favorece você!", "Cypher ativado!", "A descoberta sorri!", "O d20 está do seu lado!", "Exploração recompensada!"],
+      "fumble": ["GM Intrusion...", "O estranho cobra.", "A ruína reage.", "Próxima jogada.", "O desconhecido reserva surpresas."],
+      "normal": ["O dado rola.", "A exploração continua.", "O estranho aguarda.", "Que os dados decidam.", "A descoberta segue."]
+    },
+    "racas": {
+      "titulo": "Catálogo de Figuras Estranhas",
+      "subtitulo": "Exploradores, estudiosos, entidades bizarras, viajantes e guardiões de ruínas — as presenças que habitam mundos Cypher.",
+      "lore": "Em Cypher, o desconhecido não é só cenário. É recompensa, ameaça e convite. Toda ruína é uma pergunta e todo objeto estranho é uma promessa."
     }
   }
 }

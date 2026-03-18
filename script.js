@@ -362,17 +362,65 @@ menuLinks.forEach(link => {
     });
 });
 
-// Race Cards Mobile Toggle
-const raceCards = document.querySelectorAll('.race-card');
-raceCards.forEach(card => {
-    card.addEventListener('click', () => {
-        // Toggle current card, close others
-        raceCards.forEach(c => {
+// Criaturas — sortear e renderizar dinamicamente
+let criaturasData = [];
+const CRIATURAS_POR_SORTEIO = 6;
+const ROTACAO_CRIATURAS_MS = 4 * 60 * 1000; // 4 minutos
+let criaturasRotationTimer = null;
+
+function shuffleArray(arr) {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+}
+
+function renderCriaturas(sorteadas) {
+    const grid = document.getElementById('criaturas-grid');
+    if (!grid || !sorteadas.length) return;
+    grid.innerHTML = sorteadas.map(c => `
+        <div class="race-card race-card-dynamic" style="background-image: url('${c.imagem}');">
+            <div class="race-icon"></div>
+            <h3>${c.nome}</h3>
+            <p>${c.descricao}</p>
+        </div>
+    `).join('');
+}
+
+function sortearCriaturas() {
+    if (!criaturasData.length) return;
+    const embaralhadas = shuffleArray(criaturasData);
+    const sorteadas = embaralhadas.slice(0, Math.min(CRIATURAS_POR_SORTEIO, criaturasData.length));
+    renderCriaturas(sorteadas);
+}
+
+async function loadCriaturas() {
+    try {
+        const res = await fetch(new URL('criaturas.json', window.location.href).href);
+        if (res.ok) {
+            const data = await res.json();
+            criaturasData = data?.criaturas || [];
+        }
+    } catch (e) {
+        console.warn('Criaturas não carregadas:', e.message);
+    }
+    sortearCriaturas();
+}
+
+// Race Cards Mobile Toggle — delegação de eventos (funciona com cards dinâmicos)
+const criaturasGrid = document.getElementById('criaturas-grid');
+if (criaturasGrid) {
+    criaturasGrid.addEventListener('click', (e) => {
+        const card = e.target.closest('.race-card');
+        if (!card) return;
+        criaturasGrid.querySelectorAll('.race-card').forEach(c => {
             if (c !== card) c.classList.remove('active');
         });
         card.classList.toggle('active');
     });
-});
+}
 
 // Dice Roller — Oráculo dos Dados
 const FORTUNA_CRIT = [
@@ -848,7 +896,18 @@ function checkInitialView() {
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
     loadSystems();
+    loadCriaturas();
     createDiceRoller();
+
+    document.getElementById('sortearCriaturasBtn')?.addEventListener('click', () => {
+        sortearCriaturas();
+        if (criaturasRotationTimer) {
+            clearInterval(criaturasRotationTimer);
+            criaturasRotationTimer = setInterval(sortearCriaturas, ROTACAO_CRIATURAS_MS);
+        }
+    });
+
+    criaturasRotationTimer = setInterval(sortearCriaturas, ROTACAO_CRIATURAS_MS);
 
     document.getElementById('btnTrocarSistema')?.addEventListener('click', () => {
         showSeletor();

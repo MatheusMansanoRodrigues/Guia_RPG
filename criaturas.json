@@ -1,0 +1,99 @@
+{
+  "criaturas": [
+    {
+      "nome": "Elfo",
+      "imagem": "imgs/elf.png",
+      "descricao": "Seres de beleza etérea e vida longa, conectados às florestas antigas e à magia natural. Percepção aguçada e graça incomparável."
+    },
+    {
+      "nome": "Anão",
+      "imagem": "imgs/dwarf.png",
+      "descricao": "Ferreiros lendários e guerreiros de coração firme. Constróem impérios sob as rochas e valorizam tradição, honra e um bom barril de cerveja."
+    },
+    {
+      "nome": "Gnomo",
+      "imagem": "imgs/gnome.png",
+      "descricao": "Mestres da mecânica e da alquimia, curiosos por natureza e excêntricos aliados. Pequenos em estatura, grandes em inventividade."
+    },
+    {
+      "nome": "Fada",
+      "imagem": "imgs/fairy.png",
+      "descricao": "Caprichosas e imprevisíveis, habitam os limites entre o mundo visível e o reino das maravilhas. Magia pura e humor perigoso."
+    },
+    {
+      "nome": "Humano",
+      "imagem": "imgs/human.png",
+      "descricao": "A raça mais versátil e adaptável. Curta vida, mas ambição infinita. Constróem impérios, quebram barreiras e moldam o mundo."
+    },
+    {
+      "nome": "Meio-elfo",
+      "imagem": "imgs/half-elf.png",
+      "descricao": "Entre dois mundos — a graça élfica e a paixão humana. Muitas vezes solitários, mas diplomatas naturais e sobreviventes resilientes."
+    },
+    {
+      "nome": "Meio-orc",
+      "imagem": "imgs/half-orc.png",
+      "descricao": "Força orc e espírito humano. Carregam o estigma de duas culturas, mas podem ser os guerreiros mais leais e determinados."
+    },
+    {
+      "nome": "Halfling",
+      "imagem": "imgs/halfling.png",
+      "descricao": "Pequenos, ágeis e sortudos. Adoram conforto, boa comida e aventuras que terminem em casa. A sorte parece favorecê-los."
+    },
+    {
+      "nome": "Orcs e Goblinoides",
+      "imagem": "imgs/orcs.png",
+      "descricao": "Culturas complexas de sobrevivência e honra tribal. Inimigos temíveis ou aliados inesperados — depende de quem encontra primeiro."
+    },
+    {
+      "nome": "Outras Criaturas",
+      "imagem": "imgs/other_creatures.png",
+      "descricao": "Dragões, sereias, centauros, tritões e tantas outras. Use-as para criar encontros memoráveis e expandir o bestiário da campanha."
+    },
+    {
+      "nome": "Kobold",
+      "imagem": "imgs/kobold.png",
+      "descricao": "Pequenos reptilianos astutos que habitam túneis e masmorras. Organizam-se em tribos e usam armadilhas e números para compensar a estatura. Leais ao clã e supersticiosos com dragões."
+    },
+    {
+      "nome": "Goblin",
+      "imagem": "imgs/Goblin.png",
+      "descricao": "Criaturas pequenas, traiçoeiras e adaptáveis. Vivem em grupos, adoram encrenca e tesouros brilhantes. Podem ser inimigos irritantes ou aliados improváveis quando conveniente."
+    },
+    {
+      "nome": "Draconato",
+      "imagem": "imgs/Draconato.png",
+      "descricao": "Humanoides com herança dracônica. Orgulhosos e resilientes, carregam o sopro ancestral e uma conexão profunda com a linhagem dos dragões. Valorizam honra e tradição."
+    },
+    {
+      "nome": "Draconato Dourado",
+      "imagem": "imgs/Draconato dourado.png",
+      "descricao": "Draconatos da linhagem dos dragões dourados — associados à luz, justiça e nobreza. Costumam ser paladinos naturais ou guardiões de causas maiores."
+    },
+    {
+      "nome": "Tiefling",
+      "imagem": "imgs/Tiefling.png",
+      "descricao": "Humanoides com sangue infernal nas veias. Chifres, cauda e olhos incomuns marcam sua origem. Muitos carregam o peso do preconceito, mas seu legado pode ser redenção ou ruína."
+    },
+    {
+      "nome": "Tiefling (variante)",
+      "imagem": "imgs/Tiefling_2.png",
+      "descricao": "Outra face da herança tiefling — cada um carrega o legado infernal de forma única. Alguns abraçam o poder; outros buscam superar a maldição do sangue."
+    },
+    {
+      "nome": "Minotauro",
+      "imagem": "imgs/Minotauro.png",
+      "descricao": "Guerreiros poderosos com cabeça de touro. Força bruta e feroz determinação. Podem ser monstros de labirinto ou membros de culturas tribais com códigos de honra próprios."
+    },
+    {
+      "nome": "Licantropo",
+      "imagem": "imgs/Licantropo.png",
+      "descricao": "Humanoides amaldiçoados que se transformam sob a lua. A besta interior luta contra a razão. Uma maldição que pode ser controlada — ou que controla quem a carrega."
+    },
+    {
+      "nome": "Dragão Selvagem",
+      "imagem": "imgs/Dragão selvagem.png",
+      "descricao": "Os senhores alados das terras antigas. Poder, sabedoria e fome de tesouro. Encontrar um dragão pode ser o fim de uma campanha — ou o início da maior aventura."
+    }
+  ]
+}

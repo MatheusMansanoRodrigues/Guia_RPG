@@ -672,6 +672,17 @@ label {
     visibility: visible;
 }
 
+.racas-actions {
+    display: flex;
+    justify-content: center;
+    margin: 24px 0;
+    gap: 16px;
+}
+
+.race-card-dynamic .race-icon {
+    background: none;
+}
+
 /* Icones das raças */
 .icon-elf {
     background-image: url(imgs/elf.png);
